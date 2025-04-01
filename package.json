@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "playwright": "^1.51.1"
-  }
+    "dependencies": {
+        "playwright": "^1.51.1"
+    },
+    "name": "hot-wallet-claimer",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
 }
