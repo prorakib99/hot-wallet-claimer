@@ -2,6 +2,7 @@
     "dependencies": {
         "playwright": "^1.51.1"
     },
+    "type": "module",
     "name": "hot-wallet-claimer",
     "version": "1.0.0",
     "main": "index.js",
