@@ -1,14 +1,18 @@
 export const accounts = [
     {
-        name: 'account-1',
+        name: 'Account-1',
         encrypted: ''
     },
     {
-        name: 'account-2',
+        name: 'Account-2',
         encrypted: ''
     },
     {
-        name: 'account-3',
+        name: 'Account-3',
+        encrypted: ''
+    },
+    {
+        name: 'Account-4',
         encrypted: ''
     }
 ];
