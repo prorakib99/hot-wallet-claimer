@@ -2,10 +2,20 @@ import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { log, logSuccess } from './logger.js';
 import moment from 'moment';
 
-export function updateClaimTime(accountName, extractedTime) {
-    const filePath = 'account-info.json';
-    let accounts = [];
+const filePath = 'account-info.json';
 
+let accounts = [];
+
+export function getClaimTime(name) {
+    if (existsSync(filePath)) {
+        const fileData = readFileSync(filePath, 'utf8');
+        accounts = JSON.parse(fileData);
+    }
+    const claim = accounts.find((item) => item.name === name);
+    return claim ? claim.claimTime : false;
+}
+
+export function updateClaimTime(accountName, extractedTime) {
     // Read existing data (if file exists)
     if (existsSync(filePath)) {
         const fileData = readFileSync(filePath, 'utf8');

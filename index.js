@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { accounts } from './data.js';
 import chalk from 'chalk';
-import { updateClaimTime } from './utils/activity.js';
+import { getClaimTime, updateClaimTime } from './utils/activity.js';
 import {
     log,
     logError,
@@ -32,6 +32,7 @@ const executablePath = chromium.executablePath();
     for (const account of accounts) {
         // Update progress
         updateProgress(currentIndex + 1, accounts.length);
+        const claimTime = getClaimTime(account.name);
         updateStatus('Starting operations');
 
         const context = await chromium.launchPersistentContext('', {
@@ -49,6 +50,12 @@ const executablePath = chromium.executablePath();
 
         const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html';
         const page = await context.newPage();
+
+        if (claimTime) {
+            logWarning(account.name, 'Skip the account');
+            currentIndex++;
+            await context.close();
+        }
 
         log(account.name, `Navigating to extension page...`);
         try {
@@ -88,7 +95,7 @@ const executablePath = chromium.executablePath();
 
         // Check and click "Check NEWS"
         await page.waitForSelector('button:has-text("Check NEWS")', { timeout: 15000 });
-        const checkNewsButton = await page.locator('button:has-text("Check NEWS")');
+        const checkNewsButton = page.locator('button:has-text("Check NEWS")');
         const isCheckNewsButtonVisible = await checkNewsButton.isVisible();
         const isCheckNewsButtonDisabled = await checkNewsButton.isDisabled();
 
@@ -109,12 +116,17 @@ const executablePath = chromium.executablePath();
 
         // Check and click "Claim HOT"
         await page.waitForSelector('button:has-text("Claim HOT")', { timeout: 15000 });
-        const claimHotButton = await page.locator('button:has-text("Claim HOT")');
+        const claimHotButton = page.locator('button:has-text("Claim HOT")');
         const isClaimHotButtonVisible = await claimHotButton.isVisible();
         const isClaimHotButtonDisabled = await claimHotButton.isDisabled();
 
+        const continueButton = page.locator('button:has-text("Continue with HOT")');
+
         if (isClaimHotButtonVisible && !isClaimHotButtonDisabled) {
             await claimHotButton.click();
+            if ((await continueButton.isVisible()) && !(await continueButton.isDisabled())) {
+                await continueButton.click();
+            }
             logSuccess(account.name, '🔥 Claimed successfully completed!');
             await page.waitForTimeout(60000);
         } else {
