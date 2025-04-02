@@ -57,17 +57,15 @@ node -v && npm -v
 1. Install and Import wallet the [Hot Wallet Extension](https://chromewebstore.google.com/detail/hot-wallet/mpeengabcnhhjjgleiodimegnkpcenbk)
 2. Goto the [Extension Home Page](chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html)
 3. Open Chrome Extension DevTools (F12)
-4. Manually Find the encrypted token: (optional)
-    ```plaintext
-    Application → Storage → Extension Storage → Local → encrypted
-    ```
-5. Automatic Copy the encrypted token: (recommended)
+4. Automatic Copy the encrypted token:
 
     Keyboard Press:
 
     ```plaintext
     Ctrl+Shift+I
     ```
+
+    Run it browser console:
 
     ```javascript
     // Secure Token Copier (Run in Console)
