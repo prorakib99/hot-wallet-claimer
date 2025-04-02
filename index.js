@@ -8,17 +8,16 @@ import chalk from 'chalk';
 dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // Fix for __dirname in ESM
-const isHeadless = !process.env.IS_BROWSER_VISIBLE.includes('true'); // Toggle headless mode
-const executablePath = isHeadless ? chromium.executablePath() : '';
+const isHeadless = process.env.IS_BROWSER_VISIBLE !== 'true'; // Toggle headless mode
+const executablePath = chromium.executablePath();
 
 const log = (accountName = '', message) => {
     const timestamp = chalk.gray(`[${new Date().toLocaleTimeString()}]`);
-    console.log(`${timestamp} [${chalk.green.bold(accountName)}] ${chalk.gray(message)}`);
+    console.log(`${timestamp} [${chalk.green(accountName)}] ${chalk.gray(message)}`);
 };
 
 (async () => {
     console.log('🔥 Starting Hot Wallet Claimer...');
-    console.log({ isHeadless });
 
     const pathToExtension = path.join(__dirname, 'hot-wallet-extension');
     const iPhone = devices['iPhone 15'];
@@ -28,7 +27,11 @@ const log = (accountName = '', message) => {
 
     for (const account of accounts) {
         console.log(
-            chalk.green('\n==============================================================')
+            chalk.green(
+                `\n--------------------[Account: ${chalk.green.bold(
+                    account.name
+                )}]--------------------`
+            )
         );
 
         log(account.name, `🔄 Processing account...`);
@@ -40,11 +43,10 @@ const log = (accountName = '', message) => {
                 `--disable-extensions-except=${pathToExtension}`,
                 `--load-extension=${pathToExtension}`,
                 '--disable-gpu',
-                '--no-sandbox',
-                '--headless=new'
+                '--no-sandbox'
             ],
             viewport: { width, height },
-            slowMo: isHeadless ? 0 : 3000
+            slowMo: 3000
         });
 
         const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html';
@@ -118,5 +120,5 @@ const log = (accountName = '', message) => {
         log(account.name, `✅ Account processing complete!`);
     }
 
-    log('🎉 All accounts processed successfully!', '');
+    console.log(chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------'));
 })();
