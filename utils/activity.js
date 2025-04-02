@@ -1,4 +1,6 @@
 import { writeFileSync, existsSync, readFileSync } from 'fs';
+import { log, logSuccess } from './logger.js';
+import moment from 'moment';
 
 export function updateClaimTime(accountName, extractedTime) {
     const filePath = 'account-info.json';
@@ -35,14 +37,13 @@ export function updateClaimTime(accountName, extractedTime) {
     if (existingAccount) {
         // Update claimTime if account exists
         existingAccount.claimTime = futureTime;
-        console.log(`🔄 Updated claim time for ${accountName}`);
+        log(accountName, `Next claim time: ${moment(futureTime).format('lll')}`);
     } else {
         // Add new account entry
         accounts.push({ name: accountName, claimTime: futureTime });
-        console.log(`➕ Added new account: ${accountName}`);
+        logSuccess(accountName, `Next claim time: ${moment(futureTime).format('lll')}`);
     }
 
     // Save updated data back to JSON
     writeFileSync(filePath, JSON.stringify(accounts, null, 2));
-    console.log('✅ Account info updated successfully!');
 }

@@ -115,7 +115,7 @@ const executablePath = chromium.executablePath();
 
         if (isClaimHotButtonVisible && !isClaimHotButtonDisabled) {
             await claimHotButton.click();
-            logSuccess(account.name, '🔥 HOT Token claimed successfully!');
+            logSuccess(account.name, '🔥 Claimed successfully completed!');
             await page.waitForTimeout(60000);
         } else {
             logWarning(account.name, '"Claim HOT" button is not active.');
@@ -127,7 +127,7 @@ const executablePath = chromium.executablePath();
         updateClaimTime(account.name, extractedTime);
         currentIndex++;
         // Close browser context for this account
-        logSuccess(account.name, `Account processing completed!`);
+
         await page.waitForTimeout(5000);
         await context.close();
     }
