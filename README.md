@@ -38,63 +38,71 @@ node -v && npm -v
 
 1. Clone repository:
 
-```bash
-git clone https://github.com/yourusername/hot-wallet-claimer.git
-cd hot-wallet-claimer
-```
+    ```bash
+    git clone https://github.com/yourusername/hot-wallet-claimer.git
+    cd hot-wallet-claimer
+    ```
 
 2. Install dependencies with Chromium:
 
-```bash
-npm install playwright --include=chromium
-npm install
-```
+    ```bash
+    npx playwright install chromium
+    npm install
+    ```
 
 ## 🔑 Token Configuration
 
 ### Retrieve Encrypted Token
 
-1. Open Chrome Extension DevTools (F12)
-2. Navigate to:
+1. Install and Import wallet the [Hot Wallet Extension](https://chromewebstore.google.com/detail/hot-wallet/mpeengabcnhhjjgleiodimegnkpcenbk)
+2. Goto the [Extension Home Page](chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html)
+3. Open Chrome Extension DevTools (F12)
+4. Manually Find the encrypted token: (optional)
     ```plaintext
     Application → Storage → Extension Storage → Local → encrypted
     ```
-3. Execute secure copy script:
+5. Automatic Copy the encrypted token: (recommended)
 
-```javascript
-// Secure Token Copier (Run in Console)
-(async () => {
-    const tokenData = await chrome.storage.local.get('encrypted');
-    const token = tokenData.encrypted;
+    Keyboard Press:
 
-    if (token) {
-        const tempInput = document.createElement('textarea');
-        tempInput.value = token;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy'); // Copy text
-        document.body.removeChild(tempInput); // Clean up
-        console.log(
-            `%c✅ Token Copied! %c${token}`,
-            'color: green; font-weight: bold;',
-            'color: #666;'
-        );
-    } else {
-        console.log('❌ No token found!');
-    }
-})();
-```
+    ```plaintext
+    Ctrl+Shift+I
+    ```
 
-4. Configure in `data.js`:
+    ```javascript
+    // Secure Token Copier (Run in Console)
+    (async () => {
+        const tokenData = await chrome.storage.local.get('encrypted');
+        const token = tokenData.encrypted;
 
-```javascript
-export const accounts = [
-    {
-        name: 'Main Wallet',
-        encrypted: 'your_copied_token_here'
-    }
-];
-```
+        if (token) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = token;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy'); // Copy text
+            document.body.removeChild(tempInput); // Clean up
+            console.log(
+                `%c✅ Token Copied! %c${token}`,
+                'color: green; font-weight: bold;',
+                'color: #666;'
+            );
+        } else {
+            console.log('❌ No token found!');
+        }
+    })();
+    ```
+
+    6. Configure in `data.js`:
+
+    ```javascript
+    export const accounts = [
+        {
+            name: 'Main Wallet',
+            encrypted: 'your_copied_token_here'
+        }
+    ];
+    ```
 
 ## 🤖 Automation Workflow
 
@@ -106,10 +114,10 @@ export const accounts = [
     - Cooldown management
 4. Error recovery and retry system
 
-```bash
-# Start automation
-npm start
-```
+    ```bash
+    # Start automation
+    npm start
+    ```
 
 ## 🔒 Security Best Practices
 
