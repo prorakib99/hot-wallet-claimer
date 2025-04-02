@@ -14,143 +14,161 @@ import {
     updateStatus
 } from './utils/logger.js';
 
+// Configure environment variables
 dotenv.config();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url)); // Fix for __dirname in ESM
-const isHeadless = process.env.IS_BROWSER_VISIBLE !== 'true'; // Toggle headless mode
-const executablePath = chromium.executablePath();
+// Constants
+const EXTENSION_ID = 'mpeengabcnhhjjgleiodimegnkpcenbk';
+const EXTENSION_PATH = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    'hot-wallet-extension'
+);
+const DEVICE_PROFILE = devices['iPhone 15'];
+const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/index.html`;
+const OPERATION_TIMEOUT = 15000;
+const POST_CLAIM_DELAY = 60000;
+const FINAL_DELAY = 5000;
 
-(async () => {
-    const pathToExtension = path.join(__dirname, 'hot-wallet-extension');
-    const iPhone = devices['iPhone 15'];
+// Browser configuration
+const browserConfig = {
+    headless: process.env.IS_BROWSER_VISIBLE !== 'true',
+    executablePath: chromium.executablePath(),
+    args: [
+        `--disable-extensions-except=${EXTENSION_PATH}`,
+        `--load-extension=${EXTENSION_PATH}`,
+        '--disable-gpu',
+        '--no-sandbox'
+    ],
+    viewport: DEVICE_PROFILE.viewport,
+    slowMo: 3000
+};
 
-    const width = iPhone.viewport.width;
-    const height = iPhone.viewport.height;
+// Selectors
+const SELECTORS = {
+    STORAGE_SECTION: 'h4:has-text("Storage")',
+    CHECK_NEWS_BUTTON: 'button:has-text("Check NEWS")',
+    CLAIM_HOT_BUTTON: 'button:has-text("Claim HOT")',
+    CONTINUE_BUTTON: 'button:has-text("Continue with HOT")',
+    TIMER_TEXT: 'p:has-text("to fill")'
+};
 
-    let currentIndex = 0;
+async function initializeBrowserContext() {
+    return await chromium.launchPersistentContext('', browserConfig);
+}
 
-    for (const account of accounts) {
-        // Update progress
-        updateProgress(currentIndex + 1, accounts.length);
-        const claimTime = getClaimTime(account.name);
-        updateStatus('Starting operations');
+async function handleExtensionSetup(page, account) {
+    try {
+        await page.goto(EXTENSION_URL, { waitUntil: 'load' });
+        logSuccess(account.name, 'Extension loaded successfully!');
 
-        const context = await chromium.launchPersistentContext('', {
-            headless: isHeadless,
-            executablePath,
-            args: [
-                `--disable-extensions-except=${pathToExtension}`,
-                `--load-extension=${pathToExtension}`,
-                '--disable-gpu',
-                '--no-sandbox'
-            ],
-            viewport: { width, height },
-            slowMo: 3000
-        });
-
-        const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html';
-        const page = await context.newPage();
-
-        if (claimTime) {
-            const now = new Date();
-            const nowTimeString = new Date(now);
-            const claimTimeString = new Date(claimTime);
-
-            const isClaimTime = nowTimeString > claimTimeString;
-
-            if (!isClaimTime) {
-                logWarning(account.name, 'Skip the account');
-                currentIndex++;
-                await context.close();
-            }
+        // Close any non-extension pages
+        for (const p of page.context().pages()) {
+            if (p.url() !== EXTENSION_URL) await p.close();
         }
 
-        log(account.name, `Navigating to extension page...`);
-        try {
-            await page.goto(extensionUrl, { waitUntil: 'load' });
-            logSuccess(account.name, `Extension loaded successfully!`);
-        } catch (error) {
-            logError(account.name, `Failed to load extension: ${error.message}`);
-            await context.close();
-            continue; // Move to the next account
-        }
-
-        // Close all other pages except the extension
-        for (const p of context.pages()) {
-            if (p.url() !== extensionUrl) {
-                await p.close();
-            }
-        }
-
-        // Hide the video element (if present)
+        // Hide video element if present
         await page.locator('video').evaluate((video) => {
             video.style.zIndex = '-9999';
         });
+
+        return true;
+    } catch (error) {
+        logError(account.name, `Extension setup failed: ${error.message}`);
+        return false;
+    }
+}
+
+async function processAccount(account, index) {
+    updateProgress(index + 1, accounts.length);
+    updateStatus('Starting operations');
+
+    const claimTime = getClaimTime(account.name);
+    if (claimTime && new Date() < new Date(claimTime)) {
+        logWarning(account.name, 'Skipping account - claim time not reached');
+        return;
+    }
+
+    const context = await initializeBrowserContext();
+    const page = await context.newPage();
+
+    try {
+        if (!(await handleExtensionSetup(page, account))) return;
 
         // Store encrypted token
         await page.evaluate((encryptedToken) => {
             chrome.storage.local.set({ encrypted: encryptedToken });
         }, account.encrypted);
-        log(account.name, `🔐 Token stored successfully`);
+        log(account.name, '🔐 Token stored successfully');
 
         await page.reload();
-        log(account.name, 'Reloaded after setting token.');
+        log(account.name, 'Reloaded after setting token');
 
-        // Click "Storage"
-        await page.waitForSelector('h4:has-text("Storage")', { timeout: 15000 });
-        await page.locator('h4:has-text("Storage")').click();
-        log(account.name, `📂 Accessing Storage section`);
+        // Access Storage section
+        await page.waitForSelector(SELECTORS.STORAGE_SECTION, { timeout: OPERATION_TIMEOUT });
+        await page.locator(SELECTORS.STORAGE_SECTION).click();
+        log(account.name, '📂 Accessed Storage section');
 
-        // Check and click "Check NEWS"
-        await page.waitForSelector('button:has-text("Check NEWS")', { timeout: 15000 });
-        const checkNewsButton = page.locator('button:has-text("Check NEWS")');
-        const isCheckNewsButtonVisible = await checkNewsButton.isVisible();
-        const isCheckNewsButtonDisabled = await checkNewsButton.isDisabled();
+        // Check NEWS functionality
+        await handleButtonInteraction(page, account, SELECTORS.CHECK_NEWS_BUTTON, 'Check NEWS');
 
-        if (isCheckNewsButtonVisible && !isCheckNewsButtonDisabled) {
-            await checkNewsButton.click();
+        // Claim HOT functionality
+        await handleClaimProcess(page, account);
 
-            // Close all other pages except the extension
-            const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/hot';
-            for (const p of context.pages()) {
-                if (p.url() !== extensionUrl) {
-                    await p.close();
-                }
-            }
-            logSuccess(account.name, 'Clicked: Check NEWS!');
-        } else {
-            logWarning(account.name, '"Check NEWS" button is unavailable.');
-        }
-
-        // Check and click "Claim HOT"
-        await page.waitForSelector('button:has-text("Claim HOT")', { timeout: 15000 });
-        const claimHotButton = page.locator('button:has-text("Claim HOT")');
-        const isClaimHotButtonVisible = await claimHotButton.isVisible();
-        const isClaimHotButtonDisabled = await claimHotButton.isDisabled();
-
-        const continueButton = page.locator('button:has-text("Continue with HOT")');
-
-        if (isClaimHotButtonVisible && !isClaimHotButtonDisabled) {
-            await claimHotButton.click();
-            if ((await continueButton.isVisible()) && !(await continueButton.isDisabled())) {
-                await continueButton.click();
-            }
-            logSuccess(account.name, '🔥 Claimed successfully completed!');
-            await page.waitForTimeout(60000);
-        } else {
-            logWarning(account.name, '"Claim HOT" button is not active.');
-        }
-
-        const timeElement = await page.locator('p:has-text("to fill")').textContent();
+        // Update claim time
+        const timeElement = await page.locator(SELECTORS.TIMER_TEXT).textContent();
         const extractedTime = timeElement.match(/(\d+h \d+m)/)?.[0];
-
         updateClaimTime(account.name, extractedTime);
-        currentIndex++;
-        // Close browser context for this account
-
-        await page.waitForTimeout(5000);
+    } catch (error) {
+        logError(account.name, `Processing failed: ${error.message}`);
+    } finally {
+        await page.waitForTimeout(FINAL_DELAY);
         await context.close();
     }
-    updateStatus('completed');
-    console.log(chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------'));
+}
+
+async function handleButtonInteraction(page, account, selector, actionName) {
+    const button = page.locator(selector);
+    const isVisible = await button.isVisible();
+    const isDisabled = await button.isDisabled();
+
+    if (isVisible && !isDisabled) {
+        await button.click();
+        logSuccess(account.name, `Clicked: ${actionName}!`);
+
+        // Close any non-extension pages
+        const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/hot`;
+        for (const p of page.context().pages()) {
+            if (p.url() !== EXTENSION_URL) await p.close();
+        }
+        return true;
+    }
+
+    logWarning(account.name, `${actionName} button unavailable`);
+    return false;
+}
+
+async function handleClaimProcess(page, account) {
+    if (await handleButtonInteraction(page, account, SELECTORS.CLAIM_HOT_BUTTON, 'Claim HOT')) {
+        const continueButton = page.locator(SELECTORS.CONTINUE_BUTTON);
+        if ((await continueButton.isVisible()) && !(await continueButton.isDisabled())) {
+            await continueButton.click();
+        }
+        logSuccess(account.name, '🔥 Claim process completed');
+        await page.waitForTimeout(POST_CLAIM_DELAY);
+    }
+}
+
+(async () => {
+    try {
+        for (const [index, account] of accounts.entries()) {
+            await processAccount(account, index);
+        }
+        updateStatus('Completed');
+        console.log(
+            chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------')
+        );
+    } catch (error) {
+        logError('Global', `Fatal error: ${error.message}`);
+        process.exit(1);
+    }
 })();
