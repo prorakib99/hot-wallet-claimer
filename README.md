@@ -96,8 +96,20 @@ node -v && npm -v
     ```javascript
     export const accounts = [
         {
-            name: 'Main Wallet',
-            encrypted: 'your_copied_token_here'
+            name: 'Account-1',
+            encrypted: ''
+        },
+        {
+            name: 'Account-2',
+            encrypted: ''
+        },
+        {
+            name: 'Account-3',
+            encrypted: ''
+        },
+        {
+            name: 'Account-4',
+            encrypted: ''
         }
     ];
     ```
