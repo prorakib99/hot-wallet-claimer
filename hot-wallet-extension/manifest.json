@@ -1,0 +1,41 @@
+{
+   "action": {
+      "default_popup": "frame.html"
+   },
+   "background": {
+      "service_worker": "service-worker-loader.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "assets/contentScript.ts-loader-BEJzhUjv.js" ],
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "host_permissions": [ "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "logo.png",
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png",
+      "512": "logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAukOLGtZw8LFzgXjRPwPUrRZR8vRm7OyzlzofXSQfwW6UGMeg6pMMrfdpuOn2rhSqrIRyWBS8ch8eeZNdTx4e6tmgzArgxe8E5mTJpOw36yiXmZKnr1JQxxQkBTh3XPqXWWix5HWJjtIodea4NAnsWJv8oc8J7gCIussPEroqV1PuJclXmXMrJK2HFNy+8T9bPSAeHclrhkxzYz4bGyOPquVs8QuRJG5f4YoYaqV8Cga8w9Z0ZWzQo9pFIpUHlCgDFrFXlCyXK8VS7BkrDg2CqWrtY91EuxguNuUUBYASzcvtQghKGI9Y7HVsVZP00vIz4tHHHFVJqRrQxiGjsaQHoQIDAQAB",
+   "manifest_version": 3,
+   "name": "HOT Wallet",
+   "permissions": [ "storage", "tabs", "activeTab", "sidePanel", "contextMenus", "scripting" ],
+   "side_panel": {
+      "default_path": "index.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.19",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "frame.html", "extension-scripts/index.js", "extension-scripts/solana.js" ],
+      "use_dynamic_url": false
+   }, {
+      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
+      "resources": [ "assets/bowser-Rsyu5S1p.js", "assets/browser-polyfill-CP3dh7Ce.js", "assets/contentScript.ts-BEyk0a0E.js" ],
+      "use_dynamic_url": false
+   } ]
+}

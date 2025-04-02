@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOT Wallet</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        min-width: 400px;
+        min-height: 600px;
+        background-color: #141518;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      iframe {
+        width: 400px;
+        height: 100%;
+        max-height: 700px;
+        border: 1px solid #ffffff1a;
+        border-radius: 16px;
+      }
+
+      @media (max-width: 600px) {
+        iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          border: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      import browser from "webextension-polyfill";
+      browser.runtime.onMessage.addListener((data) => {
+        const { $hot, method, id } = data;
+        if ($hot !== "wallet:ping" || method !== "exist") return;
+        browser.runtime.sendMessage({ $hot: "wallet:pong", id, value: method });
+      });
+    </script>
+
+    <iframe src="/index.html"></iframe>
+  </body>
+</html>
