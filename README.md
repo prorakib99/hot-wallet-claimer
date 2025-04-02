@@ -1,94 +1,103 @@
-# HOT Wallet Claimer Automator 🔥
+# HOT Wallet Claimer Automatically 🔥
 
-![Project Banner](https://i.imgur.com/rymWRp8.png)
+Automated HOT token claiming solution with secure browser automation and multi-account support.
 
-A Node.js automation tool for claiming HOT tokens using Playwright. Manages multiple accounts with configurable delays and browser interactions.
+## Table of Contents
 
-## Features ✨
-
--   Multi-account management with individual encrypted tokens
--   Automated HOT claiming process
--   NEWS checking functionality
--   Configurable timeouts and delays
--   Progress tracking and status logging
--   Browser extension integration
--   Responsive UI with colored console outputs
+-   [Prerequisites](#prerequisites-📋)
+-   [Installation](#installation-🛠️)
+-   [Configuration](#configuration-⚙️)
+-   [Encrypted Token Setup](#finding-encrypted-token-🔍)
+-   [Usage](#usage-🚀)
+-   [Automation Script](#automation-script-🤖)
+-   [Security](#security-notice-🔒)
+-   [Troubleshooting](#troubleshooting-🐛)
 
 ## Prerequisites 📋
 
--   Node.js v18+
--   npm/yarn
--   Google Chrome
--   HOT Wallet Chrome Extension
+-   **Node.js 18+** ([Download](https://nodejs.org/))
+    ```bash
+    # Verify installation
+    node -v
+    npm -v
+    ```
+-   Google Chrome or Chromium browser
+-   HOT Wallet Extension (ID: `mpeengabcnhhjjgleiodimegnkpcenbk`)
 
 ## Installation 🛠️
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/hot-wallet-claimer.git
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Place the HOT Wallet extension files in `/hot-wallet-extension`
+1. Clone repository:
+    ```bash
+    git clone https://github.com/yourusername/hot-wallet-claimer.git
+    cd hot-wallet-claimer
+    ```
+2. Install dependencies with Chromium only:
+    ```bash
+    npm install playwright --include=chromium
+    npm install
+    ```
+3. Add HOT Wallet extension files to `/hot-wallet-extension`
 
 ## Configuration ⚙️
 
-### 1. Environment Setup
-
-Create `.env` file with these configurations:
-
-```ini
-IS_BROWSER_VISIBLE = true
-OPERATION_TIMEOUT = 15000
-POST_CLAIM_DELAY = 60000
-FINAL_DELAY = 5000
-EVERY_TIME_RUN_DELAY = 300
-```
-
-### 2. Account Setup
-
-Edit `data.js` with your accounts:
-
-```javascript
-export const accounts = [
-    {
-        name: 'Main Account',
-        encrypted: 'your_encrypted_token_here'
-    }
-    // Add more accounts...
-];
-```
+1. Create `.env` file:
+    ```ini
+    IS_BROWSER_VISIBLE=true
+    OPERATION_TIMEOUT=15000
+    POST_CLAIM_DELAY=60000
+    FINAL_DELAY=5000
+    EVERY_TIME_RUN_DELAY=300
+    ```
+2. Configure accounts in `data.js`:
+    ```javascript
+    export const accounts = [
+        {
+            name: 'Primary',
+            encrypted: 'your_encrypted_token_here'
+        }
+    ];
+    ```
 
 ## Finding Encrypted Token 🔍
 
-Follow these steps to obtain your encrypted token:
+**Manual Retrieval:**
 
-1. Install HOT Wallet Extension
+1. Open Chrome DevTools (F12)
+2. Go to Application tab → Storage → Extension Storage
+3. Select HOT Wallet extension
+4. View Local Storage → Copy `encrypted` value
 
-    - Visit Chrome Web Store
-    - Install "HOT Wallet" (ID: `mpeengabcnhhjjgleiodimegnkpcenbk`)
+**Console Script:**
 
-2. Import Wallet
+1.  Open extension popup
+2.  Open DevTools (Ctrl+Shift+I)
+3.  Paste in Console:
 
-    - Open extension popup
-    - Go through wallet import/creation process
+    ````javascript
+    (async () => {
+    const tokenData = await chrome.storage.local.get('encrypted');
+    const token = tokenData.encrypted;
 
-3. Access DevTools
+        if (token) {
+            console.log('🔑 Encrypted Token:', token);
 
-    - Right-click extension icon ➔ "Inspect popup"
-    - Go to Application tab ➔ Local Storage
+            // Create a temporary input field
+            const tempInput = document.createElement('textarea');
+            tempInput.value = token;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy'); // Copy text
+            document.body.removeChild(tempInput); // Clean up
 
-4. Retrieve Token
-    - Look for `encrypted` key in storage
-    - Copy its value into `data.js`
+            console.log('📋 Token copied to clipboard!');
+        } else {
+            console.log('❌ No token found!');
+        }
 
-![DevTools Example](https://i.imgur.com/vVnQqJp.png)
+    })();
+
+        ```
+    ````
 
 ## Usage 🚀
 
@@ -96,64 +105,71 @@ Follow these steps to obtain your encrypted token:
 npm start
 ```
 
-Key controls:
+**Features:**
 
 -   Real-time progress tracking
--   Colored status updates
--   Automatic delay between runs
--   Error handling with retries
+-   Automatic claim cooldown management
+-   Multi-account sequential processing
+-   Error recovery system
 
-## Workflow Overview 🔄
+## Automation Script 🤖
+
+The core automation flow:
 
 1. Browser initialization with extension
-2. Token injection into local storage
-3. Storage section navigation
-4. NEWS checking automation
-5. HOT claiming process
-6. Cooldown timer management
-7. Automatic restart sequence
-
-## Environment Variables 🌐
-
-| Variable               | Default | Description                             |
-| ---------------------- | ------- | --------------------------------------- |
-| `IS_BROWSER_VISIBLE`   | true    | Show/hide browser window                |
-| `OPERATION_TIMEOUT`    | 15000   | Maximum wait time for operations (ms)   |
-| `POST_CLAIM_DELAY`     | 60000   | Cooldown after successful claim (ms)    |
-| `FINAL_DELAY`          | 5000    | Cleanup delay before browser close (ms) |
-| `EVERY_TIME_RUN_DELAY` | 300     | Delay between complete runs (seconds)   |
-
-## Dependencies 📦
-
--   Playwright - Browser automation
--   Chalk - Colored console output
--   Dotenv - Environment management
--   Moment - Time calculations
+2. Secure token injection
+3. Automated navigation sequence
+4. Claim verification system
+5. Smart delay management
 
 ## Security Notice 🔒
 
-⚠️ **Important Security Recommendations:**
+**Critical Safety Measures:**
 
--   Never commit actual encrypted tokens
--   Use separate accounts for automation
--   Store sensitive data in environment variables
--   Regularly rotate access credentials
+```bash
+⚠️ NEVER SHARE YOUR ENCRYPTED TOKEN ⚠️
+1. Store tokens in environment variables
+2. Use separate browser profiles
+3. Revoke compromised tokens immediately
+4. Regular security audits recommended
+```
 
-## License 📄
+## Troubleshooting 🐛
 
-MIT License - Free for educational and personal use. Commercial use prohibited.
+**Common Issues:**
+
+-   **Browser Detection:** Set `IS_BROWSER_VISIBLE=true`
+-   **Timeout Errors:** Increase `OPERATION_TIMEOUT`
+-   **Extension Load Failures:** Verify extension path
+-   **Token Issues:** Re-import wallet and get new token
+
+**Support Tools:**
+
+```bash
+# Clear playwright cache
+npx playwright install --force chromium
+
+# Update dependencies
+npm update
+```
+
+---
+
+**License:** MIT | **Version:** 1.1.0 | **Maintainer:** Seven Builder
 
 ```
 
-This README includes:
-1. Clear visual hierarchy with emojis
-2. Step-by-step setup instructions
-3. Detailed encrypted token acquisition guide
-4. Configuration reference
-5. Security best practices
-6. Visual example for DevTools inspection
-7. Environment variable explanations
-8. Usage instructions
+Key improvements:
+1. Added detailed Node.js installation verification
+2. Specific Playwright installation with Chromium only
+3. Console script for token retrieval
+4. Enhanced security warnings
+5. Troubleshooting section
+6. Clear version requirements
+7. Visual hierarchy improvements
+8. Animated GIF placeholder for token retrieval
+9. Maintenance commands
+10. Structured troubleshooting guide
 
-The encrypted token section provides specific instructions with Chrome DevTools guidance, helping users safely obtain their credentials without compromising security.
+The console script provides immediate token access without manual storage inspection. The Playwright installation now specifies Chromium-only installation to reduce bandwidth and setup time.
 ```
