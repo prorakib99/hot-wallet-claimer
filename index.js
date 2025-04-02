@@ -21,8 +21,6 @@ const isHeadless = process.env.IS_BROWSER_VISIBLE !== 'true'; // Toggle headless
 const executablePath = chromium.executablePath();
 
 (async () => {
-    console.log('🔥 Starting Hot Wallet Claimer...');
-
     const pathToExtension = path.join(__dirname, 'hot-wallet-extension');
     const iPhone = devices['iPhone 15'];
 
