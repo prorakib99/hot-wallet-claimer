@@ -1,4 +1,4 @@
 node_modules
 hot-wallet-extension
-data.js
+# data.js
 account-info.json
