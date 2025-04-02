@@ -91,7 +91,7 @@ node -v && npm -v
     })();
     ```
 
-    6. Configure in `data.js`:
+5. Configure in `data.js`:
 
     ```javascript
     export const accounts = [
