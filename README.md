@@ -57,7 +57,7 @@ npm install
 1. Open Chrome Extension DevTools (F12)
 2. Navigate to:
     ```plaintext
-    Application → Storage → Extension Storage → HOT Wallet
+    Application → Storage → Extension Storage → Local → encrypted
     ```
 3. Execute secure copy script:
 
