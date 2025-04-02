@@ -25,9 +25,10 @@ const EXTENSION_PATH = path.join(
 );
 const DEVICE_PROFILE = devices['iPhone 15'];
 const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/index.html`;
-const OPERATION_TIMEOUT = 15000;
-const POST_CLAIM_DELAY = 60000;
-const FINAL_DELAY = 5000;
+const OPERATION_TIMEOUT = parseInt(process.env.OPERATION_TIMEOUT) || 15000;
+const POST_CLAIM_DELAY = parseInt(process.env.POST_CLAIM_DELAY) || 60000;
+const FINAL_DELAY = parseInt(process.env.FINAL_DELAY) || 5000;
+const EVERY_TIME_RUN_DELAY = parseInt(process.env.EVERY_TIME_RUN_DELAY) || 300;
 
 // Browser configuration
 const browserConfig = {
@@ -135,10 +136,13 @@ async function handleButtonInteraction(page, account, selector, actionName) {
         await button.click();
         logSuccess(account.name, `Clicked: ${actionName}!`);
 
-        // Close any non-extension pages
-        const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/hot`;
-        for (const p of page.context().pages()) {
-            if (p.url() !== EXTENSION_URL) await p.close();
+        if (actionName === 'Check NEWS') {
+            await page.waitForTimeout(2000);
+            // Close any non-extension pages
+            const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/hot`;
+            for (const p of page.context().pages()) {
+                if (p.url() !== EXTENSION_URL) await p.close();
+            }
         }
         return true;
     }
@@ -158,17 +162,28 @@ async function handleClaimProcess(page, account) {
     }
 }
 
-(async () => {
-    try {
-        for (const [index, account] of accounts.entries()) {
-            await processAccount(account, index);
+async function main() {
+    while (true) {
+        try {
+            for (const [index, account] of accounts.entries()) {
+                await processAccount(account, index);
+            }
+            updateStatus('Completed');
+            console.log(
+                chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------')
+            );
+        } catch (error) {
+            logError('Global', `Fatal error: ${error.message}`);
         }
-        updateStatus('Completed');
-        console.log(
-            chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------')
-        );
-    } catch (error) {
-        logError('Global', `Fatal error: ${error.message}`);
-        process.exit(1);
+        console.log('\n');
+        for (let i = EVERY_TIME_RUN_DELAY; i > 0; i--) {
+            process.stdout.write(
+                chalk.green(`\rNext run in: ⏳ ${chalk.red.bold(i)}s remaining... `)
+            ); // Keep the label intact
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+        }
+        console.log('\nStarting next run...\n'); // Move to a new line after countdown
     }
-})();
+}
+
+main();
