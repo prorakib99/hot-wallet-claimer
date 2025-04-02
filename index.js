@@ -29,14 +29,12 @@ const executablePath = chromium.executablePath();
     const width = iPhone.viewport.width;
     const height = iPhone.viewport.height;
 
-    let index = 0;
+    let currentIndex = 0;
 
     for (const account of accounts) {
         // Update progress
-        updateProgress(index + 1, accounts.length);
+        updateProgress(currentIndex + 1, accounts.length);
         updateStatus('Starting operations');
-
-        log(account.name, `🔄 Processing account...`);
 
         const context = await chromium.launchPersistentContext('', {
             headless: isHeadless,
@@ -110,7 +108,7 @@ const executablePath = chromium.executablePath();
         const isClaimHotButtonDisabled = await claimHotButton.isDisabled();
 
         if (isClaimHotButtonVisible && !isClaimHotButtonDisabled) {
-            // await claimHotButton.click();
+            await claimHotButton.click();
             logSuccess(account.name, '🔥 HOT Token claimed successfully!');
             await page.waitForTimeout(60000);
         } else {
@@ -121,7 +119,7 @@ const executablePath = chromium.executablePath();
         const extractedTime = timeElement.match(/(\d+h \d+m)/)?.[0];
 
         updateClaimTime(account.name, extractedTime);
-        index++;
+        currentIndex++;
         // Close browser context for this account
         await context.close();
         logSuccess(account.name, `Account processing complete!`);

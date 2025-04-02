@@ -34,7 +34,7 @@ const theme = {
     error: chalk.redBright.bold,
     info: chalk.cyan,
     highlight: gradient('#00B4D8', '#0077B6'),
-    timestamp: chalk.gray.dim
+    timestamp: chalk.gray
 };
 
 // State management
@@ -48,8 +48,8 @@ const accountLogs = [];
 const createTable = () => new CliTable3(tableConfig);
 
 export const log = (accountName = '', message, type = 'info') => {
-    const timestamp = theme.timestamp(`[${new Date().toLocaleTimeString()}]`);
-    const formattedAccount = theme.highlight(accountName.padEnd(15));
+    const timestamp = theme.timestamp(`${new Date().toLocaleTimeString()}`);
+    const formattedAccount = theme.highlight(accountName.padEnd(10));
 
     const messageStyles = {
         success: `✅ ${theme.success(message)}`,
