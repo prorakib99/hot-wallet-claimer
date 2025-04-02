@@ -52,9 +52,17 @@ const executablePath = chromium.executablePath();
         const page = await context.newPage();
 
         if (claimTime) {
-            logWarning(account.name, 'Skip the account');
-            currentIndex++;
-            await context.close();
+            const now = new Date();
+            const nowTimeString = new Date(now);
+            const claimTimeString = new Date(claimTime);
+
+            const isClaimTime = nowTimeString > claimTimeString;
+
+            if (!isClaimTime) {
+                logWarning(account.name, 'Skip the account');
+                currentIndex++;
+                await context.close();
+            }
         }
 
         log(account.name, `Navigating to extension page...`);
