@@ -53,9 +53,9 @@ export const log = (accountName = '', message, type = 'info') => {
 
     const messageStyles = {
         success: `✅ ${theme.success(message)}`,
-        warning: `⚠️  ${theme.warning(message)}`,
+        warning: `⚠️ ${theme.warning(message)}`,
         error: `❌ ${theme.error(message)}`,
-        info: `ℹ️  ${theme.info(message)}`
+        info: `ℹ️ ${theme.info(message)}`
     };
 
     const logEntry = [timestamp, formattedAccount, messageStyles[type] || message];
@@ -87,9 +87,9 @@ const renderInterface = () => {
     console.clear();
 
     // Render header
-    console.log(theme.highlight('\n╔══════════════════════════════════════════════════╗'));
-    console.log(theme.highlight(' 🔥 HOT WALLET CLAIMER v1.0 - MADE BY SEVEN BUILDER  '));
-    console.log(theme.highlight('╚══════════════════════════════════════════════════╝'));
+    console.log(theme.highlight('\n╔══════════════════════════════════════════════════════╗'));
+    console.log(theme.highlight('   🔥 HOT WALLET CLAIMER v1.0 - MADE BY SEVEN BUILDER  '));
+    console.log(theme.highlight('╚══════════════════════════════════════════════════════╝'));
 
     // Render main content
     console.log(table.toString());

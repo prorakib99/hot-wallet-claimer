@@ -81,7 +81,7 @@ const executablePath = chromium.executablePath();
         log(account.name, `🔐 Token stored successfully`);
 
         await page.reload();
-        log(account.name, '🔄 Page reloaded after setting token.');
+        log(account.name, 'Reloaded after setting token.');
 
         // Click "Storage"
         await page.waitForSelector('h4:has-text("Storage")', { timeout: 15000 });
@@ -96,6 +96,14 @@ const executablePath = chromium.executablePath();
 
         if (isCheckNewsButtonVisible && !isCheckNewsButtonDisabled) {
             await checkNewsButton.click();
+
+            // Close all other pages except the extension
+            const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/hot';
+            for (const p of context.pages()) {
+                if (p.url() !== extensionUrl) {
+                    await p.close();
+                }
+            }
             logSuccess(account.name, 'Clicked: Check NEWS!');
         } else {
             logWarning(account.name, '"Check NEWS" button is unavailable.');
@@ -121,9 +129,10 @@ const executablePath = chromium.executablePath();
         updateClaimTime(account.name, extractedTime);
         currentIndex++;
         // Close browser context for this account
+        logSuccess(account.name, `Account processing completed!`);
+        await page.waitForTimeout(5000);
         await context.close();
-        logSuccess(account.name, `Account processing complete!`);
     }
-
+    updateStatus('completed');
     console.log(chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------'));
 })();
