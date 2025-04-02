@@ -4,17 +4,21 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { accounts } from './data.js';
 import chalk from 'chalk';
+import { updateClaimTime } from './utils/activity.js';
+import {
+    log,
+    logError,
+    logSuccess,
+    logWarning,
+    updateProgress,
+    updateStatus
+} from './utils/logger.js';
 
 dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // Fix for __dirname in ESM
 const isHeadless = process.env.IS_BROWSER_VISIBLE !== 'true'; // Toggle headless mode
 const executablePath = chromium.executablePath();
-
-const log = (accountName = '', message) => {
-    const timestamp = chalk.gray(`[${new Date().toLocaleTimeString()}]`);
-    console.log(`${timestamp} [${chalk.green(accountName)}] ${chalk.gray(message)}`);
-};
 
 (async () => {
     console.log('🔥 Starting Hot Wallet Claimer...');
@@ -25,14 +29,12 @@ const log = (accountName = '', message) => {
     const width = iPhone.viewport.width;
     const height = iPhone.viewport.height;
 
+    let index = 0;
+
     for (const account of accounts) {
-        console.log(
-            chalk.green(
-                `\n--------------------[Account: ${chalk.green.bold(
-                    account.name
-                )}]--------------------`
-            )
-        );
+        // Update progress
+        updateProgress(index + 1, accounts.length);
+        updateStatus('Starting operations');
 
         log(account.name, `🔄 Processing account...`);
 
@@ -52,12 +54,12 @@ const log = (accountName = '', message) => {
         const extensionUrl = 'chrome-extension://mpeengabcnhhjjgleiodimegnkpcenbk/index.html';
         const page = await context.newPage();
 
-        log(account.name, `🌍 Navigating to extension page...`);
+        log(account.name, `Navigating to extension page...`);
         try {
             await page.goto(extensionUrl, { waitUntil: 'load' });
-            log(account.name, `✅ Extension loaded successfully!`);
+            logSuccess(account.name, `Extension loaded successfully!`);
         } catch (error) {
-            log(account.name, `❌ Failed to load extension: ${error.message}`);
+            logError(account.name, `Failed to load extension: ${error.message}`);
             await context.close();
             continue; // Move to the next account
         }
@@ -96,9 +98,9 @@ const log = (accountName = '', message) => {
 
         if (isCheckNewsButtonVisible && !isCheckNewsButtonDisabled) {
             await checkNewsButton.click();
-            log(account.name, '📢 Clicked: Check NEWS!');
+            logSuccess(account.name, 'Clicked: Check NEWS!');
         } else {
-            log(account.name, '⚠ "Check NEWS" button is unavailable.');
+            logWarning(account.name, '"Check NEWS" button is unavailable.');
         }
 
         // Check and click "Claim HOT"
@@ -108,16 +110,21 @@ const log = (accountName = '', message) => {
         const isClaimHotButtonDisabled = await claimHotButton.isDisabled();
 
         if (isClaimHotButtonVisible && !isClaimHotButtonDisabled) {
-            await claimHotButton.click();
-            log(account.name, '🔥 HOT Token claimed successfully!');
+            // await claimHotButton.click();
+            logSuccess(account.name, '🔥 HOT Token claimed successfully!');
             await page.waitForTimeout(60000);
         } else {
-            log(account.name, '⚠ "Claim HOT" button is not active.');
+            logWarning(account.name, '"Claim HOT" button is not active.');
         }
 
+        const timeElement = await page.locator('p:has-text("to fill")').textContent();
+        const extractedTime = timeElement.match(/(\d+h \d+m)/)?.[0];
+
+        updateClaimTime(account.name, extractedTime);
+        index++;
         // Close browser context for this account
         await context.close();
-        log(account.name, `✅ Account processing complete!`);
+        logSuccess(account.name, `Account processing complete!`);
     }
 
     console.log(chalk.green('\n----------🎉 All accounts processed successfully! 🎉----------'));

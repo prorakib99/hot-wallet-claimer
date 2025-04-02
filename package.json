@@ -10,7 +10,7 @@
         "chalk": "^5.4.1",
         "cli-table3": "^0.6.5",
         "dotenv": "^16.4.7",
-        "figlet": "^1.8.0",
+        "gradient-string": "^3.0.0",
         "moment": "^2.30.1",
         "playwright": "^1.51.1"
     },
