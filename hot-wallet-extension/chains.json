@@ -1,6 +1,9 @@
 {
-  "version": 1,
-  "signature": "",
+  "version": 27,
+  "signature": "d12e4485916cb078e8bed1a455ced81e1ff8fd624ef5644bfffce5091ce1263ea3077984679dba963647538b65bfb671872ce2b2cc3121f055c6ceaa247b9c0f",
+  "ab": {
+    "merkle_mev": true
+  },
   "chains": [
     {
       "id": 0,
@@ -15,7 +18,7 @@
       "isEvm": false,
       "explorer": "https://hotscan.org",
       "explorerTx": "https://hotscan.org/tx",
-      "exporerToken": "https://hotscan.org/token",
+      "explorerToken": "https://hotscan.org/token",
       "system": true
     },
     {
@@ -31,14 +34,21 @@
       "isEvm": false,
       "explorer": "",
       "explorerTx": "",
-      "exporerToken": "",
+      "explorerToken": "",
       "isClosed": true,
       "system": true
     },
     {
       "id": 1100,
-      "rpc": ["https://mainnet.sorobanrpc.com", "https://stellar-rpc.hotdao.ai", "https://api0.herewallet.app/api/v1/evm/rpc/1100"],
-      "api": ["https://horizon.stellar.org", "https://stellar-horizon.hotdao.ai"],
+      "rpc": [
+        "https://api0.herewallet.app/api/v1/evm/rpc/1100",
+        "https://stellar-rpc.hotdao.ai",
+        "https://mainnet.sorobanrpc.com"
+      ],
+      "api": [
+        "https://horizon.stellar.org",
+        "https://stellar-horizon.hotdao.ai"
+      ],
       "icon": "https://tgapp.herewallet.app/images/chains/xlm.svg",
       "wrapToken": "",
       "name": "Stellar",
@@ -49,13 +59,17 @@
       "isEvm": false,
       "explorer": "https://stellar.expert/explorer/public/account",
       "explorerTx": "https://stellar.expert/explorer/public/tx",
-      "exporerToken": "https://stellar.expert/explorer/public/contract",
+      "explorerToken": "https://stellar.expert/explorer/public/contract",
       "system": true
     },
     {
       "id": 999,
-      "rpc": ["https://api.trongrid.io"],
-      "api": ["https://api.trongrid.io"],
+      "rpc": [
+        "https://api.trongrid.io"
+      ],
+      "api": [
+        "https://api.trongrid.io"
+      ],
       "icon": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tron/info/logo.png",
       "wrapToken": "TNUC9Qb1rRpS5CbWLmNMxXBjyFoydXjWFR",
       "name": "TRON",
@@ -66,14 +80,26 @@
       "isEvm": false,
       "explorer": "https://tronscan.org/#/address",
       "explorerTx": "https://tronscan.org/#/transaction",
-      "exporerToken": "https://tronscan.org/#/token20",
+      "explorerToken": "https://tronscan.org/#/token20",
       "system": true
     },
     {
       "id": 1001,
-      "submitter": ["https://api0.herewallet.app/api/v1/evm/helius/staked", "https://api0.herewallet.app/api/v1/evm/rpc/1001", "https://api0.herewallet.app/api/v1/evm/everstake-sol"],
-      "rpc": ["https://api0.herewallet.app/api/v1/evm/everstake-sol", "https://solana-rpc.publicnode.com", "https://api0.herewallet.app/api/v1/evm/rpc/1001"],
-      "api": ["https://api0.herewallet.app/api/v1/evm/helius/rpc-mainnet", "https://api0.herewallet.app/api/v1/evm/everstake-sol"],
+      "submitter": [
+        "https://api0.herewallet.app/api/v1/evm/helius/staked",
+        "https://api0.herewallet.app/api/v1/evm/helius/rpc-mainnet",
+        "https://api0.herewallet.app/api/v1/evm/rpc/1001",
+        "https://api0.herewallet.app/api/v1/evm/everstake-sol"
+      ],
+      "rpc": [
+        "https://api0.herewallet.app/api/v1/evm/everstake-sol",
+        "https://solana-rpc.publicnode.com",
+        "https://api0.herewallet.app/api/v1/evm/rpc/1001"
+      ],
+      "api": [
+        "https://api0.herewallet.app/api/v1/evm/helius/rpc-mainnet",
+        "https://api0.herewallet.app/api/v1/evm/everstake-sol"
+      ],
       "icon": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png",
       "wrapToken": "So11111111111111111111111111111111111111112",
       "name": "Solana",
@@ -84,7 +110,7 @@
       "isEvm": false,
       "explorer": "https://solscan.io/account",
       "explorerTx": "https://solscan.io/tx",
-      "exporerToken": "https://solscan.io/token",
+      "explorerToken": "https://solscan.io/token",
       "system": true
     },
     {
@@ -98,7 +124,9 @@
         "https://nearrpc.aurora.dev",
         "https://archival-rpc.mainnet.near.org"
       ],
-      "api": ["https://api.nearblocks.io"],
+      "api": [
+        "https://api.nearblocks.io"
+      ],
       "icon": "https://storage.herewallet.app/ft/1010:native.png",
       "wrapToken": "wrap.near",
       "name": "NEAR",
@@ -109,7 +137,7 @@
       "isEvm": false,
       "explorer": "https://nearblocks.io/address",
       "explorerTx": "https://nearblocks.io/txns",
-      "exporerToken": "https://nearblocks.io/token",
+      "explorerToken": "https://nearblocks.io/token",
       "system": true
     },
     {
@@ -125,12 +153,18 @@
       "isEvm": false,
       "explorer": "https://tonviewer.com",
       "explorerTx": "https://tonviewer.com/transaction",
-      "exporerToken": "https://tonviewer.com",
+      "explorerToken": "https://tonviewer.com",
       "system": true
     },
     {
       "id": 1,
-      "rpc": ["https://rpc.ankr.com/eth", "https://cloudflare-eth.com", "https://ethereum.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://eth.meowrpc.com",
+        "https://ethereum.rpc.subquery.network/public",
+        "https://ethereum-rpc.publicnode.com",
+        "https://eth-mainnet.public.blastapi.io",
+        "https://cloudflare-eth.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/80978f3676fc2dfbd3d874a9421004fb7dea7616481bda53bf68f44e21c3ce0c.png",
       "wrapToken": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       "name": "Ethereum",
@@ -170,7 +204,16 @@
     },
     {
       "id": 42161,
-      "rpc": ["https://arb1.arbitrum.io/rpc", "https://endpoints.omniatech.io/v1/arbitrum/one/public", "https://arbitrum.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://endpoints.omniatech.io/v1/arbitrum/one/public",
+        "https://arbitrum.blockpi.network/v1/rpc/public",
+        "https://api.zan.top/arb-one",
+        "https://arb-pokt.nodies.app",
+        "https://arbitrum.meowrpc.com",
+        "https://1rpc.io/arb",
+        "https://arb1.lava.build"
+      ],
       "icon": "https://storage.herewallet.app/upload/1606b00068f729f48de00d2575940484f6a0dc83351702a9fb8b0139e41dc00b.jpeg",
       "wrapToken": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
       "name": "Arbitrum",
@@ -180,9 +223,9 @@
       "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://arbiscan.io/address",
+      "explorer": "https://arbiscan.io",
       "explorerTx": "https://arbiscan.io/tx",
-      "explorerToken": "https://arbiscan.io/tokens",
+      "explorerToken": "https://arbiscan.io/token",
       "isLayer2": true,
       "tokens": [
         "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
@@ -213,7 +256,11 @@
     },
     {
       "id": 43114,
-      "rpc": ["https://avalanche-c-chain-rpc.publicnode.com", "https://api.avax.network/ext/bc/C/rpc", "https://avalanche.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://avalanche-c-chain-rpc.publicnode.com",
+        "https://api.avax.network/ext/bc/C/rpc",
+        "https://avalanche.blockpi.network/v1/rpc/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/fa027e81ebb6957ebd8feada21b5374b15aa090e1747fae131a1e061d3d7e6da.jpg",
       "wrapToken": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
       "name": "Avalanche",
@@ -250,17 +297,22 @@
     },
     {
       "id": 8453,
-      "rpc": ["https://rpc.ankr.com/base", "https://mainnet.base.org", "https://base.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://base.meowrpc.com",
+        "https://base.kolibr.io/?api_key=53fa8be5-26b0-4199-8bd3-1154793d7346&rev_recv=0x78eFa4004c5Da42C928D92bE3CD0183E3Ea306EB",
+        "https://rpc.ankr.com/base",
+        "https://mainnet.base.org",
+        "https://base.blockpi.network/v1/rpc/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/c18cd124b566128035743ace1826a6dd81f24da0657def31b4eaec80f3b41c70.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Base",
       "short": "BASE",
       "key": "base",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://basescan.org/address",
+      "explorer": "https://basescan.org",
       "explorerTx": "https://basescan.org/tx",
       "explorerToken": "https://basescan.org/tokens",
       "isLayer2": true,
@@ -290,8 +342,16 @@
     },
     {
       "id": 56,
-      "submitter": ["https://bsc.meowrpc.com/?api_key=yo_mister"],
-      "rpc": ["https://binance.llamarpc.com", "https://bsc-rpc.publicnode.com", "https://bsc-dataseed.bnbchain.org"],
+      "submitter": [
+        "https://bsc.meowrpc.com/?api_key=yo_mister"
+      ],
+      "rpc": [
+        "https://bsc.meowrpc.com",
+        "https://bsc.kolibr.io/?api_key=53fa8be5-26b0-4199-8bd3-1154793d7346&rev_recv=0x78eFa4004c5Da42C928D92bE3CD0183E3Ea306EB",
+        "https://binance.llamarpc.com",
+        "https://bsc-rpc.publicnode.com",
+        "https://bsc-dataseed.bnbchain.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/b82ec85a318b8d8f1f12b25a0e21cd475208014f15952daf317b876812562530.png",
       "wrapToken": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
       "name": "BNB",
@@ -300,7 +360,7 @@
       "symbol": "BNB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://bscscan.com/address",
+      "explorer": "https://bscscan.com",
       "explorerTx": "https://bscscan.com/tx",
       "explorerToken": "https://bscscan.com/tokens",
       "isLayer2": false,
@@ -328,17 +388,19 @@
     },
     {
       "id": 59144,
-      "rpc": ["https://linea.drpc.org", "https://linea-rpc.publicnode.com"],
+      "rpc": [
+        "https://linea.drpc.org",
+        "https://linea-rpc.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/2e41ad07f27354babc3a3f8931e7a4abb7b6ee6cd80bf8f2830b70b4a662d729.jpg",
       "wrapToken": "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f",
       "name": "Linea",
       "short": "LINEA",
       "key": "linea",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://linea.socialscan.io/address",
+      "explorer": "https://linea.socialscan.io",
       "explorerTx": "https://linea.socialscan.io/tx",
       "explorerToken": "https://linea.socialscan.io/tokens",
       "isLayer2": true,
@@ -364,17 +426,22 @@
     },
     {
       "id": 10,
-      "rpc": ["https://optimism-rpc.publicnode.com", "https://op-pokt.nodies.app", "https://mainnet.optimism.io", "https://optimism.llamarpc.com", "https://optimism.drpc.org"],
+      "rpc": [
+        "https://optimism-rpc.publicnode.com",
+        "https://op-pokt.nodies.app",
+        "https://mainnet.optimism.io",
+        "https://optimism.llamarpc.com",
+        "https://optimism.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/d183a3c76b584552888cb8b5a4dfb849572592d7c7f473fe43bcc5c2adae9a50.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Optimism",
       "short": "OPTIMISM",
       "key": "op",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://optimistic.etherscan.io/address",
+      "explorer": "https://optimistic.etherscan.io",
       "explorerTx": "https://optimistic.etherscan.io/tx",
       "explorerToken": "https://optimistic.etherscan.io/tokens",
       "isLayer2": true,
@@ -404,7 +471,12 @@
     },
     {
       "id": 137,
-      "rpc": ["https://polygon-rpc.com", "https://polygon.llamarpc.com", "https://endpoints.omniatech.io/v1/matic/mainnet/public", "https://polygon.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://polygon-rpc.com",
+        "https://polygon.llamarpc.com",
+        "https://endpoints.omniatech.io/v1/matic/mainnet/public",
+        "https://polygon.blockpi.network/v1/rpc/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/e51b9ec8d0ed17792cca05be487f5dbc1d0a1b9113cf7e3465310de48c0acc2f.jpg",
       "wrapToken": "0x0000000000000000000000000000000000001010",
       "name": "Polygon",
@@ -413,7 +485,7 @@
       "symbol": "POL",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://polygonscan.com/address",
+      "explorer": "https://polygonscan.com",
       "explorerTx": "https://polygonscan.com/tx",
       "explorerToken": "https://polygonscan.com/tokens",
       "isLayer2": false,
@@ -440,17 +512,19 @@
     },
     {
       "id": 534352,
-      "rpc": ["https://1rpc.io/scroll", "https://endpoints.omniatech.io/v1/scroll/mainnet/public"],
+      "rpc": [
+        "https://1rpc.io/scroll",
+        "https://endpoints.omniatech.io/v1/scroll/mainnet/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/670bb948df5a83ff37717a0271686e44446b185f26b6a2bd9fe62b1a65c48926.jpg",
       "wrapToken": "0x5300000000000000000000000000000000000004",
       "name": "Scroll",
       "short": "SCROLL",
       "key": "scroll",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scrollscan.com/address",
+      "explorer": "https://scrollscan.com",
       "explorerTx": "https://scrollscan.com/tx",
       "explorerToken": "https://scrollscan.com/tokens",
       "isLayer2": true,
@@ -477,17 +551,20 @@
     },
     {
       "id": 324,
-      "rpc": ["https://1rpc.io/zksync2-era", "https://zksync.meowrpc.com", "https://mainnet.era.zksync.io"],
+      "rpc": [
+        "https://1rpc.io/zksync2-era",
+        "https://zksync.meowrpc.com",
+        "https://mainnet.era.zksync.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/5902c30a6fa8e1a0d2201782c69d9933296e36916c2b018757c38d30edf013cc.jpg",
-      "wrapToken": "0xf00DAD97284D0c6F06dc4Db3c32454D4292c6813",
+      "wrapToken": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
       "name": "ZKsync",
       "short": "ZKSYNC",
       "key": "zksync",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zksync.io/address",
+      "explorer": "https://explorer.zksync.io",
       "explorerTx": "https://explorer.zksync.io/transactions",
       "explorerToken": "https://explorer.zksync.io/tokens",
       "isLayer2": true,
@@ -510,7 +587,11 @@
     },
     {
       "id": 5000,
-      "rpc": ["https://rpc.mantle.xyz", "https://mantle-mainnet.public.blastapi.io", "https://1rpc.io/mantle"],
+      "rpc": [
+        "https://rpc.mantle.xyz",
+        "https://mantle-mainnet.public.blastapi.io",
+        "https://1rpc.io/mantle"
+      ],
       "icon": "https://storage.herewallet.app/upload/747989521fa9f032fefcf6138f237f316a7391877566774b7a94dbc1f639e73b.jpg",
       "wrapToken": "0x78c1b0C915c4FAA5FffA6CAbf0219DA63d7f4cb8",
       "name": "Mantle",
@@ -519,7 +600,7 @@
       "symbol": "MNT",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.mantle.xyz/address",
+      "explorer": "https://explorer.mantle.xyz",
       "explorerTx": "https://explorer.mantle.xyz/tx",
       "explorerToken": "https://explorer.mantle.xyz/tokens-erc20",
       "isLayer2": true,
@@ -545,7 +626,11 @@
     },
     {
       "id": 250,
-      "rpc": ["https://fantom.drpc.org", "https://fantom-pokt.nodies.app", "https://rpcapi.fantom.network"],
+      "rpc": [
+        "https://fantom.drpc.org",
+        "https://fantom-pokt.nodies.app",
+        "https://rpcapi.fantom.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/9187357a4afcfe4cb15ea62e772094d7f9d74f08c19b803ef14b35d60e8c4c08.jpg",
       "wrapToken": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
       "name": "Fantom",
@@ -554,7 +639,7 @@
       "symbol": "FTM",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.fantom.network/address",
+      "explorer": "https://explorer.fantom.network",
       "explorerTx": "https://explorer.fantom.network/transactions",
       "explorerToken": "https://explorer.fantom.network/assets",
       "isLayer2": false,
@@ -579,21 +664,27 @@
     },
     {
       "id": 7777777,
-      "rpc": ["https://zora.drpc.org", "https://rpc.zora.energy"],
+      "rpc": [
+        "https://zora.drpc.org",
+        "https://rpc.zora.energy"
+      ],
       "icon": "https://storage.herewallet.app/upload/d69b65ff100f8cdc2d7c09383f781556874edb7a4f9f97fd1ab0a50b3d31b6bb.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Zora",
       "short": "ZORA",
       "key": "zora",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zora.energy/address",
+      "explorer": "https://explorer.zora.energy",
       "explorerTx": "https://explorer.zora.energy/tx",
       "explorerToken": "https://explorer.zora.energy/tokens",
       "isLayer2": true,
-      "tokens": ["0xa6B280B42CB0b7c4a4F789eC6cCC3a7609A1Bc39", "0x4200000000000000000000000000000000000006", "0x078540eECC8b6d89949c9C7d5e8E91eAb64f6696"],
+      "tokens": [
+        "0xa6B280B42CB0b7c4a4F789eC6cCC3a7609A1Bc39",
+        "0x4200000000000000000000000000000000000006",
+        "0x078540eECC8b6d89949c9C7d5e8E91eAb64f6696"
+      ],
       "optionalTokens": [
         "0xCccCCccc7021b32EBb4e8C08314bD62F7c653EC4",
         "0xFcb41F83EEb46d357738a46fde6B7D27edEc4762",
@@ -605,7 +696,11 @@
     },
     {
       "id": 42220,
-      "rpc": ["https://1rpc.io/celo", "https://forno.celo.org", "https://rpc.ankr.com/celo"],
+      "rpc": [
+        "https://1rpc.io/celo",
+        "https://forno.celo.org",
+        "https://rpc.ankr.com/celo"
+      ],
       "icon": "https://storage.herewallet.app/upload/487e3fbd3a9410c2a66d174f41b3a5a8fcba322c584a0e1e4040f7672891662a.jpg",
       "wrapToken": "0x471EcE3750Da237f93B8E339c536989b8978a438",
       "name": "Celo",
@@ -614,7 +709,7 @@
       "symbol": "CELO",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://celoscan.io/address",
+      "explorer": "https://celoscan.io",
       "explorerTx": "https://celoscan.io/tx",
       "explorerToken": "https://celoscan.io/tokens",
       "isLayer2": false,
@@ -637,7 +732,12 @@
     },
     {
       "id": 2222,
-      "rpc": ["https://lb.nodies.app/v1/131ba386363a4c56a3ea2d617770efbf", "https://kava-pokt.nodies.app", "https://evm.kava-rpc.com", "https://rpc.ankr.com/kava_evm"],
+      "rpc": [
+        "https://lb.nodies.app/v1/131ba386363a4c56a3ea2d617770efbf",
+        "https://kava-pokt.nodies.app",
+        "https://evm.kava-rpc.com",
+        "https://rpc.ankr.com/kava_evm"
+      ],
       "icon": "https://storage.herewallet.app/upload/bbc773e19ebc338f93b2954c1cb6e89cb4ad5472eb82d6edc02b9399ed9b2808.jpg",
       "wrapToken": "0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b",
       "name": "Kava EVM",
@@ -646,7 +746,7 @@
       "symbol": "KAVA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://kavascan.com/address",
+      "explorer": "https://kavascan.com",
       "explorerTx": "https://kavascan.com/tx",
       "explorerToken": "https://kavascan.com/tokens",
       "isLayer2": false,
@@ -655,6 +755,7 @@
         "0x15932E26f5BD4923d46a2b205191C4b5d5f43FE3",
         "0xaf20f5f19698f1D19351028cd7103B63D30DE7d7",
         "0x2DfD4dE5AE386Cd3f4fC8e2cb39240852E47F5E8",
+        "0x25e9171C98Fc1924Fa9415CF50750274F0664764",
         "0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b"
       ],
       "optionalTokens": [
@@ -662,7 +763,6 @@
         "0x52369B1539EA8F4e1eadEEF18D85462Dcf9a3658",
         "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
         "0xEB466342C4d449BC9f53A865D5Cb90586f405215",
-        "0x25e9171C98Fc1924Fa9415CF50750274F0664764",
         "0x4D84E25cEa9447581867fE9f2329B972f532Da2c",
         "0xb84Df10966a5D7e1ab46D9276F55d57bD336AFC7"
       ],
@@ -670,17 +770,20 @@
     },
     {
       "id": 169,
-      "rpc": ["https://endpoints.omniatech.io/v1/manta-pacific/mainnet/public", "https://1rpc.io/manta", "https://manta-pacific.drpc.org"],
+      "rpc": [
+        "https://endpoints.omniatech.io/v1/manta-pacific/mainnet/public",
+        "https://1rpc.io/manta",
+        "https://manta-pacific.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/92ba25d3fb36517e0979c69c80d42c7165f806890c53ae10b733fa55cb7d805f.jpg",
       "wrapToken": "0x0dc808adce2099a9f62aa87d9670745aba741746",
       "name": "Manta Pacific",
       "short": "MANTAPACIFIC",
       "key": "manta",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://manta.socialscan.io/address",
+      "explorer": "https://manta.socialscan.io",
       "explorerTx": "https://manta.socialscan.io/tx",
       "explorerToken": "https://manta.socialscan.io/tokens",
       "isLayer2": true,
@@ -704,7 +807,10 @@
     },
     {
       "id": 1329,
-      "rpc": ["https://sei.drpc.org", "https://evm-rpc.sei-apis.com"],
+      "rpc": [
+        "https://sei.drpc.org",
+        "https://evm-rpc.sei-apis.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/f658974e29d34d457dc8c07a1303ce56721e6a1257c11e1e3b3d664320c54231.jpg",
       "wrapToken": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
       "name": "Sei",
@@ -713,7 +819,7 @@
       "symbol": "SEI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://seistream.app/address",
+      "explorer": "https://seistream.app",
       "explorerTx": "https://seistream.app/blockchain?tab=transactions",
       "explorerToken": "https://seistream.app/tokens",
       "isLayer2": false,
@@ -728,7 +834,12 @@
     },
     {
       "id": 204,
-      "rpc": ["https://opbnb-rpc.publicnode.com", "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3", "https://1rpc.io/opbnb", "https://opbnb-rpc.publicnode.com"],
+      "rpc": [
+        "https://opbnb-rpc.publicnode.com",
+        "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+        "https://1rpc.io/opbnb",
+        "https://opbnb-rpc.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/7cb81182f0095319a1ef53c59e669608c904a532dce3b2f7b8e08cc4d1a48004.png",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "opBNB",
@@ -737,7 +848,7 @@
       "symbol": "BNB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://opbnbscan.com/address",
+      "explorer": "https://opbnbscan.com",
       "explorerTx": "https://opbnbscan.com/tx",
       "explorerToken": "https://opbnbscan.com/tokens",
       "isLayer2": true,
@@ -751,7 +862,11 @@
     },
     {
       "id": 146,
-      "rpc": ["https://rpc.ankr.com/sonic_mainnet", "https://rpc.soniclabs.com", "https://sonic-rpc.publicnode.com"],
+      "rpc": [
+        "https://rpc.ankr.com/sonic_mainnet",
+        "https://rpc.soniclabs.com",
+        "https://sonic-rpc.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/5d294a09db1a364bec75186249e42508e6e79e59775efa306fc6a522740537e7.jpg",
       "wrapToken": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
       "name": "Sonic",
@@ -760,7 +875,7 @@
       "symbol": "S",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://sonicscan.org/address",
+      "explorer": "https://sonicscan.org",
       "explorerTx": "https://sonicscan.org/tx",
       "explorerToken": "https://sonicscan.org/tokens",
       "isLayer2": false,
@@ -783,7 +898,11 @@
     },
     {
       "id": 100,
-      "rpc": ["https://gnosis.drpc.org", "https://rpc.ankr.com/gnosis", "https://rpc.gnosischain.com"],
+      "rpc": [
+        "https://gnosis.drpc.org",
+        "https://rpc.ankr.com/gnosis",
+        "https://rpc.gnosischain.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/fc4945be03eec20c68ae19920f012afef7204b2c04d39b5cff6ab3a6d99b5981.jpg",
       "wrapToken": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
       "name": "Gnosis",
@@ -792,7 +911,7 @@
       "symbol": "xDAI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://gnosisscan.io/address",
+      "explorer": "https://gnosisscan.io",
       "explorerTx": "https://gnosisscan.io/tx",
       "explorerToken": "https://gnosisscan.io/tokens",
       "isLayer2": true,
@@ -816,17 +935,20 @@
     },
     {
       "id": 1313161554,
-      "rpc": ["https://mainnet.aurora.dev", "https://1rpc.io/aurora", "https://aurora.drpc.org"],
+      "rpc": [
+        "https://mainnet.aurora.dev",
+        "https://1rpc.io/aurora",
+        "https://aurora.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/17c20efb4ff19dabcb95bf2564790e0ee637a4b8c2a1286b5a8b3b1bf1b24f2e.jpg",
       "wrapToken": "0xC9BdeEd33CD01541e1eeD10f90519d2C06Fe3feB",
       "name": "Aurora",
       "short": "AURORA",
       "key": "aurora",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.mainnet.aurora.dev/address",
+      "explorer": "https://explorer.mainnet.aurora.dev",
       "explorerTx": "https://explorer.mainnet.aurora.dev/tx",
       "explorerToken": "https://explorer.mainnet.aurora.dev/tokens",
       "isLayer2": true,
@@ -852,17 +974,20 @@
     },
     {
       "id": 81457,
-      "rpc": ["https://endpoints.omniatech.io/v1/blast/mainnet/public", "https://blast.drpc.org", "https://rpc.blast.io"],
+      "rpc": [
+        "https://endpoints.omniatech.io/v1/blast/mainnet/public",
+        "https://blast.drpc.org",
+        "https://rpc.blast.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/3c5bb768a0142498e8eb97b4f9af8021595a66e7a95e64d54c29aa2929d3a290.jpg",
       "wrapToken": "0x4300000000000000000000000000000000000004",
       "name": "Blast",
       "short": "BLAST",
       "key": "blast",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://blastscan.io/address",
+      "explorer": "https://blastscan.io",
       "explorerTx": "https://blastscan.io/tx",
       "explorerToken": "https://blastscan.io/tokens",
       "isLayer2": true,
@@ -886,7 +1011,11 @@
     },
     {
       "id": 196,
-      "rpc": ["https://xlayer.drpc.org", "https://endpoints.omniatech.io/v1/xlayer/mainnet/public", "https://rpc.xlayer.tech"],
+      "rpc": [
+        "https://xlayer.drpc.org",
+        "https://endpoints.omniatech.io/v1/xlayer/mainnet/public",
+        "https://rpc.xlayer.tech"
+      ],
       "icon": "https://storage.herewallet.app/upload/9eef5ffe3956a174ff6f92ad6a657053757e14338f22ed410680d2a576a150ff.jpg",
       "wrapToken": "0xe538905cf8410324e03a5a23c1c177a474d59b2b",
       "name": "XLayer",
@@ -895,7 +1024,7 @@
       "symbol": "OKB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.okx.com/web3/explorer/xlayer/address",
+      "explorer": "https://www.okx.com/web3/explorer/xlayer",
       "explorerTx": "https://www.okx.com/web3/explorer/xlayer/tx-list",
       "explorerToken": "https://www.okx.com/web3/explorer/xlayer/token-list",
       "isLayer2": true,
@@ -919,7 +1048,10 @@
     },
     {
       "id": 33139,
-      "rpc": ["https://rpc.apechain.com", "https://apechain.drpc.org"],
+      "rpc": [
+        "https://rpc.apechain.com",
+        "https://apechain.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/d857bc3dc67a7f21664117c810152063b1aaf94f56bd12fd15bc190902a1ad3d.jpg",
       "wrapToken": "0x48b62137EdfA95a428D35C09E44256a739F6B557",
       "name": "Apechain",
@@ -928,30 +1060,38 @@
       "symbol": "APE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://apescan.io/address",
+      "explorer": "https://apescan.io",
       "explorerTx": "https://apescan.io/tx",
       "explorerToken": "https://apescan.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x48b62137EdfA95a428D35C09E44256a739F6B557", "0xe31C676d8235437597581b44c1c4f8A30e90b38a"],
+      "tokens": [
+        "0x48b62137EdfA95a428D35C09E44256a739F6B557",
+        "0xe31C676d8235437597581b44c1c4f8A30e90b38a"
+      ],
       "isTestnet": false
     },
     {
       "id": 2741,
-      "rpc": ["https://api.mainnet.abs.xyz"],
+      "rpc": [
+        "https://api.mainnet.abs.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/abab07636191ba997017495082fbfe4f4605e16991de9299782f36d0bfb94094.jpg",
       "wrapToken": "0x3439153EB7AF838Ad19d56E1571FBD09333C2809",
       "name": "Abstract",
       "short": "ABSTRACT",
       "key": "abstract",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://abscan.org/address",
+      "explorer": "https://abscan.org",
       "explorerTx": "https://abscan.org/tx",
       "explorerToken": "https://abscan.org/tokens",
       "isLayer2": true,
-      "tokens": ["0x0709F39376dEEe2A2dfC94A58EdEb2Eb9DF012bD", "0x84A71ccD554Cc1b02749b35d22F684CC8ec987e1", "0x3439153EB7AF838Ad19d56E1571FBD09333C2809"],
+      "tokens": [
+        "0x0709F39376dEEe2A2dfC94A58EdEb2Eb9DF012bD",
+        "0x84A71ccD554Cc1b02749b35d22F684CC8ec987e1",
+        "0x3439153EB7AF838Ad19d56E1571FBD09333C2809"
+      ],
       "optionalTokens": [
         "0x7d597148d32738CfFA4d3D503437bFf7e6EB38b2",
         "0x27F095d85132e08fC7a3f5d6dDE4f000C7F56515",
@@ -962,20 +1102,26 @@
     },
     {
       "id": 13371,
-      "rpc": ["https://immutable-zkevm.drpc.org", "https://rpc.immutable.com"],
+      "rpc": [
+        "https://immutable-zkevm.drpc.org",
+        "https://rpc.immutable.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/f2f3a3ab3f07ad3ff001b1a6ffb105914512ec3f93b2e9d49a3cdd2060170965.jpg",
       "wrapToken": "0x3A0C2Ba54D6CBd3121F01b96dFd20e99D1696C9D",
-      "name": "Immutable zkevm",
+      "name": "Immutable zkEVM",
       "short": "IMMUTABLEZKEVM",
       "key": "immutablezkevm",
       "symbol": "IMX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.immutable.com/address",
+      "explorer": "https://explorer.immutable.com",
       "explorerTx": "https://explorer.immutable.com/tx",
       "explorerToken": "https://explorer.immutable.com/tokens",
       "isLayer2": true,
-      "tokens": ["0x6de8aCC0D406837030CE4dd28e7c08C5a96a30d2", "0x52A6c53869Ce09a731CD772f245b97A4401d3348"],
+      "tokens": [
+        "0x6de8aCC0D406837030CE4dd28e7c08C5a96a30d2",
+        "0x52A6c53869Ce09a731CD772f245b97A4401d3348"
+      ],
       "optionalTokens": [
         "0x3A0C2Ba54D6CBd3121F01b96dFd20e99D1696C9D",
         "0xb00ed913aAFf8280C17BfF33CcE82fE6D79e85e8",
@@ -986,7 +1132,10 @@
     },
     {
       "id": 1088,
-      "rpc": ["https://metis-pokt.nodies.app", "https://metis.drpc.org"],
+      "rpc": [
+        "https://metis-pokt.nodies.app",
+        "https://metis.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/f66730b33dbe8904c9bfb1d4da47abd2e7da50f4919e435fe9d729d4a0c861ab.jpg",
       "wrapToken": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
       "name": "Metis",
@@ -995,11 +1144,15 @@
       "symbol": "METIS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.metis.io/address",
+      "explorer": "https://explorer.metis.io",
       "explorerTx": "https://explorer.metis.io/tx",
       "explorerToken": "https://explorer.metis.io/tokens",
       "isLayer2": true,
-      "tokens": ["0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC", "0xEA32A96608495e54156Ae48931A7c20f0dcc1a21", "0xa5B55ab1dAF0F8e1EFc0eB1931a957fd89B918f4"],
+      "tokens": [
+        "0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC",
+        "0xEA32A96608495e54156Ae48931A7c20f0dcc1a21",
+        "0xa5B55ab1dAF0F8e1EFc0eB1931a957fd89B918f4"
+      ],
       "optionalTokens": [
         "0x4c078361FC9BbB78DF910800A991C7c3DD2F6ce0",
         "0xaf20f5f19698f1D19351028cd7103B63D30DE7d7",
@@ -1012,7 +1165,9 @@
     },
     {
       "id": 994873017,
-      "rpc": ["https://mainnet-rpc.lumia.org"],
+      "rpc": [
+        "https://mainnet-rpc.lumia.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/68707799937a18a945a4799a057d7c9c61ad5a87470428ebe06cecf388b3a90c.jpg",
       "wrapToken": "0xE891B5EE2F52E312038710b761EC165792AD25B1",
       "name": "Lumia",
@@ -1021,7 +1176,7 @@
       "symbol": "LUMIA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.lumia.org/address",
+      "explorer": "https://explorer.lumia.org",
       "explorerTx": "https://explorer.lumia.org/tx",
       "explorerToken": "https://explorer.lumia.org/tokens",
       "isLayer2": true,
@@ -1036,17 +1191,20 @@
     },
     {
       "id": 34443,
-      "rpc": ["https://1rpc.io/mode", "https://mainnet.mode.network", "https://mode.drpc.org"],
+      "rpc": [
+        "https://1rpc.io/mode",
+        "https://mainnet.mode.network",
+        "https://mode.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/f21b7c0f41e5b9f5d48aa7244db820489bb4da490f9fed18b364de278945366d.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Mode",
       "short": "MODE",
       "key": "mode",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.mode.network/address",
+      "explorer": "https://explorer.mode.network",
       "explorerTx": "https://explorer.mode.network/tx",
       "explorerToken": "https://explorer.mode.network/tokens",
       "isLayer2": true,
@@ -1069,7 +1227,11 @@
     },
     {
       "id": 1284,
-      "rpc": ["https://moonbeam.public.curie.radiumblock.co/ws", "https://moonbeam.public.blastapi.io", "https://rpc.ankr.com/moonbeam"],
+      "rpc": [
+        "https://moonbeam.public.curie.radiumblock.co/ws",
+        "https://moonbeam.public.blastapi.io",
+        "https://rpc.ankr.com/moonbeam"
+      ],
       "icon": "https://storage.herewallet.app/upload/be17f1c7bec122ccb4e1c679ef602e850fa1d389c02d321eb44b1cc445ebeb6e.jpg",
       "wrapToken": "0xAcc15dC74880C9944775448304B263D191c6077F",
       "name": "Moonbeam",
@@ -1078,7 +1240,7 @@
       "symbol": "GLMR",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://moonscan.io/address",
+      "explorer": "https://moonscan.io",
       "explorerTx": "https://moonscan.io/tx",
       "explorerToken": "https://moonscan.io/tokens",
       "isLayer1": true,
@@ -1102,7 +1264,10 @@
     },
     {
       "id": 109,
-      "rpc": ["https://www.shibrpc.com", "https://rpc.shibrpc.com"],
+      "rpc": [
+        "https://www.shibrpc.com",
+        "https://rpc.shibrpc.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/f10188b4ab83f1441c8174599c421cd589a5e3db4bad59a422e080238f2f0020.jpg",
       "wrapToken": "0x839FdB6cc98342B428E074C1573ADF6D48CA3bFd",
       "name": "Shibarium",
@@ -1111,16 +1276,22 @@
       "symbol": "BONE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.shibariumscan.io/address",
+      "explorer": "https://www.shibariumscan.io",
       "explorerTx": "https://www.shibariumscan.io/tx",
       "explorerToken": "https://www.shibariumscan.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x0da5Aae7F402f4aFbBdd045FaDCd447835983A91", "0xef99cd3e619C058658043F8775ED9077105D8581", "0x91fbB2503AC69702061f1AC6885759Fc853e6EaE"],
+      "tokens": [
+        "0x0da5Aae7F402f4aFbBdd045FaDCd447835983A91",
+        "0xef99cd3e619C058658043F8775ED9077105D8581",
+        "0x91fbB2503AC69702061f1AC6885759Fc853e6EaE"
+      ],
       "isTestnet": false
     },
     {
       "id": 660279,
-      "rpc": ["https://xai-chain.net/rpc"],
+      "rpc": [
+        "https://xai-chain.net/rpc"
+      ],
       "icon": "https://storage.herewallet.app/upload/f5d02b5a55f9e8acda5b6eb0166fcb301e3d17c5c66ccd267df55b2f5fd650bf.jpg",
       "wrapToken": "0x3fB787101DC6Be47cfe18aeEe15404dcC842e6AF",
       "name": "Xai",
@@ -1129,16 +1300,42 @@
       "symbol": "XAI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://xaiscan.io/address",
+      "explorer": "https://xaiscan.io",
       "explorerTx": "https://xaiscan.io/tx",
       "explorerToken": "https://xaiscan.io/tokens",
       "isLayer3": true,
-      "tokens": ["0x3fB787101DC6Be47cfe18aeEe15404dcC842e6AF", "0xBeE82CfdAff4a6AA4E4793cb81eb1C2E79aC463C"],
+      "tokens": [
+        "0x3fB787101DC6Be47cfe18aeEe15404dcC842e6AF",
+        "0xBeE82CfdAff4a6AA4E4793cb81eb1C2E79aC463C"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 397,
+      "rpc": [
+        "https://eth-rpc.mainnet.near.org"
+      ],
+      "icon": "https://storage.herewallet.app/ft/1010:native.png",
+      "wrapToken": "0x4200000000000000000000000000000000000006",
+      "name": "NEAR EVM",
+      "short": "NEAR EVM",
+      "key": "near_evm",
+      "symbol": "NEAR",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "",
+      "explorerTx": "",
+      "explorerToken": "",
+      "isLayer3": true,
+      "tokens": [],
       "isTestnet": false
     },
     {
       "id": 7000,
-      "rpc": ["wss://zeta-chain.drpc.org", "https://zeta-chain.drpc.org"],
+      "rpc": [
+        "wss://zeta-chain.drpc.org",
+        "https://zeta-chain.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/1847dd53b0a9a73aca111a1987efff77220ea6530ee034ba4988186ddb422832.jpg",
       "wrapToken": "0x5f0b1a82749cb4e2278ec87f8bf6b618dc71a8bf",
       "name": "Zetachain",
@@ -1147,7 +1344,7 @@
       "symbol": "ZETA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zetachain.com/address",
+      "explorer": "https://explorer.zetachain.com",
       "explorerTx": "https://explorer.zetachain.com/evm/tx",
       "explorerToken": "https://explorer.zetachain.com/liquidity",
       "isLayer2": true,
@@ -1156,17 +1353,20 @@
     },
     {
       "id": 167000,
-      "rpc": ["https://rpc.ankr.com/taiko", "https://taiko-rpc.publicnode.com", "https://taiko-mainnet.gateway.tenderly.co"],
+      "rpc": [
+        "https://rpc.ankr.com/taiko",
+        "https://taiko-rpc.publicnode.com",
+        "https://taiko-mainnet.gateway.tenderly.co"
+      ],
       "icon": "https://storage.herewallet.app/upload/28eb55de7c461e7d05e2fea5197e8a22af307e72a26a7745e66013b4e51bda62.png",
       "wrapToken": "0xA51894664A773981C6C112C43ce576f315d5b1B6",
       "name": "Taiko",
       "short": "TAIKO",
       "key": "taiko",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://taikoscan.io/address",
+      "explorer": "https://taikoscan.io",
       "explorerTx": "https://taikoscan.io/txs",
       "explorerToken": "https://taikoscan.io/tokens",
       "isLayer2": true,
@@ -1186,7 +1386,10 @@
     },
     {
       "id": 2000,
-      "rpc": ["https://rpc01-sg.dogechain.dog", "https://rpc.dogechain.dog"],
+      "rpc": [
+        "https://rpc01-sg.dogechain.dog",
+        "https://rpc.dogechain.dog"
+      ],
       "icon": "https://storage.herewallet.app/upload/cea94fb7a1b21a0ffffd12914c02aed4d61398b96996bdcd1835b21421edace2.jpg",
       "wrapToken": "0xB7ddC6414bf4F5515b52D8BdD69973Ae205ff101",
       "name": "Dogechain",
@@ -1195,16 +1398,22 @@
       "symbol": "DOGE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.dogechain.dog/address",
+      "explorer": "https://explorer.dogechain.dog",
       "explorerTx": "https://explorer.dogechain.dog/tx",
       "explorerToken": "https://explorer.dogechain.dog/tokens",
       "isLayer2": true,
-      "tokens": ["0x765277eebeca2e31912c9946eae1021199b39c61", "0xb7ddc6414bf4f5515b52d8bdd69973ae205ff101"],
+      "tokens": [
+        "0x765277eebeca2e31912c9946eae1021199b39c61",
+        "0xb7ddc6414bf4f5515b52d8bdd69973ae205ff101"
+      ],
       "isTestnet": false
     },
     {
       "id": 252,
-      "rpc": ["https://rpc.frax.com", "https://fraxtal.drpc.org"],
+      "rpc": [
+        "https://rpc.frax.com",
+        "https://fraxtal.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/7786ae8b37b742a08fbddad9931172ba9690bc58bbd9c2dbcc4c96d59ffa1d83.png",
       "wrapToken": "0xFC00000000000000000000000000000000000006",
       "name": "Fraxtal",
@@ -1213,7 +1422,7 @@
       "symbol": "frxETH",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://fraxscan.com/address",
+      "explorer": "https://fraxscan.com",
       "explorerTx": "https://fraxscan.com/tx",
       "explorerToken": "https://fraxscan.com/tokens",
       "isLayer2": true,
@@ -1227,17 +1436,20 @@
     },
     {
       "id": 1101,
-      "rpc": ["https://endpoints.omniatech.io/v1/polygon-zkevm/mainnet/public", "https://zkevm-rpc.com", "https://rpc.ankr.com/polygon_zkevm"],
+      "rpc": [
+        "https://endpoints.omniatech.io/v1/polygon-zkevm/mainnet/public",
+        "https://zkevm-rpc.com",
+        "https://rpc.ankr.com/polygon_zkevm"
+      ],
       "icon": "https://storage.herewallet.app/upload/57db45ee14eecd29c19f5370f5b1702d3cd5d56cff9eeb5d3f81ff4c6ee82a4d.png",
       "wrapToken": "0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9",
       "name": "Polygon zkEVM",
       "short": "POLYGON ZKEVM",
       "key": "polygonzkevm",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://zkevm.polygonscan.com/address",
+      "explorer": "https://zkevm.polygonscan.com",
       "explorerTx": "https://zkevm.polygonscan.com/tx",
       "explorerToken": "https://zkevm.polygonscan.com/tokens",
       "isLayer2": true,
@@ -1258,7 +1470,10 @@
     },
     {
       "id": 1666600000,
-      "rpc": ["https://endpoints.omniatech.io/v1/harmony/mainnet-0/public", "https://api.harmony.one"],
+      "rpc": [
+        "https://endpoints.omniatech.io/v1/harmony/mainnet-0/public",
+        "https://api.harmony.one"
+      ],
       "icon": "https://storage.herewallet.app/upload/d634ee06156bc1fc8602f3e81d82f4ad037e3765ed8e3c36fa144f840c175e1c.JPG",
       "wrapToken": "one1eanyppa9hvpr0g966e6zs5hvdjxkngn6jtulua",
       "name": "Harmony",
@@ -1267,16 +1482,21 @@
       "symbol": "ONE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.harmony.one/address",
+      "explorer": "https://explorer.harmony.one",
       "explorerTx": "https://explorer.harmony.one/tx",
       "explorerToken": "https://explorer.harmony.one/tokens",
       "isLayer1": true,
-      "tokens": ["one1dxparek77d5scntpdvf4j7sfucvnagqnhhfaun", "one18s4ch6vu2pvnpq0252njfu9c9p044w50gw3l6y"],
+      "tokens": [
+        "one1dxparek77d5scntpdvf4j7sfucvnagqnhhfaun",
+        "one18s4ch6vu2pvnpq0252njfu9c9p044w50gw3l6y"
+      ],
       "isTestnet": false
     },
     {
       "id": 177,
-      "rpc": ["https://mainnet.hsk.xyz"],
+      "rpc": [
+        "https://mainnet.hsk.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/8750bae6df87d73c775fc91d9d3012f8f2c26cf6f66828d8b51f7627be35991d.PNG",
       "wrapToken": "0xb210d2120d57b758ee163cffb43e73728c471cf1",
       "name": "HashKey",
@@ -1285,16 +1505,23 @@
       "symbol": "HSK",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.okx.com/web3/explorer/hashkey/address",
+      "explorer": "https://www.okx.com/web3/explorer/hashkey",
       "explorerTx": "https://www.okx.com/web3/explorer/hashkey/tx-list",
       "explorerToken": "https://www.okx.com/web3/explorer/hashkey/token-list",
       "isLayer2": true,
-      "tokens": ["0xf1b50ed67a9e2cc94ad3c477779e2d4cbfff9029", "0xb210d2120d57b758ee163cffb43e73728c471cf1", "0xefd4bc9afd210517803f293ababd701caeecdfd0"],
+      "tokens": [
+        "0xf1b50ed67a9e2cc94ad3c477779e2d4cbfff9029",
+        "0xb210d2120d57b758ee163cffb43e73728c471cf1",
+        "0xefd4bc9afd210517803f293ababd701caeecdfd0"
+      ],
       "isTestnet": false
     },
     {
       "id": 2020,
-      "rpc": ["https://ronin.lgns.net/rpc", "https://ronin.drpc.org"],
+      "rpc": [
+        "https://ronin.lgns.net/rpc",
+        "https://ronin.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/c85682038357f96937aaf3398d8b470c02bec480e96ca0d489fcb6f67c7a270e.JPG",
       "wrapToken": "0xe514d9deb7966c8be0ca922de8a064264ea6bcd4",
       "name": "Ronin",
@@ -1303,11 +1530,15 @@
       "symbol": "RON",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://app.roninchain.com/address",
+      "explorer": "https://app.roninchain.com",
       "explorerTx": "https://app.roninchain.com/tx",
       "explorerToken": "https://app.roninchain.com/tokens",
       "isLayer1": true,
-      "tokens": ["0x0b7007c13325c48911f73a2dad5fa5dcbf808adc", "0xe514d9deb7966c8be0ca922de8a064264ea6bcd4", "0xc99a6a985ed2cac1ef41640596c5a5f9f4e19ef5"],
+      "tokens": [
+        "0x0b7007c13325c48911f73a2dad5fa5dcbf808adc",
+        "0xe514d9deb7966c8be0ca922de8a064264ea6bcd4",
+        "0xc99a6a985ed2cac1ef41640596c5a5f9f4e19ef5"
+      ],
       "optionalTokens": [
         "0x7eae20d11ef8c779433eb24503def900b9d28ad7",
         "0x9fa2b2b2b314f0486a15c48810b736ae83d5cc53",
@@ -1318,7 +1549,10 @@
     },
     {
       "id": 19,
-      "rpc": ["https://rpc.au.cc/songbird", "https://rpc.ftso.au/songbird"],
+      "rpc": [
+        "https://rpc.au.cc/songbird",
+        "https://rpc.ftso.au/songbird"
+      ],
       "icon": "https://storage.herewallet.app/upload/83e005863ea48f023f80a1b3f47635fbf1a7916fe6c329cc1be103a05727e6c4.PNG",
       "wrapToken": "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED",
       "name": "Songbird",
@@ -1327,11 +1561,14 @@
       "symbol": "SGB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://songbird-explorer.flare.network/address",
+      "explorer": "https://songbird-explorer.flare.network",
       "explorerTx": "https://songbird-explorer.flare.network/tx",
       "explorerToken": "https://songbird-explorer.flare.network/tokens",
       "isLayer1": true,
-      "tokens": ["0x7070f4d88ECF226660a002b18dDDE864eea2Ed6F", "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED"],
+      "tokens": [
+        "0x7070f4d88ECF226660a002b18dDDE864eea2Ed6F",
+        "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED"
+      ],
       "optionalTokens": [
         "0x39838abf66af299401030e1B82be7848301FbB94",
         "0xB2cD91b79df296ea181AA5f6d729E5136e1853A4",
@@ -1342,7 +1579,10 @@
     },
     {
       "id": 8217,
-      "rpc": ["https://public-en.node.kaia.io", "https://rpc.ankr.com/klaytn"],
+      "rpc": [
+        "https://public-en.node.kaia.io",
+        "https://rpc.ankr.com/klaytn"
+      ],
       "icon": "https://storage.herewallet.app/upload/f9a5e8822b200f010cd56c1520166f87c41097f0f1e1b267b1b0c7346caeefa9.JPG",
       "wrapToken": "0x19aac5f612f524b754ca7e7c41cbfa2e981a4432",
       "name": "Kaia",
@@ -1351,7 +1591,7 @@
       "symbol": "KAIA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://kaiascan.io/address",
+      "explorer": "https://kaiascan.io",
       "explorerTx": "https://kaiascan.io/tx",
       "explorerToken": "https://kaiascan.io/tokens",
       "isLayer1": true,
@@ -1373,7 +1613,10 @@
     },
     {
       "id": 592,
-      "rpc": ["https://evm.astar.network", "https://astar.public.curie.radiumblock.co/http"],
+      "rpc": [
+        "https://evm.astar.network",
+        "https://astar.public.curie.radiumblock.co/http"
+      ],
       "icon": "https://storage.herewallet.app/upload/d9783f63d7187568909a36dce956427f7a1ad62346f1f4bcd69ff6ff43f11b3b.JPG",
       "wrapToken": "0x37795FdD8C165CaB4D6c05771D564d80439CD093",
       "name": "Astar",
@@ -1382,11 +1625,15 @@
       "symbol": "ASTR",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://astar.subscan.io/address",
+      "explorer": "https://astar.subscan.io",
       "explorerTx": "https://astar.subscan.io/erc20_token",
       "explorerToken": "https://astar.subscan.io/evm_transaction",
       "isLayer1": true,
-      "tokens": ["0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720", "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98", "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"],
+      "tokens": [
+        "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720",
+        "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98",
+        "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"
+      ],
       "optionalTokens": [
         "0x3795C36e7D12A8c252A20C5a7B455f7c57b60283",
         "0x03065E84748a9e4a1AEbef15AC89da1Cdf18B202",
@@ -1397,9 +1644,16 @@
     },
     {
       "id": 1030,
-      "rpc": ["https://conflux-espace-public.unifra.io", "https://evm.confluxrpc.com"],
+      "rpc": [
+        "https://conflux-espace-public.unifra.io",
+        "https://evm.confluxrpc.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/fa0619469a856326c4b7ed29731ef1d72bccdacc948d91e323472d0682b381a5.PNG",
-      "tokens": ["0x6963efed0ab40f6c3d7bda44a05dcf1437c44372", "0xfe97e85d13abd9c1c33384e796f10b73905637ce", "0xfe97e85d13abd9c1c33384e796f10b73905637ce"],
+      "tokens": [
+        "0x6963efed0ab40f6c3d7bda44a05dcf1437c44372",
+        "0xfe97e85d13abd9c1c33384e796f10b73905637ce",
+        "0xfe97e85d13abd9c1c33384e796f10b73905637ce"
+      ],
       "wrapToken": "0x14b2d3bc65e74dae1030eafd8ac30c533c976a9b",
       "name": "Conflux",
       "short": "CONFLUX",
@@ -1407,7 +1661,7 @@
       "symbol": "CFX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.confluxscan.io/address",
+      "explorer": "https://www.confluxscan.io",
       "explorerTx": "https://www.confluxscan.io/blockchain/transactions",
       "explorerToken": "https://www.confluxscan.io/tokens",
       "isLayer1": true,
@@ -1415,7 +1669,11 @@
     },
     {
       "id": 25,
-      "rpc": ["https://1rpc.io/cro", "https://cronos.drpc.org", "https://cronos-evm-rpc.publicnode.com"],
+      "rpc": [
+        "https://1rpc.io/cro",
+        "https://cronos.drpc.org",
+        "https://cronos-evm-rpc.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/0ab7e9eb7f38055e49059d86e1212fe323574823baaac61c5af45558af490cd9.PNG",
       "wrapToken": "0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23",
       "name": "Cronos",
@@ -1424,11 +1682,15 @@
       "symbol": "CRO",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.cronos.org/address",
+      "explorer": "https://explorer.cronos.org",
       "explorerTx": "https://explorer.cronos.org/tx",
       "explorerToken": "https://explorer.cronos.org/tokens",
       "isLayer2": true,
-      "tokens": ["0x66e428c3f67a68878562e79A0234c1F83c208770", "0xc21223249CA28397B4B6541dfFaEcC539BfF0c59", "0xe44Fd7fCb2b1581822D0c862B68222998a0c299a"],
+      "tokens": [
+        "0x66e428c3f67a68878562e79A0234c1F83c208770",
+        "0xc21223249CA28397B4B6541dfFaEcC539BfF0c59",
+        "0xe44Fd7fCb2b1581822D0c862B68222998a0c299a"
+      ],
       "optionalTokens": [
         "0x2D03bECE6747ADC00E1a131BBA1469C15fD11e03",
         "0x6b431B8a964BFcf28191b07c91189fF4403957D0",
@@ -1439,36 +1701,43 @@
     },
     {
       "id": 810180,
-      "rpc": ["https://rpc.zklink.io"],
+      "rpc": [
+        "https://rpc.zklink.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/1d2a9b2a1e0b4fbcbc8e8749b8a0621ceb99195a425e24a3210339fe281bbc94.JPG",
       "wrapToken": "0x000000000000000000000000000000000000800A",
       "name": "zkLinkNova",
       "short": "ZKLINKNOVA",
       "key": "zklinknova",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zklink.io/address",
+      "explorer": "https://explorer.zklink.io",
       "explorerTx": "https://explorer.zklink.io/transactions",
       "explorerToken": "https://explorer.zklink.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x1a1A3b2ff016332e866787B311fcB63928464509", "0x2F8A25ac62179B31D62D7F80884AE57464699059", "0xDa4AaEd3A53962c83B35697Cd138cc6df43aF71f"],
+      "tokens": [
+        "0x1a1A3b2ff016332e866787B311fcB63928464509",
+        "0x2F8A25ac62179B31D62D7F80884AE57464699059",
+        "0xDa4AaEd3A53962c83B35697Cd138cc6df43aF71f"
+      ],
       "isTestnet": false
     },
     {
       "id": 480,
-      "rpc": ["wss://worldchain.drpc.org", "https://worldchain-mainnet.g.alchemy.com/public"],
+      "rpc": [
+        "wss://worldchain.drpc.org",
+        "https://worldchain-mainnet.g.alchemy.com/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/c02a528fc7e41dced493aceb44031dcadc7d45328834e3e3fa459a65a613b421.PNG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "WorldChain",
       "short": "WORLD",
       "key": "world",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://worldscan.org/address",
+      "explorer": "https://worldscan.org",
       "explorerTx": "https://worldscan.org/tx",
       "explorerToken": "https://worldscan.org/tokens",
       "isLayer2": true,
@@ -1482,7 +1751,10 @@
     },
     {
       "id": 1116,
-      "rpc": ["https://rpc-core.icecreamswap.com", "https://rpc.ankr.com/core"],
+      "rpc": [
+        "https://rpc-core.icecreamswap.com",
+        "https://rpc.ankr.com/core"
+      ],
       "icon": "https://storage.herewallet.app/upload/46c5a01778d092416cb5baf709d7f991013e57331bbc594c077a242cfa6f5f38.JPG",
       "wrapToken": "0x71a80922d0774f92ce444aeda285af2f184f9cb6",
       "name": "CORE",
@@ -1491,11 +1763,15 @@
       "symbol": "CORE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.coredao.org/address",
+      "explorer": "https://scan.coredao.org",
       "explorerTx": "https://scan.coredao.org/tx",
       "explorerToken": "https://scan.coredao.org/tokentxns",
       "isLayer1": true,
-      "tokens": ["0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1", "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f", "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9"],
+      "tokens": [
+        "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
+        "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f",
+        "0xa4151b2b3e269645181dccf2d426ce75fcbdeca9"
+      ],
       "optionalTokens": [
         "0x892ccdd2624ef09ca5814661c566316253353820",
         "0x1a639e150d2210a4be4a5f0857a9151b241e7ae4",
@@ -1506,7 +1782,10 @@
     },
     {
       "id": 369,
-      "rpc": ["https://rpc.pulsechain.com", "https://pulsechain-rpc.publicnode.com"],
+      "rpc": [
+        "https://rpc.pulsechain.com",
+        "https://pulsechain-rpc.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/f82144ab7dea9262735a29052c14d367ab4f52a5c0fe5c87297d39801bb5d848.JPG",
       "wrapToken": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
       "name": "PulseChain",
@@ -1515,7 +1794,7 @@
       "symbol": "PLS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.pulsechainfoundation.org/#/address",
+      "explorer": "https://scan.pulsechainfoundation.org/#",
       "explorerTx": "https://scan.pulsechainfoundation.org/#/tx",
       "explorerToken": "https://scan.pulsechainfoundation.org/#/tokens",
       "isLayer1": true,
@@ -1537,17 +1816,18 @@
     },
     {
       "id": 1868,
-      "rpc": ["https://rpc.soneium.org"],
+      "rpc": [
+        "https://rpc.soneium.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/c7419980ded5dfa2f20d098e054dff7e5166088b6f42fe8d54592b55faae4b24.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Soneium",
       "short": "SONEIUM",
       "key": "soneium",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://soneium-minato.blockscout.com/address",
+      "explorer": "https://soneium-minato.blockscout.com",
       "explorerTx": "https://soneium-minato.blockscout.com/tx",
       "explorerToken": "https://soneium-minato.blockscout.com/tokens",
       "isLayer2": true,
@@ -1575,17 +1855,18 @@
     },
     {
       "id": 10241024,
-      "rpc": ["https://rpc.alienxchain.io/http"],
+      "rpc": [
+        "https://rpc.alienxchain.io/http"
+      ],
       "icon": "https://storage.herewallet.app/upload/a8e633d25c6a02703957187b7b486eeea715ab3d7484749d7c0347d75a89ec18.PNG",
       "wrapToken": "0xa9b181EB9456170086f9C51AeEcD0511Aa2609e6",
       "name": "AlienX",
       "short": "ALIENX",
       "key": "alienx",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.alienxchain.io/address",
+      "explorer": "https://explorer.alienxchain.io",
       "explorerTx": "https://explorer.alienxchain.io/tx",
       "explorerToken": "https://explorer.fuse.io/tokens",
       "isLayer2": true,
@@ -1609,7 +1890,12 @@
     },
     {
       "id": 61,
-      "rpc": ["https://geth-at.etc-network.info", "https://besu-at.etc-network.info"],
+      "rpc": [
+        "https://etc.etcdesktop.com",
+        "https://rpc.etcinscribe.com",
+        "https://geth-at.etc-network.info",
+        "https://besu-at.etc-network.info"
+      ],
       "icon": "https://storage.herewallet.app/upload/c2a496257f246c5df2d20cd67661dbede0a529e2b983803cb594dddbcb5c53e4.png",
       "wrapToken": "0x82A618305706B14e7bcf2592D4B9324A366b6dAd",
       "name": "Ethereum Classic",
@@ -1618,7 +1904,7 @@
       "symbol": "ETC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://etc.blockscout.com/address",
+      "explorer": "https://etc.blockscout.com",
       "explorerTx": "https://etc.blockscout.com/tx",
       "explorerToken": "https://etc.blockscout.com/tokens",
       "isLayer2": false,
@@ -1638,7 +1924,9 @@
     },
     {
       "id": 122,
-      "rpc": ["https://fuse.liquify.com"],
+      "rpc": [
+        "https://fuse.liquify.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/93bb1af24e1fdbe02319c01f70c0e7c1a9774ad50ec318ee5d8e12b86d968280.JPG",
       "wrapToken": "0x0BE9e53fd7EDaC9F859882AfdDa116645287C629",
       "name": "Fuse",
@@ -1647,7 +1935,7 @@
       "symbol": "FUSE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.fuse.io/address",
+      "explorer": "https://explorer.fuse.io",
       "explorerTx": "https://explorer.fuse.io/tx",
       "explorerToken": "https://explorer.fuse.io/tokens",
       "isLayer2": true,
@@ -1668,7 +1956,10 @@
     },
     {
       "id": 248,
-      "rpc": ["https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3", "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3"],
+      "rpc": [
+        "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3",
+        "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3"
+      ],
       "icon": "https://storage.herewallet.app/upload/670728e500c91b0a38f62cd9c87ddd4777aac3b091fd0fbbd80de0c3d4a447bf.JPG",
       "wrapToken": "0x5200000000000000000000000000000000000001",
       "name": "Oasys",
@@ -1677,11 +1968,15 @@
       "symbol": "OAS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.oasys.games/address",
+      "explorer": "https://explorer.oasys.games",
       "explorerTx": "https://explorer.oasys.games/tx",
       "explorerToken": "https://explorer.oasys.games/tokens",
       "isLayer2": false,
-      "tokens": ["0x4D17C0609B77e456Fb98Ea99a62bCeF09adae32D", "0xDc3af65eCBD339309Ec55F109CB214E0325c5eD4", "0x5801E5a61164024Be2554248E33127c6ebC8C113"],
+      "tokens": [
+        "0x4D17C0609B77e456Fb98Ea99a62bCeF09adae32D",
+        "0xDc3af65eCBD339309Ec55F109CB214E0325c5eD4",
+        "0x5801E5a61164024Be2554248E33127c6ebC8C113"
+      ],
       "optionalTokens": [
         "0x5B1CC635E524cAbb63a581c050C895534755F297",
         "0xd11E0F63B04868567c297A3119e491707DB19E4e",
@@ -1692,7 +1987,10 @@
     },
     {
       "id": 20,
-      "rpc": ["https://rpc.glidefinance.io", "https://api2.elastos.net/eth"],
+      "rpc": [
+        "https://rpc.glidefinance.io",
+        "https://api2.elastos.net/eth"
+      ],
       "icon": "https://storage.herewallet.app/upload/6cff24bf642b2810e63b2b2141eeb30ed0f45667a50ebf7a5d6554642efa5e2e.JPG",
       "wrapToken": "0x517e9e5d46c1ea8ab6f78677d6114ef47f71f6c4",
       "name": "Elastos",
@@ -1701,7 +1999,7 @@
       "symbol": "ELA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://esc.elastos.io/address",
+      "explorer": "https://esc.elastos.io",
       "explorerTx": "https://esc.elastos.io/tx",
       "explorerToken": "https://esc.elastos.io/tokens",
       "isLayer2": false,
@@ -1711,22 +2009,26 @@
         "0x802c3e839E4fDb10aF583E3E759239ec7703501e",
         "0xA06be0F5950781cE28D965E5EFc6996e88a8C141"
       ],
-      "optionalTokens": ["0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE", "0x7DcE38e11B4219B613DE04e763d747427d0F0638"],
+      "optionalTokens": [
+        "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
+        "0x7DcE38e11B4219B613DE04e763d747427d0F0638"
+      ],
       "isTestnet": false
     },
     {
       "id": 957,
-      "rpc": ["https://rpc.lyra.finance"],
+      "rpc": [
+        "https://rpc.lyra.finance"
+      ],
       "icon": "https://storage.herewallet.app/upload/39a065f3fd4d068d12bfb4b23b97cca64ca6ce1b9560534f16821efebac17ad8.JPG",
       "wrapToken": "0x15CEcd5190A43C7798dD2058308781D0662e678E",
       "name": "Derive",
       "short": "DERIVE",
       "key": "derive",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.derive.xyz/address",
+      "explorer": "https://explorer.derive.xyz",
       "explorerTx": "https://explorer.derive.xyz/tx",
       "explorerToken": "https://explorer.derive.xyz/tokens",
       "isLayer2": true,
@@ -1746,7 +2048,9 @@
     },
     {
       "id": 53935,
-      "rpc": ["https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc"],
+      "rpc": [
+        "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc"
+      ],
       "icon": "https://storage.herewallet.app/upload/194616a044fbad88040ea251514113117b3cb7ca7fb7cbbd85c04bed63d2730f.PNG",
       "wrapToken": "0xccb93dabd71c8dad03fc4ce5559dc3d89f67a260",
       "name": "DFK",
@@ -1755,16 +2059,21 @@
       "symbol": "JEWEL",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://53935.snowtrace.io/address",
+      "explorer": "https://53935.snowtrace.io",
       "explorerTx": "https://53935.snowtrace.io/tx",
       "explorerToken": "https://53935.snowtrace.io/tokens",
       "isLayer2": false,
-      "tokens": ["0x3AD9DFE640E1A9Cc1D9B0948620820D975c3803a"],
+      "tokens": [
+        "0x3AD9DFE640E1A9Cc1D9B0948620820D975c3803a"
+      ],
       "isTestnet": false
     },
     {
       "id": 14,
-      "rpc": ["https://rpc.au.cc/flare", "https://flare.rpc.thirdweb.com"],
+      "rpc": [
+        "https://rpc.au.cc/flare",
+        "https://flare.rpc.thirdweb.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/6be8af43b9ace1de4ab919140daf36e23061bb4b4ea2afe25be83d945ee045ba.JPG",
       "wrapToken": "0x1D80c49BbBCd1C0911346656B529DF9E5c2F783d",
       "name": "Flare",
@@ -1773,7 +2082,7 @@
       "symbol": "FLR",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://flarescan.com/address",
+      "explorer": "https://flarescan.com",
       "explorerTx": "https://flarescan.com/tx",
       "explorerToken": "https://flarescan.com/tokens",
       "isLayer2": false,
@@ -1795,7 +2104,9 @@
     },
     {
       "id": 201022,
-      "rpc": ["https://fsc-dataseed1.fonscan.io"],
+      "rpc": [
+        "https://fsc-dataseed1.fonscan.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/9b07e1b53ae59a289a77e59f3385a02ebd6c4dbc4195644a3e108df63d70c8ef.JPG",
       "wrapToken": "0xb582fD9d0D5C3515EEB6b02fF2d6eE0b6E45E7A7",
       "name": "FONChain",
@@ -1804,7 +2115,7 @@
       "symbol": "FON",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://fonscan.io/address",
+      "explorer": "https://fonscan.io",
       "explorerTx": "https://fonscan.io/tx",
       "explorerToken": "https://fonscan.io/tokens",
       "isLayer2": false,
@@ -1824,7 +2135,10 @@
     },
     {
       "id": 7332,
-      "rpc": ["https://eon-rpc.horizenlabs.io/ethv1", "https://eon-rpc.horizenlabs.io/ethv1"],
+      "rpc": [
+        "https://eon-rpc.horizenlabs.io/ethv1",
+        "https://eon-rpc.horizenlabs.io/ethv1"
+      ],
       "icon": "https://storage.herewallet.app/upload/7e519029d4a5c39b6f4e0b59db12bbcf507b3ce4367f91691b6f11dc59217849.JPG",
       "wrapToken": "0xF5cB8652a84329A2016A386206761f455bCEDab6",
       "name": "HorizenEON",
@@ -1833,11 +2147,15 @@
       "symbol": "ZEN",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://eon-explorer.horizenlabs.io/address",
+      "explorer": "https://eon-explorer.horizenlabs.io",
       "explorerTx": "https://eon-explorer.horizenlabs.io/tx",
       "explorerToken": "https://eon-explorer.horizenlabs.io/tokens",
       "isLayer2": false,
-      "tokens": ["0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53", "0x2c2E0B0c643aB9ad03adBe9140627A645E99E054", "0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7"],
+      "tokens": [
+        "0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53",
+        "0x2c2E0B0c643aB9ad03adBe9140627A645E99E054",
+        "0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7"
+      ],
       "optionalTokens": [
         "0xF5cB8652a84329A2016A386206761f455bCEDab6",
         "0xDF8DBA35962Aa0fAD7ade0Df07501c54Ec7c4A89",
@@ -1848,7 +2166,9 @@
     },
     {
       "id": 8822,
-      "rpc": ["https://json-rpc.evm.iotaledger.net"],
+      "rpc": [
+        "https://json-rpc.evm.iotaledger.net"
+      ],
       "icon": "https://storage.herewallet.app/upload/8a57935571e51386e43f554b29af7e555c339de9b315a935183c2d5685214f98.JPG",
       "wrapToken": "0x6e47f8d48a01b44DF3fFF35d258A10A3AEdC114c",
       "name": "IOTAEVM",
@@ -1857,7 +2177,7 @@
       "symbol": "IOTA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.evm.iota.org/address",
+      "explorer": "https://explorer.evm.iota.org",
       "explorerTx": "https://explorer.evm.iota.org/tx",
       "explorerToken": "https://explorer.evm.iota.org/tokens",
       "isLayer2": false,
@@ -1879,7 +2199,10 @@
     },
     {
       "id": 4689,
-      "rpc": ["https://babel-api.mainnet.iotex.one", "https://babel-api.mainnet.iotex.io"],
+      "rpc": [
+        "https://babel-api.mainnet.iotex.one",
+        "https://babel-api.mainnet.iotex.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/44b4ea7a6a5225d33180fa31bf46139f6ba289f44df192ab2136ff38a279718f.JPG",
       "wrapToken": "0xa00744882684c3e4747faefd68d283ea44099d03",
       "name": "IoTeX",
@@ -1888,7 +2211,7 @@
       "symbol": "IOTX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://iotexscan.io/address",
+      "explorer": "https://iotexscan.io",
       "explorerTx": "https://iotexscan.io/tx",
       "explorerToken": "https://iotexscan.io/tokens",
       "isLayer2": false,
@@ -1908,7 +2231,9 @@
     },
     {
       "id": 321,
-      "rpc": ["https://rpc-mainnet.kcc.network"],
+      "rpc": [
+        "https://rpc-mainnet.kcc.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/00b7aba0369bf8cabc4133615945cb5a951730a1515498aab3f2df2e1090f7b7.JPG",
       "wrapToken": "0x4446Fc4eb47f2f6586f9fAAb68B3498F86C07521",
       "name": "KCC",
@@ -1917,7 +2242,7 @@
       "symbol": "KCS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.kcc.io/address",
+      "explorer": "https://scan.kcc.io",
       "explorerTx": "https://scan.kcc.io/tx",
       "explorerToken": "https://scan.kcc.io/tokens",
       "isLayer2": true,
@@ -1937,17 +2262,18 @@
     },
     {
       "id": 255,
-      "rpc": ["https://1rpc.io/kroma"],
+      "rpc": [
+        "https://1rpc.io/kroma"
+      ],
       "icon": "https://storage.herewallet.app/upload/7c6910222471f49542781d2317276f6364c65bd65e73b7a0e6cd0dc2724aaf8a.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000001",
       "name": "Kroma",
       "short": "KROMA",
       "key": "kroma",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://kroscan.io/address",
+      "explorer": "https://kroscan.io",
       "explorerTx": "https://kroscan.io/tx",
       "explorerToken": "https://kroscan.io/tokens",
       "isLayer2": true,
@@ -1961,7 +2287,9 @@
     },
     {
       "id": 42,
-      "rpc": ["https://rpc.lukso.sigmacore.io"],
+      "rpc": [
+        "https://rpc.lukso.sigmacore.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/f4e673c5bea9f580c253ebc41490e213f8118bb7b05e041c1db8e223bcc15326.JPG",
       "wrapToken": "0xF9506457473bFcc285a22C7Ea42e88ABA2b888EE",
       "name": "LUKSO",
@@ -1970,7 +2298,7 @@
       "symbol": "LYX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.execution.mainnet.lukso.network/address",
+      "explorer": "https://explorer.execution.mainnet.lukso.network",
       "explorerTx": "https://explorer.execution.mainnet.lukso.network/tx",
       "explorerToken": "https://explorer.execution.mainnet.lukso.network/tokens",
       "isLayer2": false,
@@ -1984,21 +2312,26 @@
     },
     {
       "id": 70700,
-      "rpc": ["https://rpc.apex.proofofplay.com"],
+      "rpc": [
+        "https://rpc.apex.proofofplay.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/6e8cb7397dbc501c20561d9ba37cd587f71ed79bbdacd6e6d91d320d3c5abfdf.PNG",
       "wrapToken": "0x77684A04145a5924eFCE0D92A7c4a2A2E8C359de",
       "name": "PoP Apex",
       "short": "PROOFOFPLAYAPEX",
       "key": "proofofplayapex",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.apex.proofofplay.com/address",
+      "explorer": "https://explorer.apex.proofofplay.com",
       "explorerTx": "https://explorer.apex.proofofplay.com/tx",
       "explorerToken": "https://explorer.apex.proofofplay.com/tokens",
       "isLayer2": true,
-      "tokens": ["0x77684A04145a5924eFCE0D92A7c4a2A2E8C359de", "0xd7f991cF407C877dc91b2C6aCade45643925cf7a", "0x77684A04145a5924eFCE0D92A7c4a2A2E8C359de"],
+      "tokens": [
+        "0x77684A04145a5924eFCE0D92A7c4a2A2E8C359de",
+        "0xd7f991cF407C877dc91b2C6aCade45643925cf7a",
+        "0x77684A04145a5924eFCE0D92A7c4a2A2E8C359de"
+      ],
       "optionalTokens": [
         "0x2AF0e672917Bac6201AA32C21287575c22E9D38F",
         "0x7117eC11c68E64ca1C477178dFcf16075c5920f3",
@@ -2009,7 +2342,9 @@
     },
     {
       "id": 111188,
-      "rpc": ["https://real.drpc.org"],
+      "rpc": [
+        "https://real.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/acb5beccf9900b3b3c395c43afc063e0c0c838548ba4a2c1c53f94533e66645b.JPG",
       "wrapToken": "0x90c6E93849E06EC7478ba24522329d14A5954Df4",
       "name": "re.al",
@@ -2018,7 +2353,7 @@
       "symbol": "reETH",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.re.al/address",
+      "explorer": "https://explorer.re.al",
       "explorerTx": "https://explorer.re.al/tx",
       "explorerToken": "https://explorer.re.al/tokens",
       "isLayer2": true,
@@ -2040,27 +2375,38 @@
     },
     {
       "id": 1729,
-      "rpc": ["https://rpc.reya.network"],
+      "rpc": [
+        "https://rpc.reya.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/5ded18ada210b2bf1c00a3fcae2992430fc6c4391f68bf27323cde369bf88c99.JPG",
       "wrapToken": "0x6B48C2e6A32077ec17e8Ba0d98fFc676dfab1A30",
       "name": "Reya",
       "short": "REYA",
       "key": "reya",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.reya.network/address",
+      "explorer": "https://explorer.reya.network",
       "explorerTx": "https://explorer.reya.network/tx",
       "explorerToken": "https://explorer.reya.network/tokens",
       "isLayer2": true,
-      "tokens": ["0x3B860c0b53f2e8bd5264AA7c3451d41263C933F2", "0x6B48C2e6A32077ec17e8Ba0d98fFc676dfab1A30", "0xa9F32a851B1800742e47725DA54a09A7Ef2556A3"],
-      "optionalTokens": ["0x2D1f58bA8ffd9f26e5717d7a76db3D6E068b5D34", "0xdfea7dFc2bb088659F068cA7DEE5fbB4e1F3c586", "0xf1E5a40f912BdA4d92003bd6cd14AA6183895D2B"],
+      "tokens": [
+        "0x3B860c0b53f2e8bd5264AA7c3451d41263C933F2",
+        "0x6B48C2e6A32077ec17e8Ba0d98fFc676dfab1A30",
+        "0xa9F32a851B1800742e47725DA54a09A7Ef2556A3"
+      ],
+      "optionalTokens": [
+        "0x2D1f58bA8ffd9f26e5717d7a76db3D6E068b5D34",
+        "0xdfea7dFc2bb088659F068cA7DEE5fbB4e1F3c586",
+        "0xf1E5a40f912BdA4d92003bd6cd14AA6183895D2B"
+      ],
       "isTestnet": false
     },
     {
       "id": 570,
-      "rpc": ["https://rpc.ankr.com/rollux"],
+      "rpc": [
+        "https://rpc.ankr.com/rollux"
+      ],
       "icon": "https://storage.herewallet.app/upload/1d619a65aa71e072ff7a3fdf7abf51309fa20a6ed687ef71bd72bdc78c627788.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Rollux",
@@ -2069,11 +2415,15 @@
       "symbol": "SYS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.rollux.com/address",
+      "explorer": "https://explorer.rollux.com",
       "explorerTx": "https://explorer.rollux.com/tx",
       "explorerToken": "https://explorer.rollux.com/tokens",
       "isLayer2": true,
-      "tokens": ["0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c", "0xaA1c53AFd099E415208F47FCFA2C880f659E6904", "0x368433CaC2A0B8D76E64681a9835502a1f2A8A30"],
+      "tokens": [
+        "0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c",
+        "0xaA1c53AFd099E415208F47FCFA2C880f659E6904",
+        "0x368433CaC2A0B8D76E64681a9835502a1f2A8A30"
+      ],
       "optionalTokens": [
         "0x3390108E913824B8eaD638444cc52B9aBdF63798",
         "0xB0d6Cb3F73af7F5C3E5128Ae6Ac45EB8418ccFA9",
@@ -2084,7 +2434,9 @@
     },
     {
       "id": 1996,
-      "rpc": ["https://mainnet.sanko.xyz"],
+      "rpc": [
+        "https://mainnet.sanko.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/28b1c47babc0a97cd5b02f369a08790cef13d61747352fac743621b5a8640db5.jpeg",
       "wrapToken": "0x754cDAd6f5821077d6915004Be2cE05f93d176f8",
       "name": "Sanko",
@@ -2093,11 +2445,14 @@
       "symbol": "DMT",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.sanko.xyz/address",
+      "explorer": "https://explorer.sanko.xyz",
       "explorerTx": "https://explorer.sanko.xyz/tx",
       "explorerToken": "https://explorer.sanko.xyz/tokens",
       "isLayer2": false,
-      "tokens": ["0x13D675BC5e659b11CFA331594cF35A20815dCF02", "0xE01e3b20C5819cf919F7f1a2b4C18bBfd222F376"],
+      "tokens": [
+        "0x13D675BC5e659b11CFA331594cF35A20815dCF02",
+        "0xE01e3b20C5819cf919F7f1a2b4C18bBfd222F376"
+      ],
       "optionalTokens": [
         "0x8a4FF77D1E7ABe0d003350C0FAF21854107Ee329",
         "0x7a7ba09d4Fd5E5bdfeBE674cf7693BD4F65422F1",
@@ -2108,27 +2463,37 @@
     },
     {
       "id": 360,
-      "rpc": ["https://mainnet.shape.network"],
+      "rpc": [
+        "https://mainnet.shape.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/8ed09208b115f922e25a94a4c9b2a1bdf5738fdac78a23c880f58688e20071e2.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Shape",
       "short": "SHAPE",
       "key": "shape",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://shapescan.xyz/address",
+      "explorer": "https://shapescan.xyz",
       "explorerTx": "https://shapescan.xyz/tx",
       "explorerToken": "https://shapescan.xyz/tokens",
       "isLayer2": true,
-      "tokens": ["0x4200000000000000000000000000000000000006", "0xA096a5A05c9FD4AA07a0d2b4C65a82bF12971b4b"],
-      "optionalTokens": ["0xdb7DD8B00EdC5778Fe00B2408bf35C7c054f8BBe", "0x42276dF82BAb34c3CCcA9e5c058b6ff7EA4d07e3", "0xC7406425895e5c24688dA7e26B75cCE671D9d652"],
+      "tokens": [
+        "0x4200000000000000000000000000000000000006",
+        "0xA096a5A05c9FD4AA07a0d2b4C65a82bF12971b4b"
+      ],
+      "optionalTokens": [
+        "0xdb7DD8B00EdC5778Fe00B2408bf35C7c054f8BBe",
+        "0x42276dF82BAb34c3CCcA9e5c058b6ff7EA4d07e3",
+        "0xC7406425895e5c24688dA7e26B75cCE671D9d652"
+      ],
       "isTestnet": false
     },
     {
       "id": 1234,
-      "rpc": ["https://rpc.step.network"],
+      "rpc": [
+        "https://rpc.step.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/fd7615e6a9fc9e781ab563cf0d8444d75bed83a15efa460c4f10ea0b25918bef.PNG",
       "wrapToken": "0xb58A9d5920AF6aC1a9522B0B10F55dF16686D1b6",
       "name": "Step",
@@ -2137,11 +2502,14 @@
       "symbol": "FITFI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://stepscan.io/address",
+      "explorer": "https://stepscan.io",
       "explorerTx": "https://stepscan.io/tx",
       "explorerToken": "https://stepscan.io/tokens",
       "isLayer2": false,
-      "tokens": ["0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d", "0xfa9343c3897324496a05fc75abed6bac29f8a40f"],
+      "tokens": [
+        "0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d",
+        "0xfa9343c3897324496a05fc75abed6bac29f8a40f"
+      ],
       "optionalTokens": [
         "0x9c9e77bcb667d41ae1e63677f70efd4681fac9d4",
         "0x68b2dfc494362aae300f2c401019205d8960226b",
@@ -2152,7 +2520,9 @@
     },
     {
       "id": 1559,
-      "rpc": ["https://tenet-evm.publicnode.com"],
+      "rpc": [
+        "https://tenet-evm.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/37ac1dae55cd92433fdfcf51b44777bbd762efef46f5efb34e4db326473875e3.JPG",
       "wrapToken": "0xd6cb8a253e12893b0cF39Ca78F7d858652cCa1fe",
       "name": "Tenet",
@@ -2161,11 +2531,15 @@
       "symbol": "TENET",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://tenetscan.io/address",
+      "explorer": "https://tenetscan.io",
       "explorerTx": "https://tenetscan.io/tx",
       "explorerToken": "https://tenetscan.io/tokens",
       "isLayer2": false,
-      "tokens": ["0x55c32e8ab56021c012ab3d5a586b743664e73da0", "0x91aa258324072dff6f82408c2beb2f82d353b300", "0xd6cb8a253e12893b0cF39Ca78F7d858652cCa1fe"],
+      "tokens": [
+        "0x55c32e8ab56021c012ab3d5a586b743664e73da0",
+        "0x91aa258324072dff6f82408c2beb2f82d353b300",
+        "0xd6cb8a253e12893b0cF39Ca78F7d858652cCa1fe"
+      ],
       "optionalTokens": [
         "0x021b4878be1ce222e5d1625ed7dbcb7cd80cf245",
         "0xbd5F8134E78f3fD4EfC65b1DB552e8B621F1675C",
@@ -2176,7 +2550,9 @@
     },
     {
       "id": 9980,
-      "rpc": ["https://rpc.combonetwork.io"],
+      "rpc": [
+        "https://rpc.combonetwork.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/0f5cc7e66f430c7528b81b8048ebe8beddb6d63dc6e82a9af0ee8d919e4ca180.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Combo",
@@ -2185,16 +2561,22 @@
       "symbol": "BNB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://combotrace.nodereal.io/address",
+      "explorer": "https://combotrace.nodereal.io",
       "explorerTx": "https://combotrace.nodereal.io/tx",
       "explorerToken": "https://combotrace.nodereal.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x7c6b91d9be155a6db01f749217d76ff02a7227f2", "0xd08a2917653d4e460893203471f0000826fb4034", "0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0x7c6b91d9be155a6db01f749217d76ff02a7227f2",
+        "0xd08a2917653d4e460893203471f0000826fb4034",
+        "0x4200000000000000000000000000000000000006"
+      ],
       "isTestnet": false
     },
     {
       "id": 388,
-      "rpc": ["https://cronos-zkevm.drpc.org"],
+      "rpc": [
+        "https://cronos-zkevm.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/8f5ff255521745cc16dd18414a2c7be26b647519927fce8ae357aee7af935473.jpeg",
       "wrapToken": "0x000000000000000000000000000000000000800A",
       "name": "CronosEVM",
@@ -2203,11 +2585,15 @@
       "symbol": "zkCRO",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zkevm.cronos.org/address",
+      "explorer": "https://explorer.zkevm.cronos.org",
       "explorerTx": "https://explorer.zkevm.cronos.org/tx",
       "explorerToken": "https://explorer.zkevm.cronos.org/tokens",
       "isLayer2": true,
-      "tokens": ["0xaa5b845F8C9c047779bEDf64829601d8B264076c", "0x898B3560AFFd6D955b1574D87EE09e46669c60eA", "0xD65E5DbA71231D35A5802bA83dC6cB6746c9758d"],
+      "tokens": [
+        "0xaa5b845F8C9c047779bEDf64829601d8B264076c",
+        "0x898B3560AFFd6D955b1574D87EE09e46669c60eA",
+        "0xD65E5DbA71231D35A5802bA83dC6cB6746c9758d"
+      ],
       "optionalTokens": [
         "0x54447f5314568Aac87d6ee9F11D2B7ad0D837413",
         "0xFB3338E2cA713B344D6A45B36525c3db156e492F",
@@ -2218,7 +2604,10 @@
     },
     {
       "id": 199,
-      "rpc": ["https://rpc.bittorrentchain.io", "https://rpc.bt.io"],
+      "rpc": [
+        "https://rpc.bittorrentchain.io",
+        "https://rpc.bt.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/23c7ce10746261f17ee4dbb39576803dc61654d52f6362b0714b4fdf4c57f3d9.png",
       "wrapToken": "0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C",
       "name": "BitTorrent",
@@ -2227,11 +2616,15 @@
       "symbol": "BTT",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://bttcscan.com/address",
+      "explorer": "https://bttcscan.com",
       "explorerTx": "https://bttcscan.com/tx",
       "explorerToken": "https://bttcscan.com/tokens",
       "isLayer2": false,
-      "tokens": ["0xdB28719F7f938507dBfe4f0eAe55668903D34a15", "0x935faA2FCec6Ab81265B301a30467Bbc804b43d3", "0x1249C65AfB11D179FFB3CE7D4eEDd1D9b98AD006"],
+      "tokens": [
+        "0xdB28719F7f938507dBfe4f0eAe55668903D34a15",
+        "0x935faA2FCec6Ab81265B301a30467Bbc804b43d3",
+        "0x1249C65AfB11D179FFB3CE7D4eEDd1D9b98AD006"
+      ],
       "optionalTokens": [
         "0x1A7019909B10cdD2D8B0034293AD729f1C1F604e",
         "0xA20dfb01DCa223c0E52B0D4991D4aFA7E08e3a50",
@@ -2242,21 +2635,25 @@
     },
     {
       "id": 888888888,
-      "rpc": ["https://rpc.ancient8.gg"],
+      "rpc": [
+        "https://rpc.ancient8.gg"
+      ],
       "icon": "https://storage.herewallet.app/upload/6064a8aff039bab5bcba90d4a95c030e804d53a010e07f1403f87ac31f8ad9f9.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Ancient8",
       "short": "ANCIENT8",
       "key": "ancient8",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.ancient8.gg/address",
+      "explorer": "https://scan.ancient8.gg",
       "explorerTx": "https://scan.ancient8.gg/tx",
       "explorerToken": "https://scan.ancient8.gg/tokens",
       "isLayer2": true,
-      "tokens": ["0x97423A68BAe94b5De52d767a17aBCc54c157c0E5", "0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0x97423A68BAe94b5De52d767a17aBCc54c157c0E5",
+        "0x4200000000000000000000000000000000000006"
+      ],
       "optionalTokens": [
         "0x38bB7B9B87BdfBEd883aAf50A2f411d330FE32D6",
         "0xD812d616A7C54ee1C8e9c9CD20D72090bDf0d424",
@@ -2267,7 +2664,9 @@
     },
     {
       "id": 7700,
-      "rpc": ["https://canto-rpc.ansybl.io"],
+      "rpc": [
+        "https://canto-rpc.ansybl.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/74e8ad2f5c7dfb652fe3b4d7506f8ebf17329d1770f9dc37227ab1e392cbc6ea.jpg",
       "wrapToken": "0x826551890dc65655a0aceca109ab11abdbd7a07b",
       "name": "Canto",
@@ -2276,11 +2675,15 @@
       "symbol": "CANTO",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://canto.dex.guru/address",
+      "explorer": "https://canto.dex.guru",
       "explorerTx": "https://canto.dex.guru/tx",
       "explorerToken": "https://canto.dex.guru/tokens",
       "isLayer2": false,
-      "tokens": ["0x80b5a32e4f032b2a058b4f29ec95eefeeb87adcd", "0xd567b3d7b8fe3c79a1ad8da978812cfc4fa05e75", "0x5fd55a1b9fc24967c4db09c513c3ba0dfa7ff687"],
+      "tokens": [
+        "0x80b5a32e4f032b2a058b4f29ec95eefeeb87adcd",
+        "0xd567b3d7b8fe3c79a1ad8da978812cfc4fa05e75",
+        "0x5fd55a1b9fc24967c4db09c513c3ba0dfa7ff687"
+      ],
       "optionalTokens": [
         "0x4e71a2e537b7f9d9413d3991d37958c0b5e1e503",
         "0xeceeefcee421d8062ef8d6b4d814efe4dc898265",
@@ -2291,7 +2694,10 @@
     },
     {
       "id": 88888,
-      "rpc": ["https://rpc.chiliz.com", "https://rpc.ankr.com/chiliz"],
+      "rpc": [
+        "https://rpc.chiliz.com",
+        "https://rpc.ankr.com/chiliz"
+      ],
       "icon": "https://storage.herewallet.app/upload/7cd4cf4ef5a3bf7e04342fbaf4e736ffb8e069f300c421d6892bfc62bd753e9c.jpg",
       "wrapToken": "0xB3651f023c22c44B1FA0A7b0a4011C2363232Ada",
       "name": "Chiliz",
@@ -2300,7 +2706,7 @@
       "symbol": "CHZ",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.chiliz.com/address",
+      "explorer": "https://scan.chiliz.com",
       "explorerTx": "https://scan.chiliz.com/tx",
       "explorerToken": "https://scan.chiliz.com/tokens",
       "isLayer2": false,
@@ -2320,45 +2726,56 @@
     },
     {
       "id": 7560,
-      "rpc": ["https://rpc.cyber.co", "https://rpc.cyber.co"],
+      "rpc": [
+        "https://rpc.cyber.co",
+        "https://rpc.cyber.co"
+      ],
       "icon": "https://storage.herewallet.app/upload/f034425fdd221a8c47e37ea046f27c6acc81471935b8e1086393fb2f8f07d165.jpeg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Cyber",
       "short": "CYBER",
       "key": "cyber",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://cyberscan.co/address",
+      "explorer": "https://cyberscan.co",
       "explorerTx": "https://cyberscan.co/tx",
       "explorerToken": "https://cyberscan.co/tokens",
       "isLayer2": true,
-      "tokens": ["0x81759adbf5520ad94da10991dfa29ff147d3337b", "0x6f6238c8eaea56f54df418823585d61fdd7de5da", "0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0x81759adbf5520ad94da10991dfa29ff147d3337b",
+        "0x6f6238c8eaea56f54df418823585d61fdd7de5da",
+        "0x4200000000000000000000000000000000000006"
+      ],
       "isTestnet": false
     },
     {
       "id": 20240603,
-      "rpc": ["https://rpc.mainnet.dbkchain.io"],
+      "rpc": [
+        "https://rpc.mainnet.dbkchain.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/86fc62fbc79f5793110b5dff497a3e146029de508d28003fe03a8b45c86f01ea.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "DBK",
       "short": "DBKCHAIN",
       "key": "dbkchain",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.dbkchain.io/address",
+      "explorer": "https://scan.dbkchain.io",
       "explorerTx": "https://scan.dbkchain.io/tx",
       "explorerToken": "https://scan.dbkchain.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0x4200000000000000000000000000000000000006"
+      ],
       "isTestnet": false
     },
     {
       "id": 666666666,
-      "rpc": ["hhttps://rpc.degen.tips"],
+      "rpc": [
+        "hhttps://rpc.degen.tips"
+      ],
       "icon": "https://storage.herewallet.app/upload/24568951a1e372e3d00d25af17f2a88c9558afdd24b499bcef9238d386c768ae.jpg",
       "wrapToken": "0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387",
       "name": "Degen",
@@ -2367,11 +2784,15 @@
       "symbol": "DEGEN",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.degen.tips/address",
+      "explorer": "https://explorer.degen.tips",
       "explorerTx": "https://explorer.degen.tips/tx",
       "explorerToken": "https://explorer.degen.tips/tokens",
       "isLayer2": false,
-      "tokens": ["0x9A32ed2912b88664e3E840346801Fe841a23bE57", "0xF058Eb3C946F0eaeCa3e6662300cb01165c64edE", "0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387"],
+      "tokens": [
+        "0x9A32ed2912b88664e3E840346801Fe841a23bE57",
+        "0xF058Eb3C946F0eaeCa3e6662300cb01165c64edE",
+        "0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387"
+      ],
       "optionalTokens": [
         "0x8f200BCE8f12F8786847b3bdC4ff443808A17D97",
         "0x8464D5DD3Ec1B2EDe357F291f0AdE21E138CA224",
@@ -2382,21 +2803,27 @@
     },
     {
       "id": 57073,
-      "rpc": ["https://ink.drpc.org"],
+      "rpc": [
+        "https://ink.drpc.org",
+        "https://rpc-qnd.inkonchain.com",
+        "https://rpc-gel.inkonchain.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/c9bdcb8bf7a3f09b9ec5770ddca3c85919df22e7ad4a1b04f5cf18ef4cd12c28.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Ink",
       "short": "INK",
       "key": "ink",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.inkonchain.com/address",
+      "explorer": "https://explorer.inkonchain.com",
       "explorerTx": "https://explorer.inkonchain.com/tx",
       "explorerToken": "https://explorer.inkonchain.com/tokens",
       "isLayer2": true,
-      "tokens": ["0xF1815bd50389c46847f0Bda824eC8da914045D14", "0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0xF1815bd50389c46847f0Bda824eC8da914045D14",
+        "0x4200000000000000000000000000000000000006"
+      ],
       "optionalTokens": [
         "0x0200C29006150606B650577BBE7B6248F58470c1",
         "0x8b12642f591E6e4226Ade511f2c831a9258fE903",
@@ -2410,17 +2837,18 @@
     },
     {
       "id": 1135,
-      "rpc": ["https://lisk.drpc.org"],
+      "rpc": [
+        "https://lisk.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/63054f2f67af053e56b658e8def2033c2e00747aff61101f880b8ce367cbe91a.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Lisk",
       "short": "LISK",
       "key": "lisk",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://blockscout.lisk.com/address",
+      "explorer": "https://blockscout.lisk.com",
       "explorerTx": "https://blockscout.lisk.com/tx",
       "explorerToken": "https://blockscout.lisk.com/tokens",
       "isLayer2": true,
@@ -2441,7 +2869,10 @@
     },
     {
       "id": 1625,
-      "rpc": ["https://rpc.ankr.com/gravity", "https://rpc.gravity.xyz"],
+      "rpc": [
+        "https://rpc.ankr.com/gravity",
+        "https://rpc.gravity.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/43cd99161a70d9d9c92e9391acb7fcb2897b0af8498fe4f7b2f185ec4711649c.jpg",
       "wrapToken": "0xBB859E225ac8Fb6BE1C7e38D87b767e95Fef0EbD",
       "name": "Gravity",
@@ -2450,30 +2881,39 @@
       "symbol": "G",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.gravity.xyz/address",
+      "explorer": "https://explorer.gravity.xyz",
       "explorerTx": "https://explorer.gravity.xyz/tx",
       "explorerToken": "https://explorer.gravity.xyz/tokens",
       "isLayer2": false,
-      "tokens": ["0xFbDa5F676cB37624f28265A144A48B0d6e87d3b6", "0xf6f832466Cd6C21967E0D954109403f36Bc8ceaA"],
+      "tokens": [
+        "0xFbDa5F676cB37624f28265A144A48B0d6e87d3b6",
+        "0xf6f832466Cd6C21967E0D954109403f36Bc8ceaA"
+      ],
       "isTestnet": false
     },
     {
       "id": 185,
-      "rpc": ["https://global.rpc.mintchain.io", "https://asia.rpc.mintchain.io"],
+      "rpc": [
+        "https://global.rpc.mintchain.io",
+        "https://asia.rpc.mintchain.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/78e5c648c90f92715d602bd7dfd9fe0fa5ca7b246f72eb520df0483b23234f08.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Mint",
       "short": "MINT",
       "key": "mint",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.mintchain.io/address",
+      "explorer": "https://explorer.mintchain.io",
       "explorerTx": "https://explorer.mintchain.io/tx",
       "explorerToken": "https://explorer.mintchain.io/tokens",
       "isLayer2": true,
-      "tokens": ["0xb62F35B9546A908d11c5803ecBBA735AbC3E3eaE", "0x05D032ac25d322df992303dCa074EE7392C117b9", "0x4200000000000000000000000000000000000006"],
+      "tokens": [
+        "0xb62F35B9546A908d11c5803ecBBA735AbC3E3eaE",
+        "0x05D032ac25d322df992303dCa074EE7392C117b9",
+        "0x4200000000000000000000000000000000000006"
+      ],
       "optionalTokens": [
         "0x7b55544D7921D167a3FE9988b426C21DbfDe6AA8",
         "0x6E55472109E6aBE4054a8E8b8d9EdFfCb31032C5",
@@ -2485,17 +2925,18 @@
     },
     {
       "id": 1380012617,
-      "rpc": ["https://mainnet.rpc.rarichain.org/http"],
+      "rpc": [
+        "https://mainnet.rpc.rarichain.org/http"
+      ],
       "icon": "https://storage.herewallet.app/upload/cf6d0c834b2372b2d6919b68f6d67a3ed78e4a8afb2d60b7dd99379d4488bcf6.jpg",
       "wrapToken": "0xf037540e51D71b2D2B1120e8432bA49F29EDFBD0",
       "name": "Rari",
       "short": "RARI",
       "key": "rari",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://mainnet.explorer.rarichain.org/address",
+      "explorer": "https://mainnet.explorer.rarichain.org",
       "explorerTx": "https://mainnet.explorer.rarichain.org/tx",
       "explorerToken": "https://mainnet.explorer.rarichain.org/tokens",
       "isLayer2": true,
@@ -2516,17 +2957,20 @@
     },
     {
       "id": 48900,
-      "rpc": ["https://zircuit1-mainnet.liquify.com", "https://zircuit-mainnet.drpc.org", "https://zircuit1-mainnet.p2pify.com"],
+      "rpc": [
+        "https://zircuit1-mainnet.liquify.com",
+        "https://zircuit-mainnet.drpc.org",
+        "https://zircuit1-mainnet.p2pify.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/89607a3518a26dc91191411819379afe23f1033cddff6f4f2d8d110bc71a26f8.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Zircuit",
       "short": "ZIRCUIT",
       "key": "zircuit",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zircuit.com/address",
+      "explorer": "https://explorer.zircuit.com",
       "explorerTx": "https://explorer.zircuit.com/transactions",
       "explorerToken": "https://explorer.zircuit.com/tokens",
       "isLayer2": true,
@@ -2544,21 +2988,27 @@
     },
     {
       "id": 1923,
-      "rpc": ["https://rpc.ankr.com/swell", "https://swell-mainnet.alt.technology"],
+      "rpc": [
+        "https://rpc.ankr.com/swell",
+        "https://swell-mainnet.alt.technology"
+      ],
       "icon": "https://storage.herewallet.app/upload/3ab6abe235da2f946bbdc6f6fc6b6620cd7e066631acc1b9c850573c0099b2ef.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Swellchain",
       "short": "SWELLCHAIN",
       "key": "swellchain",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.swellnetwork.io/address",
+      "explorer": "https://explorer.swellnetwork.io",
       "explorerTx": "https://explorer.swellnetwork.io/tx",
       "explorerToken": "https://explorer.swellnetwork.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34", "0x4200000000000000000000000000000000000006", "0x2826D136F5630adA89C1678b64A61620Aab77Aea"],
+      "tokens": [
+        "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+        "0x4200000000000000000000000000000000000006",
+        "0x2826D136F5630adA89C1678b64A61620Aab77Aea"
+      ],
       "optionalTokens": [
         "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1",
         "0x2416092f143378750bb29b79eD961ab195CcEea5",
@@ -2569,17 +3019,19 @@
     },
     {
       "id": 543210,
-      "rpc": ["https://rpc.zerion.io/v1/zero", "https://zero.drpc.org"],
+      "rpc": [
+        "https://rpc.zerion.io/v1/zero",
+        "https://zero.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/fb0cb1f591d197b900952e16d8ff267fd73831ed7ba18bc5572018028c78730a.png",
       "wrapToken": "0xB69A3E1A659cBaefa405c9FD107DC63342240e8c",
       "name": "Zerθ",
       "short": "ZERϴ",
       "key": "zerθ",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.zero.network/address",
+      "explorer": "https://explorer.zero.network",
       "explorerTx": "https://explorer.zero.network/transactions",
       "explorerToken": "https://explorer.zero.network/tokens",
       "isLayer2": true,
@@ -2599,7 +3051,10 @@
     },
     {
       "id": 1480,
-      "rpc": ["https://rpc.vana.org", "https://evm-rpc-vana.josephtran.xyz"],
+      "rpc": [
+        "https://rpc.vana.org",
+        "https://evm-rpc-vana.josephtran.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/2e9917b1b05d71bb12ee6f9fd7fe02ca2349fbfa1b75e763be73e6391783f590.jpg",
       "wrapToken": "0x00EDdD9621Fb08436d0331c149D1690909a5906d",
       "name": "Vana",
@@ -2608,7 +3063,7 @@
       "symbol": "VANA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://vanascan.io/address",
+      "explorer": "https://vanascan.io",
       "explorerTx": "https://vanascan.io/tx",
       "explorerToken": "https://vanascan.io/tokens",
       "isLayer2": false,
@@ -2628,21 +3083,26 @@
     },
     {
       "id": 2818,
-      "rpc": ["https://rpc.morphl2.io", "https://rpc-quicknode.morphl2.io"],
+      "rpc": [
+        "https://rpc.morphl2.io",
+        "https://rpc-quicknode.morphl2.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/e85b909e51c5712e88343051c9ae51e974719468d88b1e06db6040a23f030135.jpg",
       "wrapToken": "0x5300000000000000000000000000000000000011",
       "name": "Morph",
       "short": "MORPH",
       "key": "morph",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.morphl2.io/address",
+      "explorer": "https://explorer.morphl2.io",
       "explorerTx": "https://explorer.morphl2.io/tx",
       "explorerToken": "https://explorer.morphl2.io/tokens",
       "isLayer2": true,
-      "tokens": ["0xc7D67A9cBB121b3b0b9c053DD9f469523243379A", "0xe34c91815d7fc18A9e2148bcD4241d0a5848b693"],
+      "tokens": [
+        "0xc7D67A9cBB121b3b0b9c053DD9f469523243379A",
+        "0xe34c91815d7fc18A9e2148bcD4241d0a5848b693"
+      ],
       "optionalTokens": [
         "0x55d1f1879969bdbB9960d269974564C58DBc3238",
         "0x5300000000000000000000000000000000000011",
@@ -2653,17 +3113,18 @@
     },
     {
       "id": 42793,
-      "rpc": ["https://node.mainnet.etherlink.com"],
+      "rpc": [
+        "https://node.mainnet.etherlink.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/3351cb2781a01914ec319f99a667c46ed0a9dda238c8f9ac50f8499c98133ec6.jpg",
       "wrapToken": "0xfc24f770F94edBca6D6f885E12d4317320BcB401",
       "name": "Etherlink",
       "short": "ETHERLINK",
       "key": "etherlink",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.etherlink.com/address",
+      "explorer": "https://explorer.etherlink.com",
       "explorerTx": "https://explorer.etherlink.com/tx",
       "explorerToken": "https://explorer.etherlink.com/tokens",
       "isLayer2": true,
@@ -2683,7 +3144,9 @@
     },
     {
       "id": 223,
-      "rpc": ["https://hub-rpc.bsquared.network"],
+      "rpc": [
+        "https://hub-rpc.bsquared.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/99ae9c917fcf9ac8f59bdd459c8ec5df91a10dda5525734586a3d4b54000fe24.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "B²",
@@ -2692,7 +3155,7 @@
       "symbol": "BTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.bsquared.network/address",
+      "explorer": "https://explorer.bsquared.network",
       "explorerTx": "https://explorer.bsquared.network/tx",
       "explorerToken": "https://explorer.bsquared.network/tokens",
       "isLayer2": true,
@@ -2707,7 +3170,10 @@
     },
     {
       "id": 11501,
-      "rpc": ["https://rpc-mainnet-2.bevm.io", "https://rpc-mainnet-1.bevm.io"],
+      "rpc": [
+        "https://rpc-mainnet-2.bevm.io",
+        "https://rpc-mainnet-1.bevm.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/f132793477070f7e6a46da14cfec324eaf5ad05434271dc02bd0df1ab2c50e2c.JPG",
       "wrapToken": "0xB5136FEba197f5fF4B765E5b50c74db717796dcD",
       "name": "BEVM",
@@ -2716,11 +3182,15 @@
       "symbol": "BTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan-mainnet.bevm.io/address",
+      "explorer": "https://scan-mainnet.bevm.io",
       "explorerTx": "https://scan-mainnet.bevm.io/tx",
       "explorerToken": "https://scan-mainnet.bevm.io",
       "isLayer2": true,
-      "tokens": ["0xa67ED736649F2958A35fd249a584151056b4b745", "0xB5136FEba197f5fF4B765E5b50c74db717796dcD", "0xF2692468666E459D87052f68aE474E36C1a34fbB"],
+      "tokens": [
+        "0xa67ED736649F2958A35fd249a584151056b4b745",
+        "0xB5136FEba197f5fF4B765E5b50c74db717796dcD",
+        "0xF2692468666E459D87052f68aE474E36C1a34fbB"
+      ],
       "optionalTokens": [
         "0x26bda683F874e7AE3e3A5d3fad44Bcb82a7c107C",
         "0x037b572661137537611F707CFA3F206994767e23",
@@ -2731,7 +3201,9 @@
     },
     {
       "id": 3068,
-      "rpc": ["https://public-02.mainnet.bifrostnetwork.com/rpc"],
+      "rpc": [
+        "https://public-02.mainnet.bifrostnetwork.com/rpc"
+      ],
       "icon": "https://storage.herewallet.app/upload/5122ed85ee35c5b7c41e4641a0c89cc12c659cf28287d94e6e2491de907af67d.PNG",
       "wrapToken": "0xAe172D8c5E428D4b7C70f9E593b207F9daC9BF3e",
       "name": "Bifrost",
@@ -2740,7 +3212,7 @@
       "symbol": "BFC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.mainnet.bifrostnetwork.com/address",
+      "explorer": "https://explorer.mainnet.bifrostnetwork.com",
       "explorerTx": "https://explorer.mainnet.bifrostnetwork.com/tx",
       "explorerToken": "https://explorer.mainnet.bifrostnetwork.com/tokens",
       "isLayer2": true,
@@ -2760,7 +3232,10 @@
     },
     {
       "id": 200901,
-      "rpc": ["https://rpc.bitlayer.org", "https://rpc.ankr.com/bitlayer"],
+      "rpc": [
+        "https://rpc.bitlayer.org",
+        "https://rpc.ankr.com/bitlayer"
+      ],
       "icon": "https://storage.herewallet.app/upload/6da1b639e105392ee794f73c8d3dd821f48706e5b544fda1aac4c6e0c1927625.JPG",
       "wrapToken": "0xff204e2681a6fa0e2c3fade68a1b28fb90e4fc5f",
       "name": "Bitlayer",
@@ -2769,7 +3244,7 @@
       "symbol": "BTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.btrscan.com/address",
+      "explorer": "https://www.btrscan.com/home",
       "explorerTx": "https://www.btrscan.com/view-txns",
       "explorerToken": "https://www.btrscan.com/tokens",
       "isLayer2": true,
@@ -2789,17 +3264,19 @@
     },
     {
       "id": 60808,
-      "rpc": ["https://bob.gateway.tenderly.co", "https://bob.drpc.org"],
+      "rpc": [
+        "https://bob.gateway.tenderly.co",
+        "https://bob.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/21709b5f55a2bc790c420d7c433ab8a6396ada08f1fbaa4796c4468f9676b08f.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "BOB",
       "short": "BOB",
       "key": "bob",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.gobob.xyz/address",
+      "explorer": "https://explorer.gobob.xyz",
       "explorerTx": "https://explorer.gobob.xyz/tx",
       "explorerToken": "https://explorer.gobob.xyz/tokens",
       "isLayer2": true,
@@ -2820,17 +3297,19 @@
     },
     {
       "id": 288,
-      "rpc": ["https://boba-eth.drpc.org", "https://boba-ethereum.gateway.tenderly.co"],
+      "rpc": [
+        "https://boba-eth.drpc.org",
+        "https://boba-ethereum.gateway.tenderly.co"
+      ],
       "icon": "https://storage.herewallet.app/upload/c64cc38e81f722d1a2ff7d89bad23ddfe58d549f9b678c83660c3e1dea8e17dd.JPG",
       "wrapToken": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
       "name": "Boba",
       "short": "BOBA",
       "key": "boba",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://bobascan.com/address",
+      "explorer": "https://bobascan.com",
       "explorerTx": "https://bobascan.com/tx",
       "explorerToken": "https://bobascan.com/tokens",
       "isLayer2": true,
@@ -2845,7 +3324,9 @@
     },
     {
       "id": 6001,
-      "rpc": ["https://fullnode-mainnet.bouncebitapi.com"],
+      "rpc": [
+        "https://fullnode-mainnet.bouncebitapi.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/cc8302136aa01349e136ff60e04be520da55181a31ee03706564c1c58e8f2b08.JPG",
       "wrapToken": "0x3FAB32Fa73207eF102019c1BF54C7CCa1440F5C5",
       "name": "BounceBit",
@@ -2854,16 +3335,22 @@
       "symbol": "BB",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://bbscan.io/address",
+      "explorer": "https://bbscan.io",
       "explorerTx": "https://bbscan.io/evm-transactions",
       "explorerToken": "https://bbscan.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x77776b40C3d75cb07ce54dEA4b2Fd1D07F865222", "0xF5e11df1ebCf78b6b6D26E04FF19cD786a1e81dC", "0x7F150c293c97172C75983BD8ac084c187107eA19"],
+      "tokens": [
+        "0x77776b40C3d75cb07ce54dEA4b2Fd1D07F865222",
+        "0xF5e11df1ebCf78b6b6D26E04FF19cD786a1e81dC",
+        "0x7F150c293c97172C75983BD8ac084c187107eA19"
+      ],
       "isTestnet": false
     },
     {
       "id": 22776,
-      "rpc": ["https://rpc.maplabs.io"],
+      "rpc": [
+        "https://rpc.maplabs.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/02236352bc8663d665d7e2fc3fdfc3d78e68cc6c93e315ba25428f27c3b29275.JPG",
       "wrapToken": "0x13cb04d4a5dfb6398fc5ab005a6c84337256ee23",
       "name": "MAP",
@@ -2872,16 +3359,20 @@
       "symbol": "MAPO",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://maposcan.io/address",
+      "explorer": "https://maposcan.io",
       "explorerTx": "https://maposcan.io/tx",
       "explorerToken": "https://maposcan.io/tokens",
       "isLayer2": true,
-      "tokens": ["0x69c43364667cf6279016bbec76445174c78f142d"],
+      "tokens": [
+        "0x69c43364667cf6279016bbec76445174c78f142d"
+      ],
       "isTestnet": false
     },
     {
       "id": 4200,
-      "rpc": ["https://rpc.merlinchain.io"],
+      "rpc": [
+        "https://rpc.merlinchain.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/369e3b87b85dcf97fa32b32e5bd9e3cae84d77a1b06033716ca29c74b431345d.JPG",
       "wrapToken": "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
       "name": "Merlin",
@@ -2890,11 +3381,15 @@
       "symbol": "BTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.merlinchain.io/address",
+      "explorer": "https://scan.merlinchain.io",
       "explorerTx": "https://scan.merlinchain.io",
       "explorerToken": "https://scan.merlinchain.io",
       "isLayer2": true,
-      "tokens": ["0x6b4eCAdA640F1B30dBdB68f77821A03A5f282EbE", "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA", "0x0A3BB08b3a15A19b4De82F8AcFc862606FB69A2D"],
+      "tokens": [
+        "0x6b4eCAdA640F1B30dBdB68f77821A03A5f282EbE",
+        "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
+        "0x0A3BB08b3a15A19b4De82F8AcFc862606FB69A2D"
+      ],
       "optionalTokens": [
         "0x9bd60d6FC99843207B8149f9190438C1F81BDdcD",
         "0x480E158395cC5b41e5584347c495584cA2cAf78d",
@@ -2905,7 +3400,10 @@
     },
     {
       "id": 30,
-      "rpc": ["https://mycrypto.rsk.co", "https://rootstock-mainnet.public.blastapi.io"],
+      "rpc": [
+        "https://mycrypto.rsk.co",
+        "https://rootstock-mainnet.public.blastapi.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/a19bf4705c585d63a8955279082fc6ef4216396d22b213520efd74893e1a1238.JPG",
       "wrapToken": "0xF3981eB22C6583abe769a1cbE15a0Ba71F7c67b1",
       "name": "Rootstock",
@@ -2914,16 +3412,23 @@
       "symbol": "RBTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.rootstock.io/address",
+      "explorer": "https://explorer.rootstock.io",
       "explorerTx": "https://explorer.rootstock.io",
       "explorerToken": "https://explorer.rootstock.io",
       "isLayer2": true,
-      "tokens": ["0xAF368c91793cb22739386DFCBbB2f1A9E4bcBEBf", "0xf6718b2701D4a6498Ef77d7c152B2137aB28B8a3", "0x2F6f07CDcf3588944bF4C42Ac74fF24bf56e7590"],
+      "tokens": [
+        "0xAF368c91793cb22739386DFCBbB2f1A9E4bcBEBf",
+        "0xf6718b2701D4a6498Ef77d7c152B2137aB28B8a3",
+        "0x2F6f07CDcf3588944bF4C42Ac74fF24bf56e7590"
+      ],
       "isTestnet": false
     },
     {
       "id": 10000,
-      "rpc": ["https://smartbch.fountainhead.cash/mainnet", "https://smartbch.greyh.at"],
+      "rpc": [
+        "https://smartbch.fountainhead.cash/mainnet",
+        "https://smartbch.greyh.at"
+      ],
       "icon": "https://storage.herewallet.app/upload/bded2c962acb0851dcc1a1e57156dbd254dd1a73e6319cd747d0af908bac8ac8.PNG",
       "wrapToken": "0x0000000000000000000000000000000000002711",
       "name": "SmartBch(SmartBitcoinCash)",
@@ -2932,11 +3437,14 @@
       "symbol": "SBTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://www.smartscout.cash/address",
+      "explorer": "https://www.smartscout.cash",
       "explorerTx": "https://www.smartscout.cash/tx",
       "explorerToken": "https://www.smartscout.cash/tokens",
       "isLayer2": true,
-      "tokens": ["0xBc2F884680c95A02cea099dA2F524b366d9028Ba", "0x675E1d6FcE8C7cC091aED06A68D079489450338a"],
+      "tokens": [
+        "0xBc2F884680c95A02cea099dA2F524b366d9028Ba",
+        "0x675E1d6FcE8C7cC091aED06A68D079489450338a"
+      ],
       "optionalTokens": [
         "0x4592B88618119e55e37FFCb28EDE02beF6F3c5bA",
         "0x291361E2619Cd0fbfD880bE3c02926CfDd3c6a9F",
@@ -2947,7 +3455,10 @@
     },
     {
       "id": 21000000,
-      "rpc": ["https://rpc.ankr.com/corn_maizenet", "https://rpc.ankr.com/corn_maizenet"],
+      "rpc": [
+        "https://rpc.ankr.com/corn_maizenet",
+        "https://rpc.ankr.com/corn_maizenet"
+      ],
       "icon": "https://storage.herewallet.app/upload/4e75996c18e750d5249d73f5a78b9c7f681c9f46816fec87d844c7078ed545bb.JPG",
       "wrapToken": "0xda5dDd7270381A7C2717aD10D1c0ecB19e3CDFb2",
       "name": "Corn",
@@ -2956,16 +3467,22 @@
       "symbol": "BTCN",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://cornscan.io/address",
+      "explorer": "https://cornscan.io",
       "explorerTx": "https://cornscan.io/tx",
       "explorerToken": "https://cornscan.io/tokens",
       "isLayer2": true,
-      "tokens": ["0xDF0B24095e15044538866576754F3C964e902Ee6", "0x85aDfA60dDf86b67E6fD493Bd2c774b2eD772D14", "0xda5dDd7270381A7C2717aD10D1c0ecB19e3CDFb2"],
+      "tokens": [
+        "0xDF0B24095e15044538866576754F3C964e902Ee6",
+        "0x85aDfA60dDf86b67E6fD493Bd2c774b2eD772D14",
+        "0xda5dDd7270381A7C2717aD10D1c0ecB19e3CDFb2"
+      ],
       "isTestnet": false
     },
     {
       "id": 32659,
-      "rpc": ["https://mainnet.fusionnetwork.io"],
+      "rpc": [
+        "https://mainnet.fusionnetwork.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/7b7e4ad1ffc893605e96ac613ed2b7b1553fd8bef6e160f21af83c82778c0624.JPG",
       "wrapToken": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
       "name": "Fusion",
@@ -2974,11 +3491,14 @@
       "symbol": "FSN",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://fsnscan.com/address",
+      "explorer": "https://fsnscan.com",
       "explorerTx": "https://fsnscan.com/txs",
       "explorerToken": "https://fsnscan.com/tokens",
       "isLayer2": false,
-      "tokens": ["0x8a20c13b42d7fe418f10f922f2cee06246c24269", "0x8fdc02dc969a22c02ddffd3d8b547fab3d7702fe"],
+      "tokens": [
+        "0x8a20c13b42d7fe418f10f922f2cee06246c24269",
+        "0x8fdc02dc969a22c02ddffd3d8b547fab3d7702fe"
+      ],
       "optionalTokens": [
         "0xd82fe57a2643fbc692585bcb88df1d5d9c636cc8",
         "0xe014a31045155bdd554a560ae7cc99f3da0a745c",
@@ -2989,7 +3509,9 @@
     },
     {
       "id": 6322,
-      "rpc": ["https://jsonrpc.aura.network"],
+      "rpc": [
+        "https://jsonrpc.aura.network"
+      ],
       "icon": "https://storage.herewallet.app/upload/b22926680bf9e68dd5431981720076ec0544f58a0640fdbe8698cbc92e744393.jpg",
       "wrapToken": "0xDE47A655a5d9904BD3F7e1A536D8323fBD99993A",
       "name": "Aura",
@@ -2998,16 +3520,22 @@
       "symbol": "AURA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://aurascan.io/address",
+      "explorer": "https://aurascan.io",
       "explorerTx": "https://aurascan.io/evm-transactions",
       "explorerToken": "https://aurascan.io/tokens",
       "isLayer2": false,
-      "tokens": ["aura1fgfnuru6krewgt9zzu7nzercz007928uzrw2t2tl6hl3ec50me2q3ankr2", "0x80b5a32E4F032B2a058b4F29EC95EEfEEB87aDcd", "0xDE47A655a5d9904BD3F7e1A536D8323fBD99993A"],
+      "tokens": [
+        "aura1fgfnuru6krewgt9zzu7nzercz007928uzrw2t2tl6hl3ec50me2q3ankr2",
+        "0x80b5a32E4F032B2a058b4F29EC95EEfEEB87aDcd",
+        "0xDE47A655a5d9904BD3F7e1A536D8323fBD99993A"
+      ],
       "isTestnet": false
     },
     {
       "id": 416,
-      "rpc": ["https://rpc.sx.technology"],
+      "rpc": [
+        "https://rpc.sx.technology"
+      ],
       "icon": "https://storage.herewallet.app/upload/29526ff25436ff09b95fdd1cd821c786d462113a21d22a3f273ec1fce6f9d9b7.jpg",
       "wrapToken": "0xaa99bE3356a11eE92c3f099BD7a038399633566f",
       "name": "SX",
@@ -3016,11 +3544,15 @@
       "symbol": "SX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.sx.technology/address",
+      "explorer": "https://explorer.sx.technology",
       "explorerTx": "https://explorer.sx.technology/txs",
       "explorerToken": "https://explorer.sx.technology/tokens",
       "isLayer2": true,
-      "tokens": ["0xe2aa35C2039Bd0Ff196A6Ef99523CC0D3972ae3e", "0xaa99bE3356a11eE92c3f099BD7a038399633566f", "0xA173954Cc4b1810C0dBdb007522ADbC182DaB380"],
+      "tokens": [
+        "0xe2aa35C2039Bd0Ff196A6Ef99523CC0D3972ae3e",
+        "0xaa99bE3356a11eE92c3f099BD7a038399633566f",
+        "0xA173954Cc4b1810C0dBdb007522ADbC182DaB380"
+      ],
       "optionalTokens": [
         "0x7Dc31a2FCBfbAd1ed4519111Fd33f78316BcBC81",
         "0xd9Fd6e207a2196e1C3FEd919fCFE91482f705909",
@@ -3031,21 +3563,26 @@
     },
     {
       "id": 690,
-      "rpc": ["https://rpc.redstonechain.com"],
+      "rpc": [
+        "https://rpc.redstonechain.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/a935bab67311d4c1a2812a8b6817f988916a5ab22a432b5e2d75b4ccaf26a2d0.jpeg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Redstone",
       "short": "REDSTONE",
       "key": "redstone",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.redstone.xyz/address",
+      "explorer": "https://explorer.redstone.xyz",
       "explorerTx": "https://explorer.redstone.xyz/txs",
       "explorerToken": "https://explorer.redstone.xyz/tokens",
       "isLayer2": true,
-      "tokens": ["0xD5d59fC063e7548b6015A36fEb10B875924A19be", "0x4200000000000000000000000000000000000006", "0x32444d4DEb1f8FA35A235FF997D5a22aC74b0e48"],
+      "tokens": [
+        "0xD5d59fC063e7548b6015A36fEb10B875924A19be",
+        "0x4200000000000000000000000000000000000006",
+        "0x32444d4DEb1f8FA35A235FF997D5a22aC74b0e48"
+      ],
       "optionalTokens": [
         "0xc072c3EbAf165955C5aAd2DbB4293f771de6dbd3",
         "0x9c0153C56b460656DF4533246302d42Bd2b49947",
@@ -3056,7 +3593,10 @@
     },
     {
       "id": 314,
-      "rpc": ["https://rpc.ankr.com/filecoin", "https://api.node.glif.io"],
+      "rpc": [
+        "https://rpc.ankr.com/filecoin",
+        "https://api.node.glif.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/a50b9e34a1d1fad1b6ac8cca9df8a680f587a394faa9c6123601af265905b9b5.jpg",
       "wrapToken": "f410fmdqxonrwz5peuit5tlbe6ih6zibu5ys223xctfi",
       "name": "Filecoin",
@@ -3065,7 +3605,7 @@
       "symbol": "FIL",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://filecoin.blockscout.com/address",
+      "explorer": "https://filecoin.blockscout.com",
       "explorerTx": "https://filecoin.blockscout.com/txs",
       "explorerToken": "https://filecoin.blockscout.com/tokens",
       "isLayer2": false,
@@ -3082,7 +3622,10 @@
     },
     {
       "id": 41455,
-      "rpc": ["https://alephzero.drpc.org", "https://rpc.alephzero.raas.gelato.cloud"],
+      "rpc": [
+        "https://alephzero.drpc.org",
+        "https://rpc.alephzero.raas.gelato.cloud"
+      ],
       "icon": "https://storage.herewallet.app/upload/05d06f18dcfb65dc2411ddb29fae378213e5cd70641d7d20e681840cae571fe3.jpg",
       "wrapToken": "0xb7Da55D7040ef9C887e20374D76A88F93A59119E",
       "name": "Aleph Zero",
@@ -3091,7 +3634,7 @@
       "symbol": "AZERO",
       "decimal": 12,
       "isEvm": true,
-      "explorer": "https://alephzero.subscan.io/address",
+      "explorer": "https://alephzero.subscan.io",
       "explorerTx": "https://alephzero.subscan.io/transfer",
       "explorerToken": "https://evm-explorer.alephzero.org/tokens",
       "isLayer2": true,
@@ -3111,7 +3654,9 @@
     },
     {
       "id": 24,
-      "rpc": ["https://rpc.kardiachain.io"],
+      "rpc": [
+        "https://rpc.kardiachain.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/59a35f918bc3569379c5b2691c7a8c9c29afd82f63a49ef63291b6840c7e7b02.png",
       "wrapToken": "0xAF984E23EAA3E7967F3C5E007fbe397D8566D23d",
       "name": "KardiaChain",
@@ -3120,7 +3665,7 @@
       "symbol": "KAI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.kardiachain.io/address",
+      "explorer": "https://explorer.kardiachain.io",
       "explorerTx": "https://explorer.kardiachain.io/txs",
       "explorerToken": "https://explorer.kardiachain.io/tokens",
       "isLayer2": true,
@@ -3142,7 +3687,9 @@
     },
     {
       "id": 2040,
-      "rpc": ["https://rpc.vanarchain.com"],
+      "rpc": [
+        "https://rpc.vanarchain.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/bdfe55c847b0229431047cf513a2c537077a83691e00aac1986f59d29f06da3c.jpeg",
       "wrapToken": "0x3F59B60748f001bd53cb96A81F148e438227B0F4",
       "name": "Vanar",
@@ -3151,7 +3698,7 @@
       "symbol": "VANRY",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.vanarchain.com/address",
+      "explorer": "https://explorer.vanarchain.com",
       "explorerTx": "https://explorer.vanarchain.com/txs",
       "explorerToken": "https://explorer.vanarchain.com/tokens",
       "isLayer2": false,
@@ -3171,7 +3718,10 @@
     },
     {
       "id": 82,
-      "rpc": ["https://rpc.meter.io", "https://meter.blockpi.network/v1/rpc/public"],
+      "rpc": [
+        "https://rpc.meter.io",
+        "https://meter.blockpi.network/v1/rpc/public"
+      ],
       "icon": "https://storage.herewallet.app/upload/46a85114b6b028d98cf1c321ee6124535cf38e103de6419f41f5b087c69c96e8.jpeg",
       "wrapToken": "0x228ebbee999c6a7ad74a6130e81b12f9fe237ba3",
       "name": "Meter",
@@ -3180,7 +3730,7 @@
       "symbol": "MTR",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://scan.meter.io/address",
+      "explorer": "https://scan.meter.io",
       "explorerTx": "https://scan.meter.io/txs",
       "explorerToken": "https://scan.meter.io",
       "isLayer2": false,
@@ -3189,7 +3739,10 @@
     },
     {
       "id": 106,
-      "rpc": ["https://evmexplorer.velas.com/rpc", "https://explorer.velas.com/rpc"],
+      "rpc": [
+        "https://evmexplorer.velas.com/rpc",
+        "https://explorer.velas.com/rpc"
+      ],
       "icon": "https://storage.herewallet.app/upload/00004e15175bbf1fb1d0cc7f8d6c36d46f79160f370534c0ed3b9b07626585ed.jpg",
       "wrapToken": "0xc579D1f3CF86749E05CD06f7ADe17856c2CE3126",
       "name": "Velas",
@@ -3198,7 +3751,7 @@
       "symbol": "VLX",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://evmexplorer.velas.com/address",
+      "explorer": "https://evmexplorer.velas.com",
       "explorerTx": "https://evmexplorer.velas.com/txs",
       "explorerToken": "https://evmexplorer.velas.com/tokens",
       "isLayer2": false,
@@ -3219,7 +3772,10 @@
     },
     {
       "id": 57,
-      "rpc": ["https://rpc.syscoin.org", "https://syscoin-evm.publicnode.com"],
+      "rpc": [
+        "https://rpc.syscoin.org",
+        "https://syscoin-evm.publicnode.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/06e0439f329070646b41c691175867fd913369fc74055ee924878e7c208424ae.jpg",
       "wrapToken": "0xd3e822f3ef011Ca5f17D82C956D952D8d7C3A1BB",
       "name": "Syscoin",
@@ -3228,7 +3784,7 @@
       "symbol": "SYS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.syscoin.org/address",
+      "explorer": "https://explorer.syscoin.org",
       "explorerTx": "https://explorer.syscoin.org/txs",
       "explorerToken": "https://explorer.syscoin.org/tokens",
       "isLayer2": false,
@@ -3248,7 +3804,10 @@
     },
     {
       "id": 9001,
-      "rpc": ["https://evmos-mainnet.public.blastapi.io", "https://rpc-evm.evmos.dragonstake.io"],
+      "rpc": [
+        "https://evmos-mainnet.public.blastapi.io",
+        "https://rpc-evm.evmos.dragonstake.io"
+      ],
       "icon": "https://storage.herewallet.app/upload/1ecc15249f1cc645c5b7108030d56822379cbcc90b662240adbe4cb7a97b9039.png",
       "wrapToken": "0xD4949664cD82660AaE99bEdc034a0deA8A0bd517",
       "name": "Evmos",
@@ -3257,7 +3816,7 @@
       "symbol": "EVMOS",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://evm.evmos.org/address",
+      "explorer": "https://evm.evmos.org",
       "explorerTx": "https://evm.evmos.org/txs",
       "explorerToken": "https://evm.evmos.org/tokens",
       "isLayer2": false,
@@ -3278,7 +3837,10 @@
     },
     {
       "id": 32520,
-      "rpc": ["https://rpc-bitgert.icecreamswap.com", "https://mainnet-rpc.brisescan.com"],
+      "rpc": [
+        "https://rpc-bitgert.icecreamswap.com",
+        "https://mainnet-rpc.brisescan.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/1672fe553b5136e0d3df996005ddc877c35c7838b9dfd6dbd846bc89ab270c8d.png",
       "wrapToken": "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710",
       "name": "Bitgert",
@@ -3287,7 +3849,7 @@
       "symbol": "BRISE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://brisescan.com/address",
+      "explorer": "https://brisescan.com",
       "explorerTx": "https://brisescan.com/txs",
       "explorerToken": "https://brisescan.com/tokens",
       "isLayer2": false,
@@ -3311,17 +3873,19 @@
     },
     {
       "id": 8008,
-      "rpc": ["https://rpc.polynomial.fi", "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a"],
+      "rpc": [
+        "https://rpc.polynomial.fi",
+        "https://node.histori.xyz/polynomial-mainnet/8ry9f6t9dct1se2hlagxnd9n2a"
+      ],
       "icon": "https://storage.herewallet.app/upload/93e32cd362cf42cfbff7969ac233d8a2a77538e37adb66d0f9bbdeff182f9b05.JPG",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Polynomial",
       "short": "POLYNOMIAL",
       "key": "polynomial",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://polynomialscan.io/address",
+      "explorer": "https://polynomialscan.io",
       "explorerTx": "https://polynomialscan.io/txs",
       "explorerToken": "https://polynomialscan.io/tokens",
       "isLayer2": true,
@@ -3335,7 +3899,10 @@
     },
     {
       "id": 245022934,
-      "rpc": ["https://neon-proxy-mainnet.solana.p2p.org", "https://neon-mainnet.everstake.one"],
+      "rpc": [
+        "https://neon-proxy-mainnet.solana.p2p.org",
+        "https://neon-mainnet.everstake.one"
+      ],
       "icon": "https://storage.herewallet.app/upload/75b68d42e365e59d9a90620885f9cc6e647e5b5539d989223f976956a9ab9beb.jpg",
       "wrapToken": "0x202C35e517Fa803B537565c40F0a6965D7204609v",
       "name": "Neon EVM",
@@ -3344,7 +3911,7 @@
       "symbol": "NEON",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://neonscan.org/address",
+      "explorer": "https://neonscan.org",
       "explorerTx": "https://neonscan.org/txs",
       "explorerToken": "https://neonscan.org/tokens",
       "isLayer2": true,
@@ -3360,17 +3927,18 @@
     },
     {
       "id": 55244,
-      "rpc": ["https://rpc.superposition.so"],
+      "rpc": [
+        "https://rpc.superposition.so"
+      ],
       "icon": "https://storage.herewallet.app/upload/d206673fa17bde2ff00e85cabe65a202848e2a9cfb19a2177248208a711e9379.jpg",
       "wrapToken": "0x1fB719f10b56d7a85DCD32f27f897375fB21cfdd",
       "name": "Superposition",
       "short": "SUPERPOSITION",
       "key": "superposition",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.superposition.so/address",
+      "explorer": "https://explorer.superposition.so",
       "explorerTx": "https://explorer.superposition.so/txs",
       "explorerToken": "https://explorer.superposition.so/tokens",
       "isLayer2": false,
@@ -3386,7 +3954,10 @@
     },
     {
       "id": 80094,
-      "rpc": ["https://berachain-rpc.publicnode.com", "https://rpc.berachain.com"],
+      "rpc": [
+        "https://rpc.berachain.com",
+        "https://rpc.berachain-apis.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/f5c15875b85ca57447ec031930dbdac1f85799a4ca83ae8ecc204142ff433d60.png",
       "wrapToken": "0x6969696969696969696969696969696969696969",
       "name": "Berachain",
@@ -3395,11 +3966,15 @@
       "symbol": "BERA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://berascan.com/address",
+      "explorer": "https://berascan.com",
       "explorerTx": "https://berascan.com/txs",
       "explorerToken": "https://berascan.com/tokens",
       "isLayer2": false,
-      "tokens": ["0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34", "0x7DCC39B4d1C53CB31e1aBc0e358b43987FEF80f7", "0x549943e04f40284185054145c6E4e9568C1D3241"],
+      "tokens": [
+        "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+        "0x7DCC39B4d1C53CB31e1aBc0e358b43987FEF80f7",
+        "0x549943e04f40284185054145c6E4e9568C1D3241"
+      ],
       "optionalTokens": [
         "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
         "0xEc901DA9c68E90798BbBb74c11406A32A70652C3",
@@ -3410,102 +3985,124 @@
     },
     {
       "id": 130,
-      "rpc": ["https://mainnet.unichain.org"],
+      "rpc": [
+        "https://mainnet.unichain.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/883436dee362fa6b67d7ba6596bad7c0742e83e9739362a57dbec6b9ee19dd88.jpeg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "Unichain",
       "short": "UNICHAIN",
       "key": "unichain",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://uniscan.xyz/address",
+      "explorer": "https://uniscan.xyz",
       "explorerTx": "https://uniscan.xyz/txs",
       "explorerToken": "https://uniscan.xyz/tokens",
       "isLayer2": true,
-      "tokens": ["0x078D782b760474a361dDA0AF3839290b0EF57AD6", "0x8f187aA05619a017077f5308904739877ce9eA21", "0x20CAb320A855b39F724131C69424240519573f81"],
+      "tokens": [
+        "0x078D782b760474a361dDA0AF3839290b0EF57AD6",
+        "0x8f187aA05619a017077f5308904739877ce9eA21",
+        "0x20CAb320A855b39F724131C69424240519573f81"
+      ],
       "isTestnet": false
     },
     {
       "id": 8333,
-      "rpc": ["https://mainnet-rpc.b3.fun"],
+      "rpc": [
+        "https://mainnet-rpc.b3.fun"
+      ],
       "icon": "https://storage.herewallet.app/upload/06c810f4ce7ba58649297612d91a2b4b0084444bf2188abe991630414fd6fdb8.jpg",
       "wrapToken": "0x4200000000000000000000000000000000000006",
       "name": "B3",
       "short": "B3",
       "key": "b3",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.b3.fun/address",
+      "explorer": "https://explorer.b3.fun",
       "explorerTx": "https://explorer.b3.fun/txs",
       "explorerToken": "https://explorer.b3.fun/tokens",
       "isLayer2": false,
-      "tokens": ["0x4FaCAeAB0b044617A94e94a54A8D6644A7f9E41B"],
+      "tokens": [
+        "0x4FaCAeAB0b044617A94e94a54A8D6644A7f9E41B"
+      ],
       "isTestnet": false
     },
     {
       "id": 11155111,
-      "rpc": ["https://sepolia.gateway.tenderly.co", "https://sepolia.drpc.org"],
+      "rpc": [
+        "https://sepolia.gateway.tenderly.co",
+        "https://sepolia.drpc.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/893fed476e0f2956e3b9bb10df289070c119f956ba62a3736db1c2c476ca1d01.jpg",
       "wrapToken": "0x1ef5F52BdBe11Af2377C58ecC914A8c72Ea807cF",
       "name": "Sepolia",
       "short": "SEPOLIA",
       "key": "sepolia",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://sepolia.etherscan.io/address",
+      "explorer": "https://sepolia.etherscan.io",
       "explorerTx": "https://sepolia.etherscan.io/txs",
       "explorerToken": "https://sepolia.etherscan.io/tokentxns",
       "isLayer2": false,
-      "tokens": ["0xFB122130C4d28860dbC050A8e024A71a558eB0C1"],
+      "tokens": [
+        "0xFB122130C4d28860dbC050A8e024A71a558eB0C1"
+      ],
       "isTestnet": true
     },
     {
       "id": 17000,
-      "rpc": ["https://rpc.holesky.ethpandaops.io", "https://ethereum-holesky-rpc.publicnode.com"],
-      "icon": "https://storage.herewallet.app/upload/60f4c5cc71da52083fdf2801b06a71a2f563ea4dbb9e1166060a272ede70f303.jpeg",
+      "rpc": [
+        "https://rpc.holesky.ethpandaops.io",
+        "https://ethereum-holesky-rpc.publicnode.com"
+      ],
+      "icon": "https://storage.herewallet.app/upload/d0cbf7cb326f35f009f3d7eb863378bf7f62d77e4e517b88fca4bbd8f9ea89b4.png",
       "wrapToken": "0x94373a4919B3240D86eA41593D5eBa789FEF3848",
-      "name": "Holeski",
-      "short": "HOLESKI",
-      "key": "holeski",
+      "name": "Holesky",
+      "short": "HOLESKY",
+      "key": "holesky",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://eth-holesky.blockscout.com/address",
+      "explorer": "https://eth-holesky.blockscout.com",
       "explorerTx": "https://eth-holesky.blockscout.com/txs",
       "explorerToken": "https://eth-holesky.blockscout.com/tokens",
       "isLayer2": false,
-      "tokens": ["0x5dddd025ed157bfe00e9622e3462258499eA9d51"],
+      "tokens": [
+        "0x5dddd025ed157bfe00e9622e3462258499eA9d51"
+      ],
       "isTestnet": true
     },
     {
       "id": 743111,
-      "rpc": ["https://testnet.rpc.hemi.network/rpc"],
+      "rpc": [
+        "https://testnet.rpc.hemi.network/rpc",
+        "https://rpc.hemi.network/rpc"
+      ],
       "icon": "https://storage.herewallet.app/upload/c8d28852fb645431835a70d33dcd6aeecacfba15f927bfc45924323fccd06392.JPG",
       "wrapToken": "0x0C8aFD1b58aa2A5bAd2414B861D8A7fF898eDC3A",
       "name": "Hemi Sepolia",
       "short": "HEMI SEPOLIA",
       "key": "hemi sepolia",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://testnet.explorer.hemi.xyz/address",
+      "explorer": "https://testnet.explorer.hemi.xyz",
       "explorerTx": "https://testnet.explorer.hemi.xyz/txs",
       "explorerToken": "https://testnet.explorer.hemi.xyz/tokens",
       "isLayer2": false,
-      "tokens": ["0x3Adf21A6cbc9ce6D5a3ea401E7Bae9499d391298"],
+      "tokens": [
+        "0x3Adf21A6cbc9ce6D5a3ea401E7Bae9499d391298"
+      ],
       "isTestnet": true
     },
     {
       "id": 9788,
-      "rpc": ["https://rpc.testnetv2.tabichain.com"],
+      "rpc": [
+        "https://rpc.testnetv2.tabichain.com"
+      ],
       "icon": "https://storage.herewallet.app/upload/c006a4c6ae11039beba12df9d0a37aa959b8a48da273a8ed03af9287fb460e39.JPG",
       "wrapToken": "0xCde9c6ad3f82f322AC86DC63eFF63bC405072F95",
       "name": "Tabi Testnetv2",
@@ -3514,35 +4111,42 @@
       "symbol": "TABI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://testnetv2.tabiscan.com/address",
+      "explorer": "https://testnetv2.tabiscan.com",
       "explorerTx": "https://testnetv2.tabiscan.com/txs",
       "explorerToken": "https://testnetv2.tabiscan.com/tokens",
       "isLayer2": false,
-      "tokens": ["0xD8BF160Cd5049B6439d11258E96B7535126aB648"],
+      "tokens": [
+        "0xD8BF160Cd5049B6439d11258E96B7535126aB648"
+      ],
       "isTestnet": true
     },
     {
       "id": 911867,
-      "rpc": ["https://odyssey.ithaca.xyz"],
+      "rpc": [
+        "https://odyssey.ithaca.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/9fec36325001371270ed1ba61b59c7ee1a974b0e9e88774a1759dc1666c174ed.jpg",
       "wrapToken": "0x0000000000000000000000000000000000000000",
       "name": "Ithaca",
       "short": "ITHACA",
       "key": "ithaca",
       "symbol": "ETH",
-      "minimum": 0.0001,
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://odyssey-explorer.ithaca.xyz/address",
+      "explorer": "https://odyssey-explorer.ithaca.xyz",
       "explorerTx": "https://odyssey-explorer.ithaca.xyz/txs",
       "explorerToken": "https://odyssey-explorer.ithaca.xyz/tokens",
       "isLayer2": false,
-      "tokens": ["0xc6Ab1437507B4156b4DbFbe061b369f0973Be8F4"],
+      "tokens": [
+        "0xc6Ab1437507B4156b4DbFbe061b369f0973Be8F4"
+      ],
       "isTestnet": true
     },
     {
       "id": 7210,
-      "rpc": ["https://evm-rpc.testnet-1.nibiru.fi"],
+      "rpc": [
+        "https://evm-rpc.testnet-1.nibiru.fi"
+      ],
       "icon": "https://storage.herewallet.app/upload/0aca3e491a04de307432fa96f03329abec727a29f4d8ed02ec18d578ed07008d.jpg",
       "wrapToken": "0x2dC45B19D2f509B998153fe5fA2A8791050e77cC",
       "name": "Nibiru Testnet-1",
@@ -3551,16 +4155,20 @@
       "symbol": "NIBI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://evm-explorer.nibiru.fi/address",
+      "explorer": "https://evm-explorer.nibiru.fi",
       "explorerTx": "https://evm-explorer.nibiru.fi/txs",
       "explorerToken": "https://evm-explorer.nibiru.fi/tokens",
       "isLayer2": false,
-      "tokens": ["0x2dC45B19D2f509B998153fe5fA2A8791050e77cC"],
+      "tokens": [
+        "0x2dC45B19D2f509B998153fe5fA2A8791050e77cC"
+      ],
       "isTestnet": true
     },
     {
       "id": 31611,
-      "rpc": ["https://rpc.test.mezo.org"],
+      "rpc": [
+        "https://rpc.test.mezo.org"
+      ],
       "icon": "https://storage.herewallet.app/upload/ba886a058942e14b1f170517f21285489e131e0f66e5dbb66e93537dd46ede85.jpg",
       "wrapToken": "0xA460F83cdd9584E4bD6a9838abb0baC58EAde999",
       "name": "Mezo Matsnet",
@@ -3569,16 +4177,20 @@
       "symbol": "BTC",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.test.mezo.org/address",
+      "explorer": "https://explorer.test.mezo.org",
       "explorerTx": "https://explorer.test.mezo.org/txs",
       "explorerToken": "https://explorer.test.mezo.org/tokens",
       "isLayer2": false,
-      "tokens": ["0x637e22A1EBbca50EA2d34027c238317fD10003eB"],
+      "tokens": [
+        "0x637e22A1EBbca50EA2d34027c238317fD10003eB"
+      ],
       "isTestnet": true
     },
     {
       "id": 93384,
-      "rpc": ["https://assam-rpc.tea.xyz"],
+      "rpc": [
+        "https://assam-rpc.tea.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/4cdb55c30be5245920eae789f80c6dd12373089d0055c62219cb114daaa29f27.jpg",
       "wrapToken": "0x9Ce422C446f401fBf8A400E5765927d642D426F4",
       "name": "Tea-assam",
@@ -3587,16 +4199,21 @@
       "symbol": "TEA",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://assam.tea.xyz/address",
+      "explorer": "https://assam.tea.xyz",
       "explorerTx": "https://assam.tea.xyz/txs",
       "explorerToken": "https://assam.tea.xyz/tokens",
       "isLayer2": false,
-      "tokens": ["0x2682DEB4CDeB181A05A851edD4AcfD4d541aE177"],
+      "tokens": [
+        "0x2682DEB4CDeB181A05A851edD4AcfD4d541aE177"
+      ],
       "isTestnet": true
     },
     {
       "id": 23294,
-      "rpc": ["https://sapphire.oasis.io", "https://1rpc.io/oasis/sapphire"],
+      "rpc": [
+        "https://sapphire.oasis.io",
+        "https://1rpc.io/oasis/sapphire"
+      ],
       "icon": "https://storage.herewallet.app/upload/8b997b2020906b64cbdd2686684333ae68d4ec6ba8dad260dc02b7029e304143.png",
       "wrapToken": "0x8Bc2B030b299964eEfb5e1e0b36991352E56D2D3",
       "name": "Oasis Sapphire",
@@ -3605,34 +4222,21 @@
       "symbol": "ROSE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.oasis.io/mainnet/sapphire/address",
+      "explorer": "https://explorer.oasis.io/mainnet/sapphire",
       "explorerTx": "https://explorer.oasis.io/mainnet/sapphire/tx",
       "explorerToken": "https://explorer.oasis.io/mainnet/sapphire/token",
       "isLayer2": true,
-      "tokens": [""],
-      "isTestnet": false
-    },
-    {
-      "id": 397,
-      "rpc": ["https://eth-rpc.mainnet.near.org"],
-      "icon": "https://storage.herewallet.app/ft/1010:native.png",
-      "wrapToken": "0x4200000000000000000000000000000000000006",
-      "name": "NEAR",
-      "short": "NEAR",
-      "key": "NEAR",
-      "symbol": "NEAR",
-      "decimal": 18,
-      "isEvm": true,
-      "explorer": "",
-      "explorerTx": "",
-      "explorerToken": "",
-      "isLayer2": true,
-      "tokens": [""],
+      "tokens": [
+        ""
+      ],
       "isTestnet": false
     },
     {
       "id": 42262,
-      "rpc": ["https://emerald.oasis.io", "https://1rpc.io/oasis/emerald"],
+      "rpc": [
+        "https://emerald.oasis.io",
+        "https://1rpc.io/oasis/emerald"
+      ],
       "icon": "https://storage.herewallet.app/upload/8b997b2020906b64cbdd2686684333ae68d4ec6ba8dad260dc02b7029e304143.png",
       "wrapToken": "0x21C718C22D52d0F3a789b752D4c2fD5908a8A733",
       "name": "Oasis Emerald",
@@ -3641,16 +4245,64 @@
       "symbol": "ROSE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://explorer.oasis.io/mainnet/emerald/address",
+      "explorer": "https://explorer.oasis.io/mainnet/emerald",
       "explorerTx": "https://explorer.oasis.io/mainnet/emerald/tx",
       "explorerToken": "https://explorer.oasis.io/mainnet/emerald/tokenn",
       "isLayer2": true,
-      "tokens": [""],
+      "tokens": [
+        ""
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 232,
+      "rpc": [
+        "https://rpc.lens.xyz"
+      ],
+      "icon": "https://storage.herewallet.app/upload/dc82e7110e7bd4813eb597ebcc8c2defdd3d9661179c40d227620b14518e3c87.jpg",
+      "wrapToken": "",
+      "name": "Lens",
+      "short": "LENS",
+      "key": "lens",
+      "symbol": "GHO",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.lens.xyz",
+      "explorerTx": "https://explorer.lens.xyz/transactions/",
+      "explorerToken": "",
+      "isLayer2": true,
+      "tokens": [
+        ""
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 4158,
+      "rpc": [
+        "https://rpc.mainnet.ms"
+      ],
+      "icon": "https://storage.herewallet.app/upload/437ab8dab844becbdc766bd6cb35c3544ef8f27d626b46fd53dbe6a33aa16b12.jpg",
+      "wrapToken": "0xc537d12bd626b135b251cca43283eff69ec109c4",
+      "name": "CrossFi",
+      "short": "CROSSFI",
+      "key": "crossfi",
+      "symbol": "XFI",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://xfiscan.com/dashboard",
+      "explorerTx": "https://xfiscan.com/txs",
+      "explorerToken": "https://xfiscan.com/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x7bbce15166bbc008ec1adf9b3d6bba0602fce7ba"
+      ],
       "isTestnet": false
     },
     {
       "id": 10143,
-      "rpc": ["https://testnet-rpc.monad.xyz"],
+      "rpc": [
+        "https://testnet-rpc.monad.xyz"
+      ],
       "icon": "https://storage.herewallet.app/upload/8f6bdf0d04494dc7157704cf3a7e623aeba7188120d93535d3b9330fa82fc200.JPG",
       "wrapToken": "0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701",
       "name": "Monad (T)",
@@ -3659,7 +4311,7 @@
       "symbol": "MON",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://testnet.monadexplorer.com/address",
+      "explorer": "https://testnet.monadexplorer.com",
       "explorerTx": "https://testnet.monadexplorer.com/transactions",
       "explorerToken": "https://testnet.monadexplorer.com/tokens",
       "isLayer2": false,
@@ -3687,7 +4339,10 @@
     },
     {
       "id": 16600,
-      "rpc": ["https://rpc.ankr.com/0g_newton"],
+      "rpc": [
+        "https://rpc.ankr.com/0g_newton",
+        "https://evmrpc-testnet.0g.ai"
+      ],
       "icon": "https://storage.herewallet.app/upload/2ec8e07ea70f3a3ea47ab1d7486decc9c650774afbb31c051b7837d76c78f807.jpg",
       "wrapToken": "0x493ea9950586033ea8894b5e684bb4df6979a0d3",
       "name": "0G-Newton-Testnet",
@@ -3696,16 +4351,20 @@
       "symbol": "A0GI",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://chainscan-newton.0g.ai/address",
+      "explorer": "https://chainscan-newton.0g.ai",
       "explorerTx": "https://chainscan-newton.0g.ai/txs",
       "explorerToken": "https://chainscan-newton.0g.ai/tokens",
       "isLayer2": false,
-      "tokens": ["0x911A31a3450AAbFD38D1484aaE457c88b66D1561"],
+      "tokens": [
+        "0x911A31a3450AAbFD38D1484aaE457c88b66D1561"
+      ],
       "isTestnet": true
     },
     {
       "id": 999,
-      "rpc": ["https://rpc.hyperliquid.xyz/evm"],
+      "rpc": [
+        "https://rpc.hyperliquid.xyz/evm"
+      ],
       "icon": "https://storage.herewallet.app/upload/87adda8fa543fb345b8d66f713f796e5273f1e4efbd237febb36cbf91ad21b40.png",
       "wrapToken": "0x5555555555555555555555555555555555555555",
       "name": "HyperEVM",
@@ -3714,16 +4373,21 @@
       "symbol": "HYPE",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://hyperliquid.cloud.blockscout.com/address",
+      "explorer": "https://hyperliquid.cloud.blockscout.com",
       "explorerTx": "https://hyperliquid.cloud.blockscout.com/txs",
       "explorerToken": "https://hyperliquid.cloud.blockscout.com/tokens",
       "isLayer2": false,
-      "tokens": ["0x47bb061C0204Af921F43DC73C7D7768d2672DdEE"],
+      "tokens": [
+        "0x47bb061C0204Af921F43DC73C7D7768d2672DdEE"
+      ],
       "isTestnet": false
     },
     {
       "id": 50312,
-      "rpc": ["https://dream-rpc.somnia.network"],
+      "rpc": [
+        "https://dream-rpc.somnia.network",
+        "https://rpc.ankr.com/somnia_testnet"
+      ],
       "icon": "https://storage.herewallet.app/upload/13fb507e13fb6c4ba7bb332f8cc93ee58f2e510840daf221f54ae477eb756a72.jpg",
       "wrapToken": "",
       "name": "Somnia Testnet",
@@ -3732,175 +4396,995 @@
       "symbol": "STT",
       "decimal": 18,
       "isEvm": true,
-      "explorer": "https://somnia-devnet.socialscan.io/address",
+      "explorer": "https://somnia-devnet.socialscan.io",
       "explorerTx": "https://somnia-devnet.socialscan.io/txs",
       "explorerToken": "https://somnia-devnet.socialscan.io/tokens",
       "isLayer2": false,
-      "tokens": [""],
+      "tokens": [
+        ""
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 1942999413,
+      "rpc": [
+        "https://rpc.testnet.humanity.org"
+      ],
+      "icon": "https://storage.herewallet.app/upload/75b1b300a258a59552a595f6791eb092f26f7162f6ff7f0a2c4e395ecb083ef3.jpg",
+      "wrapToken": "",
+      "name": "Humanity",
+      "short": "HUMANITY",
+      "key": "humanity",
+      "symbol": "tHP",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.testnet.humanity.org/",
+      "explorerTx": "https://explorer.testnet.humanity.org/txs",
+      "explorerToken": "https://explorer.testnet.humanity.org/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x693cB8de384f00A5c2580D544B38013BFB496529"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 50341,
+      "rpc": [
+        "https://reddio-dev.reddio.com"
+      ],
+      "icon": "https://storage.herewallet.app/upload/14f7f7fdd003761e48e1519b7d01d92b5e435c3d16766017afce9cfe40ddfcf2.png",
+      "wrapToken": "",
+      "name": "Reddio Devnet",
+      "short": "REDDIO DEVNET",
+      "key": "reddio devnet",
+      "symbol": "RED",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://reddio-devnet.l2scan.co/",
+      "explorerTx": "https://reddio-devnet.l2scan.co/txs",
+      "explorerToken": "https://reddio-devnet.l2scan.co/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0x4f4FDcECa7d48822E39097970b6cDBa179C28d9b"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 313313,
+      "rpc": [
+        "https://testnet.saharalabs.ai"
+      ],
+      "icon": "https://storage.herewallet.app/upload/1d52671547bb072b77df289bffa42df7ce1c0fd4132392847972303f8e30fb02.jpg",
+      "wrapToken": "",
+      "name": "SaharaAI Testnet",
+      "short": "SAHARAAI TESTNET",
+      "key": "saharaai testnet",
+      "symbol": "SAHARA",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.saharaa.info/",
+      "explorerTx": "https://explorer.saharaa.info/txs",
+      "explorerToken": "https://explorer.saharaa.info/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0xE7b23Bff46D604BE559D1c8b90c30ED90A25d9fB"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 18880,
+      "rpc": [
+        "https://rpc1-testnet.expchain.ai"
+      ],
+      "icon": "https://storage.herewallet.app/upload/2b75f051c6976021571b3c288e8d8f550f6b65bb16b3b7ddee4604699ee41ed9.jpg",
+      "wrapToken": "",
+      "name": "EXPchain",
+      "short": "EXPCHAIN",
+      "key": "expchain",
+      "symbol": "tZKJ",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://blockscout-testnet.expchain.ai/",
+      "explorerTx": "https://blockscout-testnet.expchain.ai/txs",
+      "explorerToken": "https://blockscout-testnet.expchain.ai/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x46A2c17FE4545e6490B45224a81070869A4f213D"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 2233,
+      "rpc": [
+        "https://chainbase-testnet-public.s.chainbase.com"
+      ],
+      "icon": "https://storage.herewallet.app/upload/74eb3d188f4b216a99fe6dbf8a61a68ee58f692bf618f75024949c3e464aba8f.jpg",
+      "wrapToken": "",
+      "name": "Chainbase Network testnet",
+      "short": "CHAINBASE NETWORK TESTNET",
+      "key": "chainbase network testnet",
+      "symbol": "ETH",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://testnet.explorer.chainbase.com/",
+      "explorerTx": "https://testnet.explorer.chainbase.com/txs",
+      "explorerToken": "https://testnet.explorer.chainbase.com/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0xffCcAa34ab71E7f8d9220E383B9EB40A2Bc59Da6"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 393,
+      "rpc": [
+        "https://rpc.nexus.xyz/http"
+      ],
+      "icon": "https://storage.herewallet.app/upload/3fe8d72e3860cb38528eb1479e6c0e091566b30fe05b8ff4b21dfc2ed9624c4c.jpg",
+      "wrapToken": "0xFe043387249e426f8ACf8BC6c682825F58242801",
+      "name": "Nexus",
+      "short": "NEXUS",
+      "key": "nexus",
+      "symbol": "NEX",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.nexus.xyz",
+      "explorerTx": "https://explorer.nexus.xyz/txs",
+      "explorerToken": "https://explorer.nexus.xyz/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x1b77c1845456833Fe717BeD25cb643d082A35407"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 33111,
+      "rpc": [
+        "https://apechain-curtis.drpc.org https://rpc.curtis.apechain.com"
+      ],
+      "icon": "https://storage.herewallet.app/upload/771ce58d306db9c15b086767f55678a508b105d3aed03bb2339e114717903f16.webp",
+      "wrapToken": "0x34b097B133bF3Fe3B7daD0d65E8f18DD5bf1a57B",
+      "name": "Curtis",
+      "short": "CURTIS",
+      "key": "curtis",
+      "symbol": "APE",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://curtis.explorer.caldera.xyz/",
+      "explorerTx": "https://curtis.explorer.caldera.xyz/txs",
+      "explorerToken": "https://curtis.explorer.caldera.xyz/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x0b21A38d42b6922bC1B770f8Ff4E5e0B72a75e6e"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 820,
+      "rpc": [
+        "https://rpc.callistodao.org"
+      ],
+      "icon": "https://storage.herewallet.app/upload/a38c0105ee6382add11a87158948e431f63f9d39d9fe6711a19a97828d2c4799.jpg",
+      "wrapToken": "0xF5AD6F6EDeC824C7fD54A66d241a227F6503aD3a",
+      "name": "Callisto",
+      "short": "CALLISTO",
+      "key": "callisto",
+      "symbol": "CLO",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.callistodao.org/",
+      "explorerTx": "https://explorer.callistodao.org/txs",
+      "explorerToken": "https://explorer.callistodao.org/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0xa2769568a26d4Ee36d27B49A1a903f2dCfA5291c"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 999,
+      "rpc": [
+        "https://rpc.hyperliquid.xyz/evm"
+      ],
+      "icon": "https://storage.herewallet.app/upload/87adda8fa543fb345b8d66f713f796e5273f1e4efbd237febb36cbf91ad21b40.png",
+      "wrapToken": "0x5555555555555555555555555555555555555555",
+      "name": "HyperEVM",
+      "short": "HYPEREVM",
+      "key": "hyperevm",
+      "symbol": "HYPE",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://hyperliquid.cloud.blockscout.com/",
+      "explorerTx": "https://hyperliquid.cloud.blockscout.com/txs",
+      "explorerToken": "https://hyperliquid.cloud.blockscout.com/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0x47bb061C0204Af921F43DC73C7D7768d2672DdEE"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 6342,
+      "rpc": [
+        "https://carrot.megaeth.com/rpc"
+      ],
+      "icon": "https://storage.herewallet.app/upload/8519c1e64bf6dbc618986c90ecdc6ffb7c8238767f7000e8e27b39fef47da366.jpg",
+      "wrapToken": "",
+      "name": "MegaETH",
+      "short": "MEGAETH",
+      "key": "megaeth",
+      "symbol": "ETH",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://www.megaexplorer.xyz/",
+      "explorerTx": "https://www.megaexplorer.xyz/tx/",
+      "explorerToken": "https://www.megaexplorer.xyz/tokens",
+      "isLayer2": true,
+      "tokens": [
+        ""
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 43111,
+      "rpc": [
+        "https://rpc.hemi.network/rpc"
+      ],
+      "icon": "https://storage.herewallet.app/upload/409ff634505c2d08ab8a591127265c688749c0fa2fe27b79756ccbc02272c505.jpg",
+      "wrapToken": "0x4200000000000000000000000000000000000006",
+      "name": "Hemi",
+      "short": "HEMI",
+      "key": "hemi",
+      "symbol": "ETH",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer.hemi.xyz/",
+      "explorerTx": "https://explorer.hemi.xyz/txs",
+      "explorerToken": "https://explorer.hemi.xyz/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0xad11a8BEb98bbf61dbb1aa0F6d6F2ECD87b35afA"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 3338,
+      "rpc": [
+        "https://peaq.api.onfinality.io/public",
+        "https://responsive-powerful-mansion.peaq-mainnet.quiknode.pro/29963d0a2deee01a20b091926b08d68db12bc68b"
+      ],
+      "icon": "https://storage.herewallet.app/upload/7052c8e8a3ef6216496793ee904090208176e2af2c767dcf40b4065a06877233.jpg",
+      "wrapToken": "0x3cD66d2e1fac1751B0A20BeBF6cA4c9699Bb12d7",
+      "name": "peaq",
+      "short": "PEAQ",
+      "key": "peaq",
+      "symbol": "PEAQ",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://peaq.subscan.io/",
+      "explorerTx": "https://peaq.subscan.io/evm_transaction",
+      "explorerToken": "https://peaq.subscan.io/erc20_token",
+      "isLayer2": false,
+      "tokens": [
+        "0x6694340fc020c5E6B96567843da2df01b2CE1eb6"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 5545,
+      "rpc": [
+        "https://rpc-hk.duckchain.io",
+        "https://rpc.duckchain.io"
+      ],
+      "icon": "https://storage.herewallet.app/upload/a9b9077c7e3961f8291b387875d9077cc9e9d52b326deb613b503ade57dfbcaf.jpg",
+      "wrapToken": "0x7F9308E8d724e724EC31395f3af52e0593BB2e3f",
+      "name": "DuckChain",
+      "short": "DUCKCHAIN",
+      "key": "duckchain",
+      "symbol": "TON",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://scan.duckchain.io/",
+      "explorerTx": "https://scan.duckchain.io/txs",
+      "explorerToken": "https://scan.duckchain.io/tokens",
+      "isLayer2": false,
+      "tokens": [
+        "0xdA65892eA771d3268610337E9964D916028B7dAD"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 37111,
+      "rpc": [
+        "https://rpc.testnet.lens.dev"
+      ],
+      "icon": "https://storage.herewallet.app/upload/dc82e7110e7bd4813eb597ebcc8c2defdd3d9661179c40d227620b14518e3c87.jpg",
+      "wrapToken": "0x000000000000000000000000000000000000800a",
+      "name": "Lens Testnet",
+      "short": "LENS TESTNET",
+      "key": "lens testnet",
+      "symbol": "GRASS",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://testnet.lenscan.io/",
+      "explorerTx": "https://testnet.lenscan.io/transactions",
+      "explorerToken": "https://testnet.lenscan.io/tokens",
+      "isLayer2": false,
+      "tokens": [
+        ""
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 5330,
+      "rpc": [
+        "https://rpc-superseed-mainnet-0.t.conduit.xyz/"
+      ],
+      "icon": "https://storage.herewallet.app/upload/62c7285873d98d37855ff3bc11055fde7beabb9e48e1b298d7066b5595f12a32.jpg",
+      "wrapToken": "0x4200000000000000000000000000000000000006",
+      "name": "Superseed",
+      "short": "SUPERSEED",
+      "key": "superseed",
+      "symbol": "ETH",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://explorer-superseed-mainnet-0.t.conduit.xyz/",
+      "explorerTx": "https://explorer-superseed-mainnet-0.t.conduit.xyz/txs",
+      "explorerToken": "https://explorer-superseed-mainnet-0.t.conduit.xyz/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0xC316C8252B5F2176d0135Ebb0999E99296998F2e"
+      ],
+      "isTestnet": false
+    },
+    {
+      "id": 53302,
+      "rpc": [
+        "https://sepolia.superseed.xyz",
+        "https://mainnet.superseed.xyz"
+      ],
+      "icon": "https://storage.herewallet.app/upload/71e76036255b05ddc7ebdc2558f3b86d366051a94043ecc843e308c2d51595c0.JPG",
+      "wrapToken": "0x155aca6c29B9f65cB45116d55E4D6096E1B8f027",
+      "name": "Superseed Testnet",
+      "short": "SUPERSEED TESTNET",
+      "key": "superseed testnet",
+      "symbol": "ETH",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://sepolia-explorer.superseed.xyz/",
+      "explorerTx": "https://sepolia-explorer.superseed.xyz/txs",
+      "explorerToken": "https://sepolia-explorer.superseed.xyz/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0x85773169ee07022AA2b4785A5e69803540E9106A"
+      ],
+      "isTestnet": true
+    },
+    {
+      "id": 10218,
+      "rpc": [
+        "https://tea-sepolia.g.alchemy.com/public"
+      ],
+      "icon": "https://storage.herewallet.app/upload/4cdb55c30be5245920eae789f80c6dd12373089d0055c62219cb114daaa29f27.jpg",
+      "wrapToken": "0xfc4e864C051cBb4aB732D5F2495eB286f8860196",
+      "name": "Tea Sepolia",
+      "short": "TEA SEPOLIA",
+      "key": "tea sepolia",
+      "symbol": "TEA",
+      "decimal": 18,
+      "isEvm": true,
+      "explorer": "https://sepolia.tea.xyz",
+      "explorerTx": "https://sepolia.tea.xyz/txs",
+      "explorerToken": "https://sepolia.tea.xyz/tokens",
+      "isLayer2": true,
+      "tokens": [
+        "0x615a02020b4cd1171551e3379491B825315ce77B"
+      ],
       "isTestnet": true
     }
   ],
-
-  "browser_wallet_sites": [],
-
-  "metamask_sites": [
-    "https://app.adrena.xyz/trade?pair=SOL_SOL&action=long",
-    "https://francium.io/app/invest/farm",
-    "https://projectlarix.com/",
-    "https://app.rate-x.io/",
-    "https://tulip.garden/leverage?src=Home",
-    "https://app.alienbase.xyz/",
-    "https://omni.apex.exchange/trade/BTCUSDT",
-    "https://app.aura.finance/",
-    "https://classic.bmx.trade/",
-    "https://www.gas.zip/",
-    "https://app.hop.exchange/",
-    "https://izumi.finance/trade/swap",
-    "https://app.jojo.exchange/",
-    "https://app.kiloex.io/trade",
-    "https://www.lombard.finance/app/vault/",
-    "https://app.metronome.io/base",
-    "https://app.openocean.finance/swap/eth/ETH/BAD",
-    "https://app.orderly.network/staking",
-    "https://app.overnight.fi/",
-    "https://app.mai.finance/",
-    "https://app.silo.finance/",
-    "https://solidly.com/",
-    "https://oyster.synfutures.com/",
-    "https://www.tarot.to/",
-    "https://app.teller.org/",
-    "https://app.trebleswap.com/",
-    "https://dapp.velvet.capital/",
-    "https://app.vesper.finance/ru/base/pools",
-    "https://app.vesper.finance/ru/base/pools",
-    "https://www.ascentyield.io/home",
-    "https://blackwing.fi/",
-    "https://clipper.exchange/app/liquidity",
-    "https://app.dsu.money/",
-    "https://www.estateprotocol.com/",
-    "https://app.frax.finance/",
-    "https://www.hegic.co/app#/arbitrum/trade/new",
-    "https://app.jaspervault.io/",
-    "https://app.lumi.finance/",
-    "https://ostium.app/",
-    "https://app.overnight.fi/",
-    "https://pancakeswap.finance/",
-    "https://app.pell.network/",
-    "https://app.premia.blue/",
-    "https://app.resonate.finance/",
-    "https://vault.teahouse.finance/",
-    "https://www.vaultka.com/",
-    "https://app.yieldflow.com/",
-    "https://arb.zomma.pro/",
-    "https://app-v2.alpacafinance.org/",
-    "https://home.babyswap.finance/",
-    "https://bsc.bakeryswap.org/",
-    "https://portal.bouncebit.io/",
-    "https://pancakebunny.finance/vault",
-    "https://ellipsis.finance/",
-    "https://app.kinza.finance/",
-    "https://app.lorenzo-protocol.xyz/staking",
-    "https://app.matrixdock.com/",
-    "https://metacoinswap.io/",
-    "https://app.stakestone.io/",
-    "https://app.wombat.exchange/",
-    "https://ipfs.io/ipfs/bafybeib4rg5gx7plrvzasrrqa3tcb3tnzm2goxhteaxsbem6hjpzsgihbu/",
-    "https://app.xwin.finance/app/dashboard?chainId=42161",
-    "https://belt.fi/dashboard",
-    "https://app.acryptos.com/about/",
-    "https://app.arrakis.finance/modular",
-    "https://app.ensuro.co/",
-    "https://app.klimadao.finance/#/stake",
-    "https://meshswap.fi/",
-    "https://app.sphere.finance/dashboard",
-    "https://app.symbiosis.finance/",
-    "https://app.tetu.io/",
-    "https://v3-app.compound.finance/?market=usdc-mainnet",
-    "https://exchange.dfyn.network/swap/0xe3d753334f5ab303585267d59d2ea8b39e71e1f6/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
-    "https://app.binaryx.com/uk?signUp=true&_gl=1*1axwfd1*_gcl_au*MTUxODQzNjE2LjE3MjI3NzU0NDU.",
-    "https://yieldlayer.cian.app/vaults/0xB13aa2d0345b0439b064f26B82D8dCf3f508775d?chainId=1",
-    "https://app.idle.finance/#/earn",
-    "https://app.kromatika.finance/",
-    "https://app.perp.com/",
-    "https://velodrome.finance/connect",
-    "https://app.exact.ly/",
-    "https://app.unitus.finance/#/lending",
-    "https://www.letsgethai.com/vaults?tab=available",
-    "https://agni.finance/swap",
-    "https://app.init.capital/?chain=5000",
-    "https://app.ktx.finance/trade",
-    "https://mantle.minterest.com/",
-    "https://app.rangeprotocol.com/",
-    "https://tsunami.finance/",
+  "browser_wallet_sites": [
+    "https://izumi.finance",
+    "https://pancakeswap.finance",
+    "https://app.pell.network",
+    "https://yieldlayer.cian.app",
+    "https://velodrome.finance",
+    "https://app.exact.ly",
+    "https://app.unitus.finance",
+    "https://www.letsgethai.com/vaults",
+    "https://agni.finance",
+    "https://app.init.capital",
     "https://fusionx.finance/swap",
-    "https://swap.butter.xyz/#/swap",
-    "https://app.stratumexchange.com/swap",
-    "https://syncswap.xyz/",
-    "https://spacefi.io/Home",
-    "https://trade.satori.finance/BTC-USD",
-    "https://fulcrom.finance/",
-    "https://app.eralend.com/",
-    "https://app.vesync.finance/swap",
-    "https://basilisk.org/markets",
-    "https://veno.finance/cro/stake/",
-    "https://arb.zomma.pro/en/main/trade/BTC-USDC",
-    "https://meson.fi/",
-    "https://app.wagmi.com/trade/swap",
-    "https://app.zkfinance.org/dashboard",
-    "https://zkfair.zkbase.app/swap",
-    "https://app.increment.finance/trade/0",
-    "https://app.rose.fi/",
-    "https://pad.fi/dex/swap",
-    "https://app.aurigami.finance/",
-    "https://www.trisolaris.io/#/swap",
-    "https://app.impossible.finance/explore",
-    "https://www.intercroneswap.com/#/",
-    "https://app.neopin.io/staking",
-    "https://just.money/",
-    "https://sun.io/#/home",
-    "https://app.justlend.org/homeNew?lang=en-US",
-    "https://stusdt.io/#/home",
-    "https://juststable.tronscan.org/#/home",
-    "https://app.zkbob.com/#/",
-    "https://www.oneswap.net/cet",
-    "https://staking.benqi.fi/stake",
-    "https://app.open-trade.io/",
-    "https://app.wombat.exchange/?_gl=1*b17l44*_ga*MTU3MjE1MzM3OC4xNzQwMDUyNzk2*_ga_NBD2MBCVBL*MTc0MTAwMTA0Ny4xLjAuMTc0MTAwMTA0Ny4wLjAuMA..",
+    "https://syncswap.xyz",
+    "https://trade.satori.finance",
+    "https://stake.lido.fi",
+    "https://potatoswap.finance",
+    "https://dyorswap.finance",
+    "https://www.dackieswap.xyz",
+    "https://www.echodex.io",
+    "https://v2.sturdy.finance",
+    "https://portal.dappos.com",
+    "https://app.zena.fi",
+    "https://ritsu.xyz",
+    "https://panko.finance",
+    "https://app.yei.finance",
+    "https://app.hover.market",
+    "https://app.pencilsprotocol.io/auctions",
+    "https://symmetry.trade",
+    "https://www.reaper.farm/",
+    "https://app.moola.market",
+    "https://pacificswap.xyz",
+    "https://celeron.xyz/vault",
+    "https://www.myso.finance",
+    "https://icecreamswap.com",
+    "https://supswap.xyz",
+    "https://app.k9finance.com/liquid-staking/stake",
+    "https://passdex.finance",
+    "https://app.dtrinity.org",
+    "https://app.amulet.org",
+    "https://aerodrome.finance/",
+    "https://app.blazeswap.xyz/swap",
+    "https://rhombusprotocol.io",
+    "https://www.capybara.exchange",
+    "https://app.colend.xyz",
+    "https://go.liquidloans.io",
+    "https://app.9inch.io/?chain=pulse",
+    "https://glidefinance.io",
+    "https://www.sceptre.fi/flare",
+    "https://kinetic.market",
+    "https://app.pegasys.fi/",
+    "https://zuit.xyz/",
+    "https://www.iguanadex.com/",
+    "https://app.storyhunt.xyz/",
+    "https://app.hiveswap.io/",
+    "https://infdex.io/"
+  ],
+  "metamask_sites": [
+    "https://app.alienbase.xyz",
+    "https://app.aura.finance",
+    "https://classic.bmx.trade",
+    "https://app.hop.exchange",
+    "https://app.jojo.exchange",
+    "https://app.kiloex.io",
+    "https://www.lombard.finance",
+    "https://app.metronome.io",
+    "https://app.openocean.finance",
+    "https://app.mai.finance",
+    "https://solidly.com",
+    "https://www.tarot.to",
+    "https://app.teller.org",
+    "https://app.trebleswap.com",
+    "https://app.vesper.finance",
+    "https://www.ascentyield.io",
+    "https://clipper.exchange/app/liquidity",
+    "https://app.dsu.money",
+    "https://www.estateprotocol.com",
+    "https://app.frax.finance",
+    "https://www.hegic.co/app",
+    "https://app.lumi.finance",
+    "https://app.premia.blue",
+    "https://app.resonate.finance",
+    "https://vault.teahouse.finance",
+    "https://www.vaultka.com",
+    "https://app.yieldflow.com",
+    "https://arb.zomma.pro",
+    "https://app-v2.alpacafinance.org",
+    "https://home.babyswap.finance",
+    "https://bsc.bakeryswap.org",
+    "https://pancakebunny.finance",
+    "https://app.kinza.finance",
+    "https://app.matrixdock.com",
+    "https://metacoinswap.io",
+    "https://app.wombat.exchange",
+    "https://ipfs.io/ipfs/bafybeib4rg5gx7plrvzasrrqa3tcb3tnzm2goxhteaxsbem6hjpzsgihbu",
+    "https://belt.fi/dashboard",
+    "https://app.acryptos.com",
+    "https://app.arrakis.finance",
+    "https://app.ensuro.co",
+    "https://app.klimadao.finance",
+    "https://meshswap.fi",
+    "https://app.sphere.finance",
+    "https://app.symbiosis.finance",
+    "https://app.tetu.io",
+    "https://v3-app.compound.finance",
+    "https://exchange.dfyn.network",
+    "https://app.binaryx.com",
+    "https://app.idle.finance",
+    "https://app.kromatika.finance",
+    "https://app.perp.com",
+    "https://app.rangeprotocol.com",
+    "https://tsunami.finance",
+    "https://swap.butter.xyz",
+    "https://spacefi.io",
+    "https://fulcrom.finance",
+    "https://app.vesync.finance",
+    "https://basilisk.org",
+    "https://veno.finance",
+    "https://arb.zomma.pro",
+    "https://app.wagmi.com",
+    "https://app.zkfinance.org",
+    "https://zkfair.zkbase.app",
+    "https://app.increment.finance",
+    "https://app.rose.fi",
+    "https://pad.fi/launchpad",
+    "https://app.aurigami.finance",
+    "https://www.trisolaris.io",
+    "https://app.impossible.finance",
+    "https://stusdt.io",
+    "https://app.zkbob.com",
+    "https://www.oneswap.net",
+    "https://staking.benqi.fi",
+    "https://app.open-trade.io",
     "https://vectorfinance.io/pools",
-    "https://www.stake.geode.fi/stake?chain=holesky&poolId=87014135670810960791487664813565319683449942977035923266296481233187004375994",
-    "https://app.vapordex.io/swap",
-    "https://app.term.finance/rewards",
-    "https://stake.lido.fi/",
-    "https://app.symbiotic.fi/deposit?sort=tvl_desc&filter_option=collateral",
-    "https://app.stakestone.io/u/stonebtc/stake",
-    "https://app.stakewise.io/",
-    "https://app.swellnetwork.io/swellchain/launch",
-    "https://potatoswap.finance/swap",
-    "https://dyorswap.finance/?chainId=34443",
-    "https://pad.chaingpt.org/staking-pools",
-    "https://www.dackieswap.xyz/swap?chain=base",
-    "https://app.spartadex.io/",
-    "https://www.echodex.io/",
-    "https://app.metalswap.finance/",
-    "https://app.kuma.bond/",
-    "https://app.logx.network/spot/KAITO",
-    "https://v2.sturdy.finance/overview",
-    "https://app.xfai.com/swap",
-    "https://app.layerbank.finance/bank?chain=linea",
-    "https://portal.dappos.com/assets",
-    "https://mobydex.io/",
-    "https://app.zena.fi/swap",
-    "https://knightdex.cc/#/swap",
-    "https://cubiswap.finance/",
-    "https://app.segment.finance/#/",
-    "https://opbnb.leetswap.finance/#/swap",
-    "https://ritsu.xyz/",
-    "https://app.symm.fi/#/telos/",
-    "https://panko.finance/",
-    "https://swaps.meridianfinance.net/",
-    "https://obm.lumenswap.io/swap",
-    "https://aqua.network/",
-    "https://app.fxdao.io/",
-    "https://app.phoenix-hub.io/"
-  ]
+    "https://www.stake.geode.fi",
+    "https://app.vapordex.io",
+    "https://app.term.finance",
+    "https://app.symbiotic.fi",
+    "https://app.stakewise.io",
+    "https://app.swellnetwork.io",
+    "https://pad.chaingpt.org",
+    "https://app.spartadex.io",
+    "https://app.metalswap.finance",
+    "https://app.kuma.bond",
+    "https://app.xfai.com",
+    "https://mobydex.io",
+    "https://knightdex.cc",
+    "https://cubiswap.finance",
+    "https://app.segment.finance",
+    "https://opbnb.leetswap.finance",
+    "https://app.symm.fi",
+    "https://swaps.meridianfinance.net",
+    "https://yaka.finance",
+    "https://app.astroport.fi",
+    "https://app.citrex.markets",
+    "https://app.xei.finance",
+    "https://app.duckgang.com",
+    "https://www.erisprotocol.com",
+    "https://app.kava.io",
+    "https://invest.scrub.money",
+    "https://mare.finance",
+    "https://tranchess.com",
+    "https://app.rollie.finance",
+    "https://dex.10kx.com",
+    "https://app.zebra.xyz",
+    "https://app.skydrome.finance",
+    "https://app.scribe.exchange",
+    "https://app.loanshark.tech",
+    "https://app.particle.trade",
+    "https://app.orbitlending.io",
+    "https://blur.io",
+    "https://app.agentfi.io",
+    "https://www.monoswap.io",
+    "https://www.archly.fi",
+    "https://wigoswap.io",
+    "https://scream.sh/lend",
+    "https://www.liquiddriver.finance",
+    "https://app.hundred.finance",
+    "https://app.mummy.finance/#/trade",
+    "https://www.knightswap.financial",
+    "https://app.bprotocol.org/liquity-app-v2",
+    "https://www.ankr.com/rpc",
+    "https://app.elk.finance",
+    "https://app.comb.financial",
+    "https://app.mento.org",
+    "https://app.ubeswap.org",
+    "https://app.untangled.finance",
+    "https://app.immortalx.io",
+    "https://app.chee.finance",
+    "https://app.primeprotocol.xyz",
+    "https://fireflydex.io",
+    "https://app.realperp.com",
+    "https://pro.doubler.pro",
+    "https://app.keom.io",
+    "https://swapx.fi",
+    "https://app.navigator.exchange",
+    "https://defive.com",
+    "https://memebox.fi",
+    "https://app.burrbear.io",
+    "https://app.beracaine.io/home",
+    "https://app.lumen.money",
+    "https://moraswap.com",
+    "https://agavefinance.eth.limo",
+    "https://swapr.eth.limo",
+    "https://app.honeyswap.org",
+    "https://levinswap.org",
+    "https://app.baofinance.io",
+    "https://www.mu.exchange",
+    "https://dex.noxa.fi",
+    "https://app.mondrianswap.xyz",
+    "https://netswap.io",
+    "https://tethys.finance",
+    "https://app.hummus.exchange",
+    "https://www.unidex.exchange",
+    "https://agoradefi.io/dashboard",
+    "https://app.mantissa.finance",
+    "https://peapods.finance/app",
+    "https://dapp.poolshark.fi",
+    "https://app.kim.exchange",
+    "https://www.desyn.io/#/markets",
+    "https://solarflare.io",
+    "https://omni.ls",
+    "https://app.beamswap.io",
+    "https://app.orbiter.one",
+    "https://chewyswap.dog",
+    "https://dog-swap.finance",
+    "https://app.substancex.io/login",
+    "https://app.sobax.app",
+    "https://app.yodeswap.dog",
+    "https://wojak.fi",
+    "https://adamant.finance/vaults",
+    "https://swap.country",
+    "https://sonicswap.io",
+    "https://harmony.cougarswap.io",
+    "https://www.coinscope.co/lockers/tokens",
+    "https://app.wepiggy.com",
+    "https://shrike.dovish.finance",
+    "https://swap.dovish.finance",
+    "https://kokonutswap.finance",
+    "https://zkevmswap.com",
+    "https://zk.app.tropykus.com",
+    "https://app.flashliquidity.finance/#/home",
+    "https://davos.xyz/app",
+    "https://app.secured.finance",
+    "https://conft.app/signin",
+    "https://legacy-recipient.sablier.com",
+    "https://enosys.global",
+    "https://www.oracleswap.io",
+    "https://app.pangolin.exchange",
+    "https://tonic.cash/",
+    "https://www.butterswap.io",
+    "https://g2.bsc.definix.com/",
+    "https://kurrency.io/",
+    "https://app.kokoa.finance/",
+    "https://claimswap.org/",
+    "https://center.mesher.io",
+    "https://app.pangeaswap.com",
+    "https://stake.ly",
+    "https://swapscanner.io/",
+    "https://klayswap.com",
+    "https://dgswap.io/",
+    "https://bwpm.io/",
+    "https://app.arthswap.org/",
+    "https://app.astriddao.xyz/",
+    "https://omni.ls/",
+    "https://v2.algem.io/",
+    "https://app.sirius.finance/#/swap",
+    "https://www.ginsengswap.org/app",
+    "https://app.swappi.io/",
+    "https://www.nucleon.space/",
+    "https://app.singlefinance.io/",
+    "https://www.argofinance.money/",
+    "https://app.cronaswap.org/",
+    "https://swap.crodex.app/",
+    "https://photonswap.finance/",
+    "https://candycity.finance/",
+    "https://www.creampan.finance/",
+    "https://www.darkcrypto.finance/",
+    "https://dexpad.io/",
+    "https://cgo.finance/",
+    "https://ferroprotocol.com/",
+    "https://orby.network/",
+    "https://tectonic.finance/",
+    "https://vvs.finance/",
+    "https://novaswap.fi",
+    "https://archerswap.finance/",
+    "https://shadowswap.xyz/",
+    "https://swap.openex.network/",
+    "https://app.lfgswap.finance/",
+    "https://app.aquarius.loan/",
+    "https://sonefi.xyz",
+    "https://portalxswap.io",
+    "https://dapp.phame.io/",
+    "https://pulserate.io/dapp",
+    "https://app.hebeswap.com/",
+    "https://www.etc-mc.com/",
+    "https://v3.etcswap.org/",
+    "https://etc.djed.one/",
+    "https://app.mirakle.io/",
+    "https://www.gaming-dex.com/",
+    "https://oasjumbo.com/",
+    "https://filda.io/",
+    "https://game.defikingdoms.com/",
+    "https://www.pangolin.exchange/",
+    "https://dex.enosys.global/",
+    "https://zoomswap.io/",
+    "https://app.magma.finance/",
+    "https://cyclone.xyz/iotx",
+    "https://filda.io/",
+    "https://basic.loans/",
+    "https://iotex.app.xdollar.fi/",
+    "https://openleverage.finance/",
+    "https://www.torches.finance/en",
+    "https://skcs.io/",
+    "https://kuswap.finance/",
+    "https://koffeeswap.exchange/",
+    "https://app.mojitoswap.finance/",
+    "https://universalswaps.io/",
+    "https://app.lunos.xyz/",
+    "https://app.step.exchange",
+    "https://wanlend.finance/",
+    "https://www.wanswap.finance",
+    "https://app.microswap.org",
+    "https://amply.finance/",
+    "https://h2.finance/",
+    "https://www.baryon.network/",
+    "https://www.scanto.io/",
+    "https://1155.tech/",
+    "https://canto.leetswap.finance/",
+    "https://app.slingshot.finance/",
+    "https://www.canto.io/lending",
+    "https://www.kewl.exchange/",
+    "https://dex.swapdegen.tips",
+    "https://app.rivera.money/",
+    "https://squidswap.ink/",
+    "https://dex.inkswap.io/",
+    "https://www.eigenlayer.magpiexyz.io",
+    "https://app.nep.finance/",
+    "https://datadex.me/",
+    "https://sharkswap.xyz/",
+    "https://www.stfil.io/",
+    "https://fil.hashking.fi",
+    "https://app.collectif.finance/",
+    "https://fvm.hashmix.org/v2/",
+    "https://kaidex.io/",
+    "https://vinemoney.xyz/",
+    "https://app.neby.exchange/",
+    "https://app.yuzu-swap.com/",
+    "https://voltswap.finance/",
+    "https://symblox.io/",
+    "https://app.wavelength.exchange/",
+    "https://exchange.wagyuswap.app/",
+    "https://portal.dymension.xyz/",
+    "https://app.unleashprotocol.xyz/",
+    "https://bswap.bevm.io/",
+    "https://app.bido.finance/",
+    "https://sovryn.app/",
+    "https://app.blueshift.fi/",
+    "https://oolongswap.com/",
+    "https://bitstaq.io/",
+    "https://bitmap.game/",
+    "https://app.mage.finance/",
+    "https://www.bitgenie.io/",
+    "https://app.tropykus.com/",
+    "https://dapp.rifonchain.com/",
+    "https://dapp.moneyonchain.com/",
+    "https://verse.bitcoin.com/",
+    "https://tangoswap.cash",
+    "https://benswap.cash/",
+    "https://app.mistswap.fi/",
+    "https://app.ionise.io/",
+    "https://plunderswap.com"
+  ],
+  "omni_bridge": {
+    "0": {
+      "isTransferable": true,
+      "id": 0,
+      "symbol": "ETH",
+      "asset": "ETH",
+      "bridge": [
+        1010,
+        1001,
+        8453,
+        42161,
+        1313161554,
+        10,
+        0
+      ],
+      "chains": {
+        "0": "0",
+        "1": "native",
+        "10": "native",
+        "1001": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+        "1010": "eth.bridge.near",
+        "8453": "native",
+        "42161": "native",
+        "1313161554": "native"
+      }
+    },
+    "1": {
+      "isTransferable": true,
+      "id": 1,
+      "symbol": "USDC",
+      "asset": "USDC",
+      "bridge": [
+        1010,
+        1001,
+        1100,
+        8453,
+        56,
+        42161,
+        1313161554,
+        10,
+        0
+      ],
+      "chains": {
+        "0": "1",
+        "10": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+        "56": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "137": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "1001": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "1010": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "1100": "CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75",
+        "8453": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "42161": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "1313161554": "0x368ebb46aca6b8d0787c96b2b20bd3cc3f2c45f7"
+      }
+    },
+    "2": {
+      "isTransferable": true,
+      "id": 2,
+      "symbol": "SOL",
+      "asset": "SOL",
+      "bridge": [
+        1010,
+        1001,
+        56,
+        0
+      ],
+      "chains": {
+        "0": "2",
+        "56": "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF",
+        "137": "0xd93f7E271cB87c23AaA73edC008A79646d1F9912",
+        "1001": "native",
+        "1010": "22.contract.portalbridge.near"
+      }
+    },
+    "3": {
+      "isTransferable": true,
+      "id": 3,
+      "symbol": "BNB",
+      "asset": "BNB",
+      "bridge": [
+        1010,
+        56,
+        0
+      ],
+      "chains": {
+        "0": "3",
+        "56": "native",
+        "1010": "wbnb.hot.tg"
+      }
+    },
+    "4": {
+      "isTransferable": true,
+      "id": 4,
+      "symbol": "DD",
+      "asset": "DD",
+      "bridge": [
+        1010,
+        56,
+        0
+      ],
+      "chains": {
+        "0": "4",
+        "56": "0xf74594a5606eeca8eb5c09933a361f261296d3b7",
+        "1010": "dd.tg"
+      }
+    },
+    "5": {
+      "isTransferable": true,
+      "id": 5,
+      "symbol": "HAPI",
+      "asset": "HAPI",
+      "bridge": [
+        1010,
+        56,
+        0
+      ],
+      "chains": {
+        "0": "5",
+        "56": "0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54",
+        "1010": "d9c2d319cd7e6177336b0a9c93c21cb48d84fb54.factory.bridge.near"
+      }
+    },
+    "6": {
+      "isTransferable": true,
+      "id": 6,
+      "symbol": "USMEME",
+      "asset": "USMEME",
+      "bridge": [
+        1010,
+        8453,
+        0
+      ],
+      "chains": {
+        "0": "6",
+        "1010": "usmeme.tg",
+        "8453": "0xdc22e3c4b841e95a13b14ab26d066ec3737d6f80"
+      }
+    },
+    "8": {
+      "isTransferable": true,
+      "id": 8,
+      "symbol": "AURORA",
+      "asset": "AURORA",
+      "bridge": [
+        1010,
+        1313161554,
+        0
+      ],
+      "chains": {
+        "0": "8",
+        "1": "0xaaaaaa20d9e0e2461697782ef11675f668207961",
+        "1010": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near",
+        "1313161554": "0x8bec47865ade3b172a928df8f990bc7f2a3b9f79"
+      }
+    },
+    "9": {
+      "isTransferable": true,
+      "id": 9,
+      "symbol": "USDT",
+      "asset": "USDT",
+      "bridge": [
+        1010,
+        1001,
+        56,
+        42161,
+        1313161554,
+        1111,
+        10,
+        2222,
+        0
+      ],
+      "chains": {
+        "0": "9",
+        "1": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "10": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+        "56": "0x55d398326f99059ff775485246999027b3197955",
+        "137": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "1001": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "1010": "usdt.tether-token.near",
+        "1111": "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",
+        "2222": "0x919C1c267BC06a7039e03fcc2eF738525769109c",
+        "42161": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "1313161554": "0x80da25da4d783e57d2fcda0436873a193a4beccf"
+      }
+    },
+    "17": {
+      "isTransferable": true,
+      "id": 17,
+      "symbol": "wNEAR",
+      "asset": "NEAR",
+      "bridge": [
+        1010,
+        1001,
+        56,
+        1313161554,
+        0
+      ],
+      "chains": {
+        "0": "17",
+        "1": "0x85f17cf997934a597031b2e18a9ab6ebd4b9f6a4",
+        "56": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
+        "1001": "BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z",
+        "1010": "native",
+        "1313161554": "0xc42c30ac6cc15fac9bd938618bcaa1a1fae8501d"
+      }
+    },
+    "46": {
+      "isTransferable": true,
+      "id": 46,
+      "symbol": "KAVA",
+      "asset": "KAVA",
+      "bridge": [],
+      "chains": {
+        "0": "46",
+        "2222": "native"
+      }
+    },
+    "95": {
+      "isTransferable": true,
+      "id": 95,
+      "symbol": "XLM",
+      "asset": "XLM",
+      "bridge": [
+        1100,
+        0
+      ],
+      "chains": {
+        "0": "95",
+        "1100": "native"
+      }
+    }
+  }
 }

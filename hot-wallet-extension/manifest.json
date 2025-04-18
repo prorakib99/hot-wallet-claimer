@@ -2,16 +2,20 @@
    "action": {
       "default_popup": "frame.html"
    },
+   "author": "HOT Labs",
    "background": {
       "service_worker": "service-worker-loader.js",
       "type": "module"
    },
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "assets/contentScript.ts-loader-BEJzhUjv.js" ],
+      "js": [ "source/contentScript.ts-loader-BE6IqZn9.js" ],
       "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
       "run_at": "document_start"
    } ],
+   "description": "HOT Wallet — a multichain wallet seamlessly integrating both EVM and non-EVM blockchains.",
+   "differential_fingerprint": "1.2fca5180f02ae2c5f01c6e2feff27823306efa1bece67ef7a0e21d58b37ae6dc",
+   "homepage_url": "https://hot-labs.org/wallet",
    "host_permissions": [ "http://*/*", "https://*/*" ],
    "icons": {
       "128": "logo.png",
@@ -24,18 +28,19 @@
    "manifest_version": 3,
    "name": "HOT Wallet",
    "permissions": [ "storage", "tabs", "activeTab", "sidePanel", "contextMenus", "scripting" ],
+   "short_name": "HOT Wallet",
    "side_panel": {
       "default_path": "index.html"
    },
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0.19",
+   "version": "1.0.29",
    "web_accessible_resources": [ {
       "matches": [ "\u003Call_urls>" ],
       "resources": [ "frame.html", "extension-scripts/index.js", "extension-scripts/solana.js" ],
       "use_dynamic_url": false
    }, {
       "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
-      "resources": [ "assets/bowser-Rsyu5S1p.js", "assets/browser-polyfill-CP3dh7Ce.js", "assets/contentScript.ts-BEyk0a0E.js" ],
+      "resources": [ "source/bowser-Rsyu5S1p.js", "source/browser-polyfill-CP3dh7Ce.js", "source/contentScript.ts-DowHIbwM.js" ],
       "use_dynamic_url": false
    } ]
 }

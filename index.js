@@ -26,7 +26,7 @@ const EXTENSION_PATH = path.join(
 const DEVICE_PROFILE = devices['iPhone 15'];
 const EXTENSION_URL = `chrome-extension://${EXTENSION_ID}/index.html`;
 const OPERATION_TIMEOUT = parseInt(process.env.OPERATION_TIMEOUT) || 15000;
-const POST_CLAIM_DELAY = parseInt(process.env.POST_CLAIM_DELAY) || 60000;
+const POST_CLAIM_DELAY = parseInt(process.env.POST_CLAIM_DELAY) || 30000;
 const FINAL_DELAY = parseInt(process.env.FINAL_DELAY) || 5000;
 const EVERY_TIME_RUN_DELAY = parseInt(process.env.EVERY_TIME_RUN_DELAY) || 300;
 
@@ -103,6 +103,19 @@ async function processAccount(account, index) {
 
         await page.reload();
         log(account.name, 'Reloaded after setting token');
+
+        await page.locator('button:has-text("Missions")').click();
+        const claimFiveHotButton = page.locator('button:has-text("Claim")');
+
+        await page.waitForSelector('button:has-text("Claim")', { timeout: 30000 });
+
+        if ((await claimFiveHotButton.isVisible()) && !(await claimFiveHotButton.isDisabled())) {
+            await claimFiveHotButton.click();
+            await page.waitForTimeout(POST_CLAIM_DELAY);
+            await page.locator('button:has-text("Continue")').click();
+        }
+
+        await page.goto(EXTENSION_URL, { waitUntil: 'load' });
 
         // Access Storage section
         await page.waitForSelector(SELECTORS.STORAGE_SECTION, { timeout: OPERATION_TIMEOUT });

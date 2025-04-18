@@ -39,6 +39,12 @@
   src: local("SCHABO Condensed"), url("/fonts/SCHABO-Condensed.woff") format("woff");
 }
 
+@font-face {
+  font-family: "SF Mono";
+  font-style: normal;
+  src: local("SF Mono"), url("/fonts/SFMonoHeavy.woff") format("woff");
+}
+
 :root {
   overscroll-behavior: none;
 }
@@ -137,6 +143,7 @@ textarea,
   --Container-low: #ebdedc;
   --Surface-common-default: #f3ebea;
   --Surface-common-container-low: #ebdedc;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #2c3034;
   --Black-Secondary: #6b6661;
@@ -150,6 +157,7 @@ textarea,
   --Green-Alpha: #acc4bf;
   --Green-Text: #087164;
   --Green-Transparent: rgba(8, 113, 100, 0.1);
+  --Green-Tertiary: #00B259;
 
   --Orange-Primary: #fdbf1e;
   --Orange-30: #fdbf1e;
@@ -178,6 +186,11 @@ textarea,
   --Icon-Primary: #2c3034;
 
   --Shadow-stroke: #2c3034;
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;
 }
 
 [data-theme="light-blue"] {
@@ -245,7 +258,11 @@ textarea,
   --Icon-Primary: #2c2f34;
 
   --Shadow-stroke: #2c2f34;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="light-red"] {
   --Border-High: #342c2c;
@@ -312,7 +329,11 @@ textarea,
   --Icon-Primary: #342c2c;
 
   --Shadow-stroke: #342c2c;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="light-orange"] {
   --Border-High: #34312c;
@@ -379,7 +400,11 @@ textarea,
   --Icon-Primary: #34312c;
 
   --Shadow-stroke: #34312c;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="light-purple"] {
   --Border-High: #342c33;
@@ -446,7 +471,11 @@ textarea,
   --Icon-Primary: #342c33;
 
   --Shadow-stroke: #342c33;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="dark"] {
   --Stroke: #ffffff1a;
@@ -474,6 +503,7 @@ textarea,
   --Container-low: #141518;
   --Surface-common-default: #1d1f20;
   --Surface-common-container-low: #262729;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #ebdedc;
   --Black-Secondary: #ada5a4;
@@ -514,7 +544,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #3d3f46;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="purple"] {
   --Stroke: #ffffff1a;
@@ -542,6 +576,7 @@ textarea,
   --Container-low: #1e1c26;
   --Surface-common-default: #26252d;
   --Surface-common-container-low: #2f2d36ff;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #e7d5dfff;
   --Black-Secondary: #776b79ff;
@@ -582,7 +617,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #554962;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="yellow"] {
   --Stroke: #ffffff1a;
@@ -610,6 +649,7 @@ textarea,
   --Container-low: #21211eff;
   --Surface-common-default: #292a25ff;
   --Surface-common-container-low: #32322eff;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #ebded6ff;
   --Black-Secondary: #736d62ff;
@@ -650,7 +690,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #535340;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="red"] {
   --Stroke: #ffffff1a;
@@ -678,6 +722,7 @@ textarea,
   --Container-low: #241b1dff;
   --Surface-common-default: #2c2425ff;
   --Surface-common-container-low: #241b1dff;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #ebdedcff;
   --Black-Secondary: #ada5a4ff;
@@ -718,7 +763,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #594444;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="blue"] {
   --Stroke: #ffffff1a;
@@ -746,6 +795,7 @@ textarea,
   --Container-low: #1a1f25ff;
   --Surface-common-default: #22282cff;
   --Surface-common-container-low: #2b3035ff;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #ebdedcff;
   --Black-Secondary: #ada5a4ff;
@@ -786,7 +836,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #3d3f46;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 [data-theme="super-dark"] {
   --Stroke: #ffffff1a;
@@ -814,6 +868,7 @@ textarea,
   --Container-low: #141518;
   --Surface-common-default: #1d1f20;
   --Surface-common-container-low: #262729;
+  --Surface-common-container-high: #c9b7b5;
 
   --Black-Primary: #ebdedc;
   --Black-Secondary: #ada5a4;
@@ -854,7 +909,11 @@ textarea,
   --Icon-Primary: #ebdedc;
 
   --Shadow-stroke: #3d3f46;
-}
+
+  --Invest-Violet: #ba84ffff;
+  --Invest-Blue: #0098EA;
+  --Invest-Yellow: #E5B10B;
+  --Invest-Dark-Green: #496858;}
 
 a {
   font-style: normal;
@@ -900,11 +959,10 @@ input::-webkit-inner-spin-button {
   width: fit-content;
 }
     </style>
-    <script type="module" crossorigin src="/assets/index-Nr-l6jnx.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/browser-polyfill-CP3dh7Ce.js">
-    <link rel="modulepreload" crossorigin href="/assets/chains-BLaPW9iG.js">
-    <link rel="modulepreload" crossorigin href="/assets/bowser-Rsyu5S1p.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-CUuZrWZJ.css">
+    <script type="module" crossorigin src="/source/index-DkZ4_JuW.js"></script>
+    <link rel="modulepreload" crossorigin href="/source/browser-polyfill-CP3dh7Ce.js">
+    <link rel="modulepreload" crossorigin href="/source/HereRpcProvider-DB0GBsdb.js">
+    <link rel="modulepreload" crossorigin href="/source/bowser-Rsyu5S1p.js">
   </head>
 
   <body>
