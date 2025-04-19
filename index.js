@@ -104,15 +104,30 @@ async function processAccount(account, index) {
         await page.reload();
         log(account.name, 'Reloaded after setting token');
 
-        await page.locator('button:has-text("Missions")').click();
-        const claimFiveHotButton = page.locator('button:has-text("Claim")');
+        try {
+            await page.locator('button:has-text("Missions")').click();
+            const claimFiveHotButton = page.locator('button:has-text("Claim")');
 
-        await page.waitForSelector('button:has-text("Claim")', { timeout: 30000 });
+            try {
+                await page.waitForSelector('button:has-text("Claim")', { timeout: 30000 });
 
-        if ((await claimFiveHotButton.isVisible()) && !(await claimFiveHotButton.isDisabled())) {
-            await claimFiveHotButton.click();
-            await page.waitForTimeout(POST_CLAIM_DELAY);
-            await page.locator('button:has-text("Continue")').click();
+                if (
+                    (await claimFiveHotButton.isVisible()) &&
+                    !(await claimFiveHotButton.isDisabled())
+                ) {
+                    await claimFiveHotButton.click();
+                    await page.waitForTimeout(15000);
+                    if (await page.locator('button:has-text("Continue")').isVisible()) {
+                        await page.locator('button:has-text("Continue")').click();
+                    }
+                }
+            } catch (error) {
+                logWarning(account.name, `Optional Missions step failed: ${error.message}`);
+                // Continue with the rest of the process
+            }
+        } catch (error) {
+            logWarning(account.name, `Couldn't access Missions section: ${error.message}`);
+            // Continue with the rest of the process
         }
 
         await page.goto(EXTENSION_URL, { waitUntil: 'load' });
