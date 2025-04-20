@@ -104,7 +104,25 @@ async function processAccount(account, index) {
         await page.reload();
         log(account.name, 'Reloaded after setting token');
 
+        // Access Storage section
+        await page.waitForSelector(SELECTORS.STORAGE_SECTION, { timeout: OPERATION_TIMEOUT });
+        await page.locator(SELECTORS.STORAGE_SECTION).click();
+        log(account.name, '📂 Accessed Storage section');
+
+        // Check NEWS functionality
+        await handleButtonInteraction(page, account, SELECTORS.CHECK_NEWS_BUTTON, 'Check NEWS');
+
+        // Claim HOT functionality
+        await handleClaimProcess(page, account);
+
+        // Update claim time
+        const timeElement = await page.locator(SELECTORS.TIMER_TEXT).textContent();
+        const extractedTime = timeElement.match(/(\d+h \d+m)/)?.[0];
+
+        updateClaimTime(account.name, extractedTime);
+
         try {
+            await page.goto(EXTENSION_URL, { waitUntil: 'load' });
             await page.locator('button:has-text("Missions")').click();
             const claimFiveHotButton = page.locator('button:has-text("Claim")');
 
@@ -129,24 +147,6 @@ async function processAccount(account, index) {
             logWarning(account.name, `Couldn't access Missions section: ${error.message}`);
             // Continue with the rest of the process
         }
-
-        await page.goto(EXTENSION_URL, { waitUntil: 'load' });
-
-        // Access Storage section
-        await page.waitForSelector(SELECTORS.STORAGE_SECTION, { timeout: OPERATION_TIMEOUT });
-        await page.locator(SELECTORS.STORAGE_SECTION).click();
-        log(account.name, '📂 Accessed Storage section');
-
-        // Check NEWS functionality
-        await handleButtonInteraction(page, account, SELECTORS.CHECK_NEWS_BUTTON, 'Check NEWS');
-
-        // Claim HOT functionality
-        await handleClaimProcess(page, account);
-
-        // Update claim time
-        const timeElement = await page.locator(SELECTORS.TIMER_TEXT).textContent();
-        const extractedTime = timeElement.match(/(\d+h \d+m)/)?.[0];
-        updateClaimTime(account.name, extractedTime);
     } catch (error) {
         logError(account.name, `Processing failed: ${error.message}`);
     } finally {
