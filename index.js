@@ -162,6 +162,7 @@ async function handleButtonInteraction(page, account, selector, actionName) {
 
     if (isVisible && !isDisabled) {
         await button.click();
+        await page.waitForTimeout(5000);
         logSuccess(account.name, `Clicked: ${actionName}!`);
 
         if (actionName === 'Check NEWS') {
