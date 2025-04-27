@@ -46,8 +46,8 @@ node -v && npm -v
 2. Install dependencies with Chromium:
 
     ```bash
-    npx playwright install chromium
     npm install
+    npx playwright install chromium
     ```
 
 ## 🔑 Token Configuration
